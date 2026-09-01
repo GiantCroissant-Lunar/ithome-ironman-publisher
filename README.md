@@ -11,7 +11,7 @@ ithome-ironman-publisher/
 ├─ .agents/skills/             # Repo-local Agent routing and safety workflows
 ├─ .github/                    # Repository workflows
 ├─ .pre-commit-config.yaml     # Standard pre-commit configuration
-├─ articles/                   # day-NNN Markdown modules and images
+├─ articles/                   # day-NNN Markdown modules, images and publication receipts
 ├─ infra/
 │  ├─ .env                     # Local runtime config; ignored by Git
 │  ├─ .env.example             # Safe template
@@ -113,6 +113,7 @@ AUTH_STATE_PATH=../../infra/.auth/storage-state.json
 DIAGNOSTICS_DIR=../../infra/diagnostics
 STATE_PATH=../../infra/state/publisher-state.json
 LOCK_PATH=../../infra/state/publisher.lock
+REPOSITORY_ROOT=../..
 BROWSER_CHANNEL=msedge
 ```
 
@@ -128,7 +129,8 @@ BROWSER_CHANNEL=msedge
 articles/
 └─ day-001/
    ├─ index.md
-   └─ ref-image-001.png
+   ├─ ref-image-001.png
+   └─ publication.json         # 發布成功後由程式產生並 commit
 ```
 
 `day-NNN` 固定使用三位數。Day identity 由目錄名稱決定，不在 frontmatter 重複設定。
@@ -151,6 +153,8 @@ tags:
 `timestamp` 是最早允許發布的時間，必須是帶秒數及明確 offset 的 RFC 3339。排程若提早執行會安全停止。建議加上引號，避免 YAML parser 改寫原始 offset。
 
 相對圖片必須留在同一個 `day-NNN` 目錄，禁止使用 `../`。支援 PNG、JPEG、GIF、WebP 與 AVIF；HTTPS 圖片保留原 URL。本機圖片上傳後只替換送入 editor 的 Markdown，原始 `index.md` 不會被改寫。
+
+`publication.json` 是公開文章的不可變發布收據，不是手寫 frontmatter。程式只在公開頁確認文章後建立，內容包含 iT 文章 ID、canonical URL、系列、發布時間，以及當時的 `sourceHash`／`renderedHash`。它必須留在對應的 `day-NNN` 目錄並由 Git 追蹤；相同 Day 若出現不同文章 ID，流程會停止，不會覆寫舊收據。
 
 repo 已提供可審稿的 `day-001` 正式文章與 PNG。離線驗證：
 
@@ -196,6 +200,8 @@ task publish
 
 真正發布需要雙重解鎖：`infra/.env` 的 `PUBLISH_DRY_RUN=false`，而且 Task 會傳入 `--publish`。只要安全鎖仍為 `true`，`task publish` 仍是 dry-run。
 
+正式發布還要求目前 branch 已設定 upstream、與 upstream 完全同步，且發文前 Git working tree 完全乾淨。程式會在網站 mutation 前先 `git fetch` 並執行 push dry-run；公開頁驗證成功後，建立 `articles/day-NNN/publication.json`，只 stage 這一個檔案，以 `chore(article): record Day NNN publication ID` commit，隨即執行 `git push`。dry-run 與 draft sync 都不會建立收據或 push。
+
 ## 冪等與安全條件
 
 - 以 `Asia/Taipei` 計算當日與 Day N。
@@ -208,9 +214,41 @@ task publish
 - 每張圖片以 SHA-256 判斷是否改變；未改變時沿用 runtime state 的 hosted URL。
 - 儲存後讀回標題與 Markdown；不一致就不發布。
 - 發布後重新讀公開系列頁；必須找到今天、同標題文章才算成功。
+- 從已驗證的公開 URL 解析文章 ID，建立不可變 `publication.json`，並立即 commit、push。
 - 每天可排程兩次；第二次靠公開頁冪等檢查避免重複發文。
 
 內容使用 canonical SHA-256：`sourceHash` 包含 frontmatter、Markdown 與本機圖片雜湊，`renderedHash` 代表替換 hosted image URL 後送入 editor 的內容。公開文章發布後若本機檔案有變更，`PUBLISHED_UPDATE_POLICY=report` 只會警告，不會自動改寫線上文章。
+
+發布收據範例：
+
+```json
+{
+  "version": 1,
+  "dayNumber": 1,
+  "articleId": "10406763",
+  "articleUrl": "https://ithelp.ithome.com.tw/articles/10406763",
+  "seriesUrl": "https://ithelp.ithome.com.tw/users/20107519/ironman/9242",
+  "ironmanYear": 2026,
+  "seriesTitle": "From (Unity) Game Dev to Orchestration of (Unity) Game Dev",
+  "category": "Vibe Coding",
+  "title": "Day 001：...",
+  "publishedAt": "2026-09-01T02:17:00.000Z",
+  "sourceHash": "...",
+  "renderedHash": "..."
+}
+```
+
+如果文章已公開，但 receipt 的 commit 或 push 失敗，**不要再次執行發布來補救**。先確認公開文章與本機 Day／標題相符，清理其他 Git 變更，再使用不會開瀏覽器、也不會重新發布的復原命令：
+
+```bash
+# runtime state 已保存 articleUrl
+task publication:sync DAY=1
+
+# runtime state 遺失時，人工提供已核對的 canonical URL
+task publication:sync DAY=1 ARTICLE_URL=https://ithelp.ithome.com.tw/articles/10406763
+```
+
+這個命令會驗證 URL origin 與 `/articles/<ID>` 格式、建立或讀取既有 receipt，只 commit 該 receipt，然後 push。若 receipt 已 commit 但先前只有 push 失敗，它會直接重試 push。
 
 ## Diagnostics 與 exit codes
 
@@ -237,6 +275,7 @@ npx playwright show-trace ../../infra/diagnostics/<timestamp>/trace.zip
 | 7 | 頁面結構或瀏覽器工作流無法辨識 |
 | 8 | 草稿／公開頁驗證失敗；先人工檢查，勿盲目重跑 |
 | 9 | 未預期錯誤 |
+| 10 | 文章可能已公開，但 publication receipt 的建立、commit 或 push 失敗；勿重發，使用 `publication:sync` |
 
 ## launchd：每天 10:17 與 20:47
 

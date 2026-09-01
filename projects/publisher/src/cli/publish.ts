@@ -2,6 +2,8 @@ import { loadProjectEnvironment } from '../config/environment.js';
 import { loadConfig } from '../config/schema.js';
 import { errorDetails, ExitCode, exitCodeFor, AppError } from '../infra/errors.js';
 import { createLogger } from '../infra/logger.js';
+import { assertGitReadyForPublication } from '../publication/git-publication.js';
+import { recordAndSyncPublication } from '../publication/sync-publication.js';
 import { PlaywrightPublisherSite } from '../site/playwright-publisher-site.js';
 import { acquireProcessLock, PublisherStateRepository } from '../state/publisher-state.js';
 import { runPublishWorkflow } from '../workflow/publish-workflow.js';
@@ -42,6 +44,15 @@ async function main(): Promise<void> {
     releaseLock = await acquireProcessLock(config.lockPath, config.lockStaleMs);
     const stateRepository = new PublisherStateRepository(config.statePath, config.profileUrl);
     const runtimeState = await stateRepository.load();
+    if (!dryRun) {
+      if (!config.seriesTitle || !config.seriesCategory) {
+        throw new AppError(
+          'IRONMAN_SERIES_TITLE and IRONMAN_CATEGORY are required for a publication receipt',
+          ExitCode.InvalidConfiguration,
+        );
+      }
+      await assertGitReadyForPublication(config.repositoryRoot);
+    }
     site = await PlaywrightPublisherSite.create(config, logger, runtimeState);
     const result = await runPublishWorkflow(
       {
@@ -56,6 +67,27 @@ async function main(): Promise<void> {
       },
       { site, logger, runtimeState, persistRuntimeState: (state) => stateRepository.save(state) },
     );
+    if (!dryRun && (result.status === 'published' || result.status === 'already-published')) {
+      try {
+        const publicationSync = await recordAndSyncPublication(
+          config,
+          runtimeState,
+          result.dayNumber,
+          result.articleUrl,
+        );
+        logger.info({ publicationSync }, 'Publication ID recorded, committed, and pushed');
+      } catch (error: unknown) {
+        throw new AppError(
+          'The article is public, but its publication receipt could not be committed and pushed',
+          ExitCode.GitSynchronizationFailed,
+          {
+            articleUrl: result.articleUrl,
+            articleMayAlreadyBePublic: true,
+            synchronizationError: errorDetails(error),
+          },
+        );
+      }
+    }
     logger.info({ result }, 'Publish command completed');
   } catch (error: unknown) {
     failed = true;

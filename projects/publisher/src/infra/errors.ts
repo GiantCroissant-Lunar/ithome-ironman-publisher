@@ -8,6 +8,7 @@ export enum ExitCode {
   BrowserWorkflowFailed = 7,
   VerificationFailed = 8,
   UnexpectedFailure = 9,
+  GitSynchronizationFailed = 10,
 }
 
 export class AppError extends Error {

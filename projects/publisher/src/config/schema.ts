@@ -17,6 +17,7 @@ const rawConfigSchema = z.object({
   ITHOME_DRAFTS_URL: optionalUrl,
   ITHOME_NEW_ARTICLE_URL: optionalUrl,
   ARTICLES_DIR: z.string().trim().min(1).default('../../articles'),
+  REPOSITORY_ROOT: z.string().trim().min(1).default('../..'),
   IRONMAN_START_DATE: z.string().regex(/^\d{4}-\d{2}-\d{2}$/u),
   IRONMAN_MAX_DAY: z.coerce.number().int().min(1).max(100).default(30),
   TIME_ZONE: z.literal('Asia/Taipei').default('Asia/Taipei'),
@@ -49,6 +50,7 @@ export interface AppConfig {
   draftsUrl?: string;
   newArticleUrl?: string;
   articlesDir: string;
+  repositoryRoot: string;
   startDate: string;
   maximumDay: number;
   timeZone: 'Asia/Taipei';
@@ -93,6 +95,7 @@ export function loadConfig(
     ...(value.ITHOME_DRAFTS_URL ? { draftsUrl: value.ITHOME_DRAFTS_URL } : {}),
     ...(value.ITHOME_NEW_ARTICLE_URL ? { newArticleUrl: value.ITHOME_NEW_ARTICLE_URL } : {}),
     articlesDir: resolve(workingDirectory, value.ARTICLES_DIR),
+    repositoryRoot: resolve(workingDirectory, value.REPOSITORY_ROOT),
     startDate: value.IRONMAN_START_DATE,
     maximumDay: value.IRONMAN_MAX_DAY,
     timeZone: value.TIME_ZONE,

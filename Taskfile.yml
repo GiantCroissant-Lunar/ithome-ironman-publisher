@@ -73,6 +73,14 @@ tasks:
     cmds:
       - npm run publish -- --publish
 
+  publication:sync:
+    desc: Record and push an already-published article ID without republishing
+    requires:
+      vars: [DAY]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run publication:sync -- --day {{.DAY}} {{if .ARTICLE_URL}}--article-url {{.ARTICLE_URL}}{{end}}
+
   lint:
     desc: Run ESLint
     dir: '{{.APP_DIR}}'

@@ -39,6 +39,7 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       seriesTitle: 'Test Ironman Series',
       seriesCategory: 'Vibe Coding',
       articlesDir: resolve(process.cwd(), '../../articles'),
+      repositoryRoot: resolve(process.cwd(), '../..'),
       startDate: '2026-09-01',
       maximumDay: 30,
       timeZone: 'Asia/Taipei',
