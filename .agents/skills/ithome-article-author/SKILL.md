@@ -9,14 +9,14 @@ Work from the repository root. Treat `articles/day-NNN/index.md` and its colocat
 
 ## Boundary
 
-- Put editorial judgment, ADE-series continuity, title/tag choices, and review decisions in this skill-driven workflow.
+- Put editorial judgment, Unity-orchestration series continuity, title/tag choices, and review decisions in this skill-driven workflow.
 - Leave parsing, path safety, timestamp validation, image hashing, and canonical `sourceHash` calculation to the TypeScript implementation. Do not reproduce those mechanics in ad-hoc shell commands or skill scripts.
 - Do not open, create, update, or publish an iT draft. Route those requests to `ithome-draft-sync` or `ithome-publish`.
 
 ## Workflow
 
 1. Read `README.md`, `articles/README.md`, and the target `articles/day-NNN/index.md` when it exists.
-2. Preserve the series premise: the 30-day subject is Agent Development Editor/Environment (ADE). Publishing automation is the Day 001 application, not the entire series.
+2. Preserve the series premise: the 30-day subject is moving from direct Unity Game Dev toward orchestration of Unity Game Dev, in the `Vibe Coding` category. Publishing automation is the Day 001 application, not the entire series.
 3. Require strict frontmatter with `title`, RFC 3339 `timestamp` including an explicit offset, and one or more `tags`.
 4. Keep local images inside the same `day-NNN` directory and reference them with relative Markdown paths. Never use `../`.
 5. Run `task content:check`. Report the resulting `sourceHash` and any validation errors.

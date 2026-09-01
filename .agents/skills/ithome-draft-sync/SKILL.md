@@ -11,7 +11,7 @@ The maintained TypeScript workflow owns all site mutations. Do not reproduce edi
 
 - The target article passes `task content:check`.
 - `task draft:preview DAY=N` succeeds.
-- The live registered series title exactly matches `IRONMAN_SERIES_TITLE` and the user's requested destination.
+- The live registered series title and category exactly match `IRONMAN_SERIES_TITLE`, `IRONMAN_CATEGORY`, and the user's requested destination.
 - Authentication is valid. Use `ithome-auth-session` when it is not.
 - Creating or updating a draft is within the user's request. A request to inspect or test selectors alone is not authorization to write.
 

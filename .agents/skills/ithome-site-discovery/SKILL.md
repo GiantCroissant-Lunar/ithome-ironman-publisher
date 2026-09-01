@@ -18,7 +18,7 @@ Prefer evidence from the visible browser UI and rendered DOM. Do not reverse-eng
 1. Run `task draft:preview DAY=N`. This must not alter site data.
 2. Validate the authenticated user against `ITHOME_PROFILE_URL` and `ITHOME_USER_IDENTIFIER`.
 3. Discover the user article listing and `/YEARironman/create/<id>` editor link through semantic links or href patterns. Cache verified dynamic URLs in ignored runtime state; do not add fake required URLs to `.env`.
-4. Compare the live registered series title with `IRONMAN_SERIES_TITLE`. A mismatch is a hard stop before any write.
+4. Compare the live registered series title and category with `IRONMAN_SERIES_TITLE` and `IRONMAN_CATEGORY`. A mismatch is a hard stop before any write.
 5. On selector failure, inspect the latest ignored screenshot, HTML, JSON, and trace. Add conservative candidates to `projects/publisher/src/site/locators.ts`, preferring role, accessible name, stable text, and testable attributes.
 6. Extend `projects/publisher/test/playwright-e2e.test.ts` for each maintained page-shape assumption, then run `task check` and repeat the dry-run.
 

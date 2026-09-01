@@ -37,6 +37,7 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       userIdentifier: 'test-user',
       ironmanYear: 2026,
       seriesTitle: 'Test Ironman Series',
+      seriesCategory: 'Vibe Coding',
       articlesDir: resolve(process.cwd(), '../../articles'),
       startDate: '2026-09-01',
       maximumDay: 30,
@@ -85,13 +86,14 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       expect(result).toMatchObject({
         status: 'published',
         dayNumber: 1,
-        expectedTitle: 'Day 001：先讓 Agent 自己發文——ADE 的第一個自動化應用',
+        expectedTitle: 'Day 001：從 Unity Game Dev 到 Orchestration——先讓 Agent 接手發文流程',
         draftAction: 'created',
       });
       expect(state.saved).toBe(true);
       expect(state.published).toBe(true);
       expect(state.markdown).toContain(`${baseUrl}/uploaded/ref-image-001.png`);
       expect(state.markdown).not.toContain('./ref-image-001.png');
+      expect(site.getDiscoveredState().newArticleUrl).toBe(`${baseUrl}/2026ironman/create/9242`);
     } finally {
       await site.close(false);
       await new Promise<void>((resolveClose, rejectClose) => {
@@ -117,7 +119,9 @@ async function handleRequest(
   if (request.method === 'GET' && requestUrl.pathname === '/') {
     sendHtml(
       response,
-      pageShell('<nav><a href="/drafts">草稿</a><a href="/new">新增文章</a></nav><main>首頁</main>'),
+      pageShell(
+        '<nav><a href="/drafts">草稿</a><a href="/articles/decoy">How to write agents</a><a href="/2026ironman/create/9242">Test Ironman Series</a></nav><main>首頁</main>',
+      ),
     );
     return;
   }
@@ -162,7 +166,7 @@ async function handleRequest(
     return;
   }
 
-  if (request.method === 'GET' && requestUrl.pathname === '/new') {
+  if (request.method === 'GET' && requestUrl.pathname === '/2026ironman/create/9242') {
     sendHtml(response, editorPage('', '', false, request.headers.host ?? 'fixture.test'));
     return;
   }
@@ -193,7 +197,7 @@ async function handleRequest(
 }
 
 function pageShell(content: string): string {
-  return `<!doctype html><html><body><header>test-user · Test Ironman Series</header>${content}</body></html>`;
+  return `<!doctype html><html><body><header>test-user · Test Ironman Series · Vibe Coding</header>${content}</body></html>`;
 }
 
 function editorPage(title: string, markdown: string, saved: boolean, host: string): string {

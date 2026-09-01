@@ -43,8 +43,8 @@ export function draftsLinkCandidates(page: Page): Locator[] {
 
 export function newArticleLinkCandidates(page: Page): Locator[] {
   return [
-    page.getByRole('link', { name: /鐵人發文|發表文章|寫文章|新增文章|new article|write/iu }),
-    page.locator('a[href*="/ironman/create/" i]'),
+    page.locator('a[href*="ironman/create/" i]'),
+    page.getByRole('link', { name: /鐵人發文|發表文章|寫文章|新增文章|new article/iu }),
     page.locator('a[href*="article" i][href*="new" i], a[href*="create" i]'),
   ];
 }

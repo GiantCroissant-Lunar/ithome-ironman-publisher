@@ -12,6 +12,7 @@ const rawConfigSchema = z.object({
   ITHOME_USER_IDENTIFIER: z.string().trim().min(1),
   IRONMAN_YEAR: z.coerce.number().int().min(2008).max(2100).default(2026),
   IRONMAN_SERIES_TITLE: optionalText,
+  IRONMAN_CATEGORY: optionalText,
   ITHOME_SERIES_URL: optionalUrl,
   ITHOME_DRAFTS_URL: optionalUrl,
   ITHOME_NEW_ARTICLE_URL: optionalUrl,
@@ -43,6 +44,7 @@ export interface AppConfig {
   userIdentifier: string;
   ironmanYear: number;
   seriesTitle?: string;
+  seriesCategory?: string;
   seriesUrl?: string;
   draftsUrl?: string;
   newArticleUrl?: string;
@@ -86,6 +88,7 @@ export function loadConfig(
     userIdentifier: value.ITHOME_USER_IDENTIFIER,
     ironmanYear: value.IRONMAN_YEAR,
     ...(value.IRONMAN_SERIES_TITLE ? { seriesTitle: value.IRONMAN_SERIES_TITLE } : {}),
+    ...(value.IRONMAN_CATEGORY ? { seriesCategory: value.IRONMAN_CATEGORY } : {}),
     ...(value.ITHOME_SERIES_URL ? { seriesUrl: value.ITHOME_SERIES_URL } : {}),
     ...(value.ITHOME_DRAFTS_URL ? { draftsUrl: value.ITHOME_DRAFTS_URL } : {}),
     ...(value.ITHOME_NEW_ARTICLE_URL ? { newArticleUrl: value.ITHOME_NEW_ARTICLE_URL } : {}),

@@ -18,7 +18,7 @@ Public posting is an external communication. Do not infer permission from reques
 ## Workflow
 
 1. Run `task publish:dry` with `PUBLISH_DRY_RUN=true` and review the exact title, Day N, and destination evidence.
-2. Keep the registered-series mismatch check as a hard stop. Never publish an ADE article into a differently named series merely because its editor URL is the only available link.
+2. Keep the registered-series title and category mismatch checks as hard stops. Never publish an article into a differently named series merely because its editor URL is the only available link.
 3. For the authorized live run, set the ignored local safety lock `PUBLISH_DRY_RUN=false` and run `task publish`. Both the environment lock and `--publish` entrypoint must be present.
 4. Let the TypeScript workflow recheck the public listing before mutation, synchronize and verify the draft, publish once, and poll the public listing for the exact title and today's Taipei date.
 5. Restore `PUBLISH_DRY_RUN=true` after an attended validation run unless the user is deliberately enabling the scheduler.

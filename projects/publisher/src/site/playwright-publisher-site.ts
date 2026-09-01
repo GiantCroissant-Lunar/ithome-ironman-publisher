@@ -164,6 +164,7 @@ export class PlaywrightPublisherSite implements PublisherSite {
     await this.navigate(existingDraft?.url ?? (await this.requireAuthenticatedUrl('newArticle')));
     await this.assertExpectedIdentity('article editor', this.config.userIdentifier);
     if (this.config.seriesTitle) await this.assertExpectedIdentity('article editor', this.config.seriesTitle);
+    if (this.config.seriesCategory) await this.assertExpectedIdentity('article editor', this.config.seriesCategory);
 
     const titleInput = await firstVisible(articleTitleInputCandidates(this.page));
     const editor = await firstVisible(markdownEditorCandidates(this.page));
@@ -241,6 +242,7 @@ export class PlaywrightPublisherSite implements PublisherSite {
     await this.navigate(draft.url);
     await this.assertExpectedIdentity('draft editor', this.config.userIdentifier);
     if (this.config.seriesTitle) await this.assertExpectedIdentity('draft editor', this.config.seriesTitle);
+    if (this.config.seriesCategory) await this.assertExpectedIdentity('draft editor', this.config.seriesCategory);
     const titleInput = await firstVisible(articleTitleInputCandidates(this.page));
     const editorTitle = titleInput ? await this.readEditableValue(titleInput) : '';
     const exactTitle = await this.page.getByText(draft.title, { exact: true }).first().isVisible().catch(() => false);

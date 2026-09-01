@@ -1,6 +1,6 @@
 # ithome-ironman-publisher
 
-「30 天打造 Agent Development Editor/Environment（ADE）」系列的 content-to-publish 工具。Day 001 以 AI Agent 自動發文作為第一個垂直應用；發文自動化是系列基礎設施與案例，不是全部 30 天的主題。工具以 TypeScript + Playwright 實作，不逆向、也不依賴未公開的 HTTP publish endpoint。
+「From (Unity) Game Dev to Orchestration of (Unity) Game Dev」系列的 content-to-publish 工具，參賽分類為 `Vibe Coding`。Day 001 以 AI Agent 自動發文作為第一個 orchestration 垂直應用；發文自動化是系列基礎設施與案例，不是全部 30 天的主題。工具以 TypeScript + Playwright 實作，不逆向、也不依賴未公開的 HTTP publish endpoint。
 
 目前語意 selector 已通過本機 Chromium E2E fixture，但**尚未在你的 2026 iT 邦 editor 完成校正**。正式使用前必須先執行 live draft sync，確認真實頁面 locator。
 
@@ -88,7 +88,8 @@ pre-commit install --install-hooks
 ITHOME_PROFILE_URL=https://ithelp.ithome.com.tw/users/20107519
 ITHOME_USER_IDENTIFIER=ApprenticeGC
 IRONMAN_YEAR=2026
-IRONMAN_SERIES_TITLE=30 天打造 Agent Development Editor/Environment（ADE）
+IRONMAN_SERIES_TITLE=From (Unity) Game Dev to Orchestration of (Unity) Game Dev
+IRONMAN_CATEGORY=Vibe Coding
 ```
 
 公開個人頁 ID 是 `20107519`，顯示名稱／handle 為 `ApprenticeGC (apprenticegc)`。預設使用畫面上可見的 `ApprenticeGC` 作登入 identity；若實際 editor 導覽列顯示不同字串，再更新此欄位。
@@ -134,12 +135,12 @@ articles/
 
 ```markdown
 ---
-title: Day 001：先讓 Agent 自己發文——ADE 的第一個自動化應用
+title: Day 001：從 Unity Game Dev 到 Orchestration——先讓 Agent 接手發文流程
 timestamp: "2026-09-01T10:17:00+08:00"
 tags:
+  - Unity
   - AI Agent
-  - Playwright
-  - TypeScript
+  - Vibe Coding
 ---
 
 # 正文

@@ -54,6 +54,11 @@ async function main(): Promise<void> {
       });
     }
     const existingDraft = matchingDrafts[0];
+    const discovered = site.getDiscoveredState();
+    if (discovered.seriesUrl) runtimeState.seriesUrl = discovered.seriesUrl;
+    if (discovered.draftsUrl) runtimeState.draftsUrl = discovered.draftsUrl;
+    if (discovered.newArticleUrl) runtimeState.newArticleUrl = discovered.newArticleUrl;
+    await stateRepository.save(runtimeState);
 
     if (!cli.write) {
       logger.info(
@@ -70,10 +75,6 @@ async function main(): Promise<void> {
     }
 
     const result = await site.syncDraft(article, existingDraft, previousState);
-    const discovered = site.getDiscoveredState();
-    if (discovered.seriesUrl) runtimeState.seriesUrl = discovered.seriesUrl;
-    if (discovered.draftsUrl) runtimeState.draftsUrl = discovered.draftsUrl;
-    if (discovered.newArticleUrl) runtimeState.newArticleUrl = discovered.newArticleUrl;
     runtimeState.articles[dayKey] = {
       ...previousState,
       draftUrl: result.draft.url,

@@ -20,7 +20,7 @@ const localArticle: LocalArticle = {
   dayNumber: 1,
   directoryPath: 'C:\\articles\\day-001',
   sourcePath: 'C:\\articles\\day-001\\index.md',
-  title: 'Day 001：先讓 Agent 自己發文——ADE 的第一個自動化應用',
+  title: 'Day 001：從 Unity Game Dev 到 Orchestration——先讓 Agent 接手發文流程',
   timestamp: '2026-09-01T10:17:00+08:00',
   scheduledAt: new Date('2026-09-01T02:17:00.000Z'),
   tags: ['Playwright', 'TypeScript'],
