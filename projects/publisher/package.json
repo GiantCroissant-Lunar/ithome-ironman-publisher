@@ -9,6 +9,11 @@
   },
   "scripts": {
     "auth": "tsx src/cli/auth-bootstrap.ts",
+    "leonardo:auth": "tsx src/cli/leonardo-auth.ts",
+    "leonardo:probe": "tsx src/cli/leonardo-probe.ts",
+    "leonardo:generate": "tsx src/cli/leonardo-generate.ts",
+    "leonardo:promote": "tsx src/cli/leonardo-promote.ts",
+    "mcp:leonardo": "playwright-mcp --browser msedge --isolated --storage-state ../../infra/.auth/leonardo-storage-state.json --output-dir ../../infra/generated/mcp --save-session --timeout-action 15000 --timeout-navigation 60000",
     "content:check": "tsx src/cli/content-check.ts",
     "images:check": "tsx src/cli/generated-images-check.ts",
     "skills:check": "tsx src/cli/skills-check.ts",
@@ -31,6 +36,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/mcp": "0.0.80",
     "@types/node": "^24.3.0",
     "eslint": "^10.9.1",
     "tsx": "^4.20.5",

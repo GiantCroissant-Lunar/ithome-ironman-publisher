@@ -41,6 +41,42 @@ tasks:
     cmds:
       - npm run images:check -- --day {{.DAY}}
 
+  leonardo:auth:
+    desc: Sign in to Leonardo in a dedicated visible Edge profile
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run leonardo:auth
+
+  leonardo:probe:
+    desc: Capture a read-only Leonardo UI diagnostic without generating
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run leonardo:probe
+
+  leonardo:preview:
+    desc: Validate and preview one Leonardo generation request without opening a browser
+    requires:
+      vars: [REQUEST]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run leonardo:generate -- "{{.REQUEST}}"
+
+  leonardo:generate:
+    desc: Submit one Leonardo Web generation and download review candidates
+    requires:
+      vars: [REQUEST]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run leonardo:generate -- "{{.REQUEST}}" --generate
+
+  leonardo:promote:
+    desc: Copy one reviewed Leonardo candidate into an article and verify provenance
+    requires:
+      vars: [RUN]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run leonardo:promote -- "{{.RUN}}" --candidate {{default "1" .CANDIDATE}} {{if .NAME}}--name "{{.NAME}}"{{end}}
+
   skills:check:
     desc: Validate repository-local Agent Skills and UI metadata
     dir: '{{.APP_DIR}}'

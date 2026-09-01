@@ -161,14 +161,43 @@ tags:
 
 ## Leonardo.Ai 生圖流程
 
-Leonardo 的網站訂閱與 API 是兩套額度。即使已訂閱 Solo，仍需先在 Leonardo 的 API Access 購買 API credits 並建立 API key，才可使用 MCP。專案已在 `.codex/config.toml` 設定官方 streamable HTTP endpoint，只開放 `generate-image`，並從啟動 Codex 時的 `LEONARDO_API_KEY` 環境變數取得 `API-Key` header；repository 不保存密鑰。相關要求可參考 [Leonardo MCP guide](https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp) 與 [Leonardo API Quick Start](https://docs.leonardo.ai/docs/getting-started)。
+Leonardo 的網站訂閱 token 與 API credits 是兩套額度。本專案不購買或使用 API credits，也不需要 API key；它只透過可見的 Microsoft Edge 操作 Leonardo Web，使用 Solo 方案原本的網站 token。流程不呼叫 undocumented HTTP／GraphQL endpoint、不讀取日常 Edge profile，也不使用 stealth 或 CAPTCHA 繞過。
 
-Windows 首次設定：
+`.codex/config.toml` 中的 `playwright-leonardo` 是 Microsoft Playwright MCP，僅用於 Agent 做只讀 UI 探勘與 selector 修復。真正可重複的生成、下載、診斷與 provenance 由本 repository 的 TypeScript CLI 負責。Leonardo 官方 MCP 需要 API credits，因此不是本方案的 runtime dependency。
 
-1. 在 Leonardo API Access 購買 API credits 並建立 key。不要把 key 貼到文章、chat、`infra/.env` 或任何 Git 檔案。
-2. 使用 Windows「編輯帳戶的環境變數」介面建立使用者環境變數 `LEONARDO_API_KEY`。若使用其他 secrets launcher，也要確保它在啟動 Codex 前把同名環境變數注入 process。
-3. 完全重新啟動 Codex，從這個受信任的 repository 開啟新 task。專案層 `.codex/config.toml` 與環境變數只會由新 process／session 載入；可用 `/mcp` 或 `codex mcp list` 確認 `leonardo-ai`。Codex 專案層 MCP 與 `env_http_headers` 的行為見 [Codex MCP documentation](https://developers.openai.com/codex/mcp)。
-4. 要為指定文章產圖時，明確呼叫 `$ithome-article-illustrator`。實際 generation 是付費外部動作，因此 Skill 不會因為「規劃流程」或「討論 prompt」就自動花費 credits。
+Windows 首次登入：
+
+```bash
+task leonardo:auth
+```
+
+它會開啟獨立的 Edge profile。請自行完成 Facebook／其他第三方登入、二階段驗證或條款確認；程式不讀取或填寫帳密與驗證碼。登入完成並回到 `app.leonardo.ai` 後，session 會保存為 Git 忽略的 `infra/.auth/leonardo-storage-state.json`，日後不需每次登入。session 過期時重新執行同一命令即可。不要 commit、分享或上傳 `infra/.auth/`。
+
+每張圖先建立一份可追蹤的 request JSON；Day 001 範例是：
+
+```text
+articles/day-001/images/prompts/agent-publishing-loop.json
+```
+
+零成本預覽只驗證 request、文章 Day 與設定，不開瀏覽器：
+
+```bash
+task leonardo:preview REQUEST=articles/day-001/images/prompts/agent-publishing-loop.json
+```
+
+明確要求真正生成時才執行：
+
+```bash
+task leonardo:generate REQUEST=articles/day-001/images/prompts/agent-publishing-loop.json
+```
+
+這個命令只按一次正常網頁的 Generate，可能消耗 Leonardo Web tokens。完成後會透過頁面上的 Download 控制下載最多 `maxCandidates` 張，並將 request、前後截圖、候選圖、尺寸、generation ID、來源頁與 SHA-256 寫到：
+
+```text
+infra/generated/day-NNN/<run-id>/
+```
+
+如果 UI 改版或 generation 逾時，失敗的 screenshot、HTML 與 trace 會放在 `infra/diagnostics/leonardo/`。可以先執行 `task leonardo:probe` 做不消耗 token 的 selector 診斷。
 
 工作流刻意分成兩階段：
 
@@ -187,7 +216,13 @@ index.md → Agent 設計 prompt → Leonardo 候選圖
                           draft sync / publish
 ```
 
-未採用候選圖留在 `infra/generated/day-NNN/<run-id>/`，不進 Git。只有人工選定的圖才會下載到 `articles/day-NNN/images/generated/`、寫入 Markdown，並在同目錄 `manifest.json` 記錄 model、完整 prompt、尺寸、時間、可選 generation ID、alt text 與 SHA-256。只有不含簽章 query／credential 的穩定 URL 才可選擇性保留；一般遠端結果 URL 可能失效，不能作為文章 source of truth。
+未採用候選圖留在 `infra/generated/`，不進 Git。選定候選圖後，先把建議的 Markdown reference 加入 `index.md`，再執行 promotion；例如：
+
+```bash
+task leonardo:promote RUN=C:/absolute/path/to/run.json CANDIDATE=1 NAME=agent-publishing-loop.jpg
+```
+
+`NAME` 的副檔名必須和候選檔一致。promotion 會拒絕覆寫不同檔案，驗證 run record 的 SHA-256，複製候選圖到 `articles/day-NNN/images/generated/`，建立或更新 `manifest.json`，最後重新驗證 Markdown reference 與 provenance。manifest 記錄 model、完整 prompt、尺寸、時間、可選 generation ID、alt text 與 SHA-256。只有不含簽章 query／credential 的穩定 URL 才會保留；遠端結果 URL 不能作為文章 source of truth。
 
 ```bash
 task images:check DAY=2

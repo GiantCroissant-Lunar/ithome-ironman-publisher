@@ -5,7 +5,5 @@ interface:
 dependencies:
   tools:
     - type: "mcp"
-      value: "leonardo-ai"
-      description: "Leonardo.Ai image generation"
-      transport: "streamable_http"
-      url: "https://mcp.leonardo.ai/v1/mcp"
+      value: "playwright-leonardo"
+      description: "Read-only Leonardo UI exploration and selector repair"
