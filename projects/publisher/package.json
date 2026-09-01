@@ -10,6 +10,7 @@
   "scripts": {
     "auth": "tsx src/cli/auth-bootstrap.ts",
     "content:check": "tsx src/cli/content-check.ts",
+    "skills:check": "tsx src/cli/skills-check.ts",
     "draft:sync": "tsx src/cli/draft-sync.ts",
     "publish": "tsx src/cli/publish.ts",
     "build": "tsc -p tsconfig.build.json",

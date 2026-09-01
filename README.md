@@ -8,6 +8,7 @@
 
 ```text
 ithome-ironman-publisher/
+├─ .agents/skills/             # Repo-local Agent routing and safety workflows
 ├─ .github/                    # Repository workflows
 ├─ .pre-commit-config.yaml     # Standard pre-commit configuration
 ├─ articles/                   # day-NNN Markdown modules and images
@@ -29,6 +30,33 @@ ithome-ironman-publisher/
 ```
 
 所有日常操作都從 repository root 使用 `task`，不需要手動切換到 Node project 目錄。
+
+## Agent Skills 與 scripts 的責任邊界
+
+Repo-local skills 位於 `.agents/skills/`。它們負責告訴 Agent **何時做、需要哪些證據、何時必須停止、哪種網站變更已獲授權**；不保存重複的 Playwright 實作。
+
+| 放在 Agent Skill | 放在 TypeScript CLI／Task |
+|---|---|
+| 工作流路由、系列語境與內容判斷 | frontmatter 解析與路徑驗證 |
+| 寫入／發布的授權界線 | SHA-256、runtime state 與 process lock |
+| series identity 衝突的停止條件 | Playwright 導覽、selector 與 editor 操作 |
+| diagnostics 證據的解讀與下一步 | screenshot、HTML、trace 與 structured logging |
+| 是否可從 preview 升級為 mutation | draft save、publish click 與公開頁驗證 |
+
+目前提供：
+
+- `$ithome-article-author`：撰寫與驗證 `day-NNN` 文章。
+- `$ithome-auth-session`：建立或修復 Edge storageState。
+- `$ithome-site-discovery`：只讀探勘動態 URL 與 selector。
+- `$ithome-draft-sync`：精準建立或更新一篇草稿，不發布。
+- `$ithome-publish`：經明確授權後發布並從公開頁驗證。
+- `$ithome-publish-diagnostics`：分析失敗，避免不安全重試。
+
+瀏覽器與資料處理邏輯集中在 `projects/publisher/src/`，由 Taskfile 提供穩定 entrypoint。skills 不建立自己的 `scripts/` 副本，避免 selector、雜湊與安全鎖出現多套真值。Skill 結構驗證已整合進完整 quality gate，也可單獨執行：
+
+```bash
+task skills:check
+```
 
 ## 安裝
 

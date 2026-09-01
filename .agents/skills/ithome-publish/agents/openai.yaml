@@ -1,0 +1,3 @@
+interface:
+  display_name: "iT Publish"
+  short_description: "Publish once and verify the public article"

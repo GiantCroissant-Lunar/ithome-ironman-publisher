@@ -33,6 +33,12 @@ tasks:
     cmds:
       - npm run content:check
 
+  skills:check:
+    desc: Validate repository-local Agent Skills and UI metadata
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run skills:check
+
   auth:
     desc: Bootstrap the Playwright login state with a visible browser
     dir: '{{.APP_DIR}}'
@@ -94,6 +100,7 @@ tasks:
   check:
     desc: Run the complete repository quality gate
     cmds:
+      - task: skills:check
       - task: content:check
       - task: lint
       - task: typecheck

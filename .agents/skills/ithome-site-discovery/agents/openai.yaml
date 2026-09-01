@@ -1,0 +1,3 @@
+interface:
+  display_name: "iT Site Discovery"
+  short_description: "Inspect live pages and calibrate safe selectors"

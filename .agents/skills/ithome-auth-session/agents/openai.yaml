@@ -1,0 +1,3 @@
+interface:
+  display_name: "iT Auth Session"
+  short_description: "Bootstrap or recover the Playwright Edge session"
