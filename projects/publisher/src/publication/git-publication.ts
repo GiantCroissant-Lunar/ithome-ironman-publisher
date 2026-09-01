@@ -104,8 +104,6 @@ export async function syncPublicationReceiptToGit(
         '--no-gpg-sign',
         '-m',
         `chore(article): record Day ${String(dayNumber).padStart(3, '0')} publication ${articleId}`,
-        '--',
-        relativePath,
       ],
       ExitCode.GitSynchronizationFailed,
     );
