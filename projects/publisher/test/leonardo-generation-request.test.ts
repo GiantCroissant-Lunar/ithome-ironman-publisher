@@ -24,6 +24,7 @@ describe('Leonardo generation request', () => {
     const path = await writeRequest({
       version: 1,
       dayNumber: 2,
+      slot: 'hero',
       assetName: 'workflow-hero',
       prompt: 'A detailed editorial illustration of an agent workflow',
       alt: 'Agent workflow illustration',
@@ -41,6 +42,7 @@ describe('Leonardo generation request', () => {
     const path = await writeRequest({
       version: 1,
       dayNumber: 1,
+      slot: 'hero',
       assetName: '../Hero',
       prompt: 'A detailed editorial illustration of an agent workflow',
       alt: 'Agent workflow illustration',
@@ -54,6 +56,7 @@ describe('Leonardo generation request', () => {
     const path = await writeRequest({
       version: 1,
       dayNumber: 1,
+      slot: 'hero',
       assetName: 'hero',
       prompt: 'A detailed editorial illustration of an agent workflow',
       alt: 'Agent workflow illustration',

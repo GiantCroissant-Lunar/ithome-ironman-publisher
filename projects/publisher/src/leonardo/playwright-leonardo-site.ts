@@ -1,4 +1,5 @@
 import { constants } from 'node:fs';
+import { createHash, randomUUID } from 'node:crypto';
 import { access, mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { chromium, type Browser, type BrowserContext, type Download, type Locator, type Page } from 'playwright';
@@ -51,6 +52,18 @@ export interface LeonardoProbe {
     style: boolean;
     model: boolean;
   };
+}
+
+interface PreparedGenerationEvidence {
+  capturedAt: string;
+  pageUrl: string;
+  promptSha256: string;
+  promptLength: number;
+  negativePromptSha256?: string;
+  aspectRatio: string;
+  style: string;
+  model: string;
+  quantity: number;
 }
 
 export class PlaywrightLeonardoSite implements LeonardoGenerator {
@@ -164,9 +177,10 @@ export class PlaywrightLeonardoSite implements LeonardoGenerator {
     await this.setChoice(leonardoModelCandidates(this.page), request.model, 'model');
     await this.setQuantity(request.maxCandidates);
     await this.setNegativePrompt(request.negativePrompt);
+    const prepared = await this.verifyPreparedRequest(request);
 
     const beforeLinks = new Set(await this.generatedImageHrefs());
-    const runId = new Date().toISOString().replaceAll(/[:.]/gu, '-');
+    const runId = `${new Date().toISOString().replaceAll(/[:.]/gu, '-')}-${randomUUID().slice(0, 8)}`;
     const runDirectory = join(
       this.config.outputDirectory,
       `day-${String(request.dayNumber).padStart(3, '0')}`,
@@ -175,6 +189,7 @@ export class PlaywrightLeonardoSite implements LeonardoGenerator {
     await mkdir(runDirectory, { recursive: true });
     await Promise.all([
       writeFile(join(runDirectory, 'request.json'), `${JSON.stringify(request, undefined, 2)}\n`, 'utf8'),
+      writeFile(join(runDirectory, 'prepared.json'), `${JSON.stringify(prepared, undefined, 2)}\n`, 'utf8'),
       this.page.screenshot({ path: join(runDirectory, 'before-generate.png'), fullPage: true }),
     ]);
 
@@ -188,6 +203,7 @@ export class PlaywrightLeonardoSite implements LeonardoGenerator {
     this.logger.info(
       {
         dayNumber: request.dayNumber,
+        slot: request.slot,
         assetName: request.assetName,
         model: request.model,
         style: request.style,
@@ -369,6 +385,57 @@ export class PlaywrightLeonardoSite implements LeonardoGenerator {
     await control.fill(value);
   }
 
+  private async verifyPreparedRequest(request: LeonardoGenerationRequest): Promise<PreparedGenerationEvidence> {
+    const prompt = await firstVisible(leonardoPromptCandidates(this.page));
+    const promptValue = await prompt?.inputValue().catch(() => undefined);
+    const ratio = await firstVisible([
+      this.page.getByRole('radio', { name: new RegExp(`^\\s*${escapeRegularExpression(request.aspectRatio)}\\s*$`, 'iu') }),
+      ...leonardoAspectRatioCandidates(this.page),
+    ]);
+    const ratioSelected = ratio
+      ? (await ratio.getAttribute('aria-checked')) === 'true' || normalizedText(await controlText(ratio)).includes(normalizedText(request.aspectRatio))
+      : false;
+    const style = await firstVisible(leonardoStyleCandidates(this.page));
+    const model = await firstVisible(leonardoModelCandidates(this.page));
+    const quantity = await firstVisible([
+      this.page.locator('button[aria-pressed="true"]').filter({ hasText: new RegExp(`^\\s*${String(request.maxCandidates)}\\s*$`, 'u') }),
+      this.page.locator('[role="option"][aria-selected="true"]').filter({
+        hasText: new RegExp(`^\\s*${String(request.maxCandidates)}\\s*$`, 'u'),
+      }),
+    ]);
+    const styleText = style ? await controlText(style) : '';
+    const modelText = model ? await controlText(model) : '';
+    const negativePrompt = request.negativePrompt ? await firstVisible(leonardoNegativePromptCandidates(this.page)) : undefined;
+    const negativePromptValue = await negativePrompt?.inputValue().catch(() => undefined);
+    const failures = {
+      prompt: promptValue === request.prompt,
+      negativePrompt: !request.negativePrompt || negativePromptValue === request.negativePrompt,
+      aspectRatio: ratioSelected,
+      style: normalizedText(styleText).includes(normalizedText(request.style)),
+      model: normalizedText(modelText).includes(normalizedText(request.model)),
+      quantity: Boolean(quantity),
+    };
+    if (Object.values(failures).some((valid) => !valid)) {
+      throw new AppError('Leonardo controls did not read back the prepared generation request', ExitCode.VerificationFailed, {
+        pageUrl: this.page.url(),
+        controls: failures,
+      });
+    }
+    return {
+      capturedAt: new Date().toISOString(),
+      pageUrl: this.page.url(),
+      promptSha256: createHash('sha256').update(request.prompt).digest('hex'),
+      promptLength: request.prompt.length,
+      ...(request.negativePrompt
+        ? { negativePromptSha256: createHash('sha256').update(request.negativePrompt).digest('hex') }
+        : {}),
+      aspectRatio: request.aspectRatio,
+      style: request.style,
+      model: request.model,
+      quantity: request.maxCandidates,
+    };
+  }
+
   private async generatedImageHrefs(): Promise<string[]> {
     const hrefs = await leonardoGeneratedImageLinks(this.page).evaluateAll((links) =>
       links.map((link) => (link instanceof HTMLAnchorElement ? link.href : '')).filter(Boolean),
@@ -494,4 +561,10 @@ function escapeRegularExpression(value: string): string {
 function extractGenerationId(url: string): string | undefined {
   const match = /([a-f\d]{8}(?:-[a-f\d]{4}){3}-[a-f\d]{12})(?:\/)?(?:[?#].*)?$/iu.exec(url);
   return match?.[1];
+}
+
+async function controlText(locator: Locator): Promise<string> {
+  return [await locator.getAttribute('aria-label'), await locator.inputValue().catch(() => ''), await locator.textContent()]
+    .filter(Boolean)
+    .join(' ');
 }

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "dayNumber": 1,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 為什麼第一天先做自動發文？"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Observe、Act、Verify"
+      }
+    },
+    {
+      "slot": "inline-03",
+      "request": "./prompts/inline-03.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 用 SHA-256 保存內容狀態"
+      }
+    }
+  ]
+}

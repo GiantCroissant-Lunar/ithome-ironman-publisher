@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 1,
+  "slot": "inline-03",
+  "assetName": "content-hash-state",
+  "prompt": "An elegant editorial illustration of content integrity and reusable state in an automated publishing pipeline. Markdown documents and image assets pass through a luminous cryptographic fingerprint scanner; unchanged assets flow safely toward a cached destination while one changed image is routed through a new verification path. Show the idea through objects, branching light paths, matching fingerprint patterns, and color only. Modern dark engineering aesthetic, navy and teal with amber change highlights, clean 16:9 landscape composition. No readable screens, no labels, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "文章與圖片經 SHA-256 指紋辨識後重用未變資產並重新驗證變更內容"
+}

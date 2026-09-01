@@ -3,11 +3,14 @@ import { z } from 'zod';
 import { AppError, ExitCode } from '../infra/errors.js';
 
 const SAFE_ASSET_NAME = /^[a-z\d][a-z\d._-]*$/u;
+export const leonardoImageSlots = ['hero', 'inline-01', 'inline-02', 'inline-03'] as const;
+const imageSlotSchema = z.enum(leonardoImageSlots);
 
 const generationRequestSchema = z
   .object({
     version: z.literal(1),
     dayNumber: z.number().int().min(1).max(999),
+    slot: imageSlotSchema,
     assetName: z.string().trim().regex(SAFE_ASSET_NAME, 'assetName must use lowercase letters, digits, dots, underscores, or hyphens'),
     prompt: z.string().trim().min(10).max(10_000),
     negativePrompt: z.string().trim().min(1).max(5_000).optional(),

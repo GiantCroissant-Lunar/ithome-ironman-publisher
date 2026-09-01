@@ -13,6 +13,7 @@
     "leonardo:probe": "tsx src/cli/leonardo-probe.ts",
     "leonardo:generate": "tsx src/cli/leonardo-generate.ts",
     "leonardo:promote": "tsx src/cli/leonardo-promote.ts",
+    "leonardo:runs:check": "tsx src/cli/leonardo-runs-check.ts",
     "mcp:leonardo": "playwright-mcp --browser msedge --isolated --storage-state ../../infra/.auth/leonardo-storage-state.json --output-dir ../../infra/generated/mcp --save-session --timeout-action 15000 --timeout-navigation 60000",
     "content:check": "tsx src/cli/content-check.ts",
     "images:check": "tsx src/cli/generated-images-check.ts",

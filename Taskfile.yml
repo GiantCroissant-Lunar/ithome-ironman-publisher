@@ -77,6 +77,14 @@ tasks:
     cmds:
       - npm run leonardo:promote -- "{{.RUN}}" --candidate {{default "1" .CANDIDATE}} {{if .NAME}}--name "{{.NAME}}"{{end}}
 
+  leonardo:runs:check:
+    desc: Re-read Leonardo run records and verify every downloaded candidate SHA-256
+    requires:
+      vars: [DAY]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run leonardo:runs:check -- --day {{.DAY}} --minimum-runs {{default "1" .MIN_RUNS}}
+
   skills:check:
     desc: Validate repository-local Agent Skills and UI metadata
     dir: '{{.APP_DIR}}'

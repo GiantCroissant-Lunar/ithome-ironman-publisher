@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 1,
+  "slot": "inline-01",
+  "assetName": "publishing-as-orchestration-case",
+  "prompt": "An editorial software-engineering illustration showing why automated publishing is a compact orchestration case. A human developer observes an AI agent coordinating four clearly visual stages: local content assets, browser interaction, a safety gate, and a verified outcome. Use distinct objects and lighting rather than labels. Subtle Unity editor and game-development props connect this small workflow to a larger development pipeline. Sophisticated dark navy, teal, and amber palette, clean isometric composition, 16:9 landscape. Pure scene illustration, no infographic captions, no UI text, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "自動發文作為小型 Agent orchestration 案例，涵蓋內容、瀏覽器、安全閘門與驗證"
+}

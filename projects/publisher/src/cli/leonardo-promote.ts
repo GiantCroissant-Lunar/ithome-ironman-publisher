@@ -117,6 +117,7 @@ async function main(): Promise<void> {
   const asset = {
     path: markdownReference,
     sha256: candidate.sha256,
+    ...(run.request.slot ? { slot: run.request.slot } : {}),
     ...(candidate.generationId ? { generationId: candidate.generationId } : {}),
     model: run.request.model,
     prompt: run.request.prompt,

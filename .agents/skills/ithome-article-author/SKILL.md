@@ -21,7 +21,8 @@ Work from the repository root. Treat `articles/day-NNN/index.md` and its colocat
 2. Preserve the series premise: the 30-day subject is moving from direct Unity Game Dev toward orchestration of Unity Game Dev, in the `Vibe Coding` category. Publishing automation is the Day 001 application, not the entire series.
 3. Require strict frontmatter with `title`, RFC 3339 `timestamp` including an explicit offset, and one or more `tags`.
 4. Keep local images inside the same `day-NNN` directory and reference them with relative Markdown paths. Never use `../`.
-5. Run `task content:check`. Report the resulting `sourceHash` and any validation errors.
-6. Run the broader `task check` when article changes accompany application changes.
+5. Create `images/visual-plan.json` for every article: one `hero` at the article start plus two or three inline slots attached to existing `##` sections. Route prompt creation, generation, review, and promotion to `ithome-article-illustrator`.
+6. Run `task content:check`. Report the resulting `sourceHash`, planned/selected visual counts, and any validation errors.
+7. Run the broader `task check` when article changes accompany application changes.
 
 Changing a published article locally does not authorize editing the public post. The runtime policy is report-only until the user explicitly requests a public update workflow.

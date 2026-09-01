@@ -173,31 +173,45 @@ task leonardo:auth
 
 它會開啟獨立的 Edge profile。請自行完成 Facebook／其他第三方登入、二階段驗證或條款確認；程式不讀取或填寫帳密與驗證碼。登入完成並回到 `app.leonardo.ai` 後，session 會保存為 Git 忽略的 `infra/.auth/leonardo-storage-state.json`，日後不需每次登入。session 過期時重新執行同一命令即可。不要 commit、分享或上傳 `infra/.auth/`。
 
-每張圖先建立一份可追蹤的 request JSON；Day 001 範例是：
+每篇文章都必須先建立一份可追蹤的 image plan：恰好一張 `hero`，放在文章開頭；另有連續二至三張 `inline-01`～`inline-03`，各自指定要放入的 `##` 章節。每個 slot 都有自己的 request，生成時逐張執行，不會因驗證 image plan 就消耗 token：
 
 ```text
-articles/day-001/images/prompts/agent-publishing-loop.json
+articles/day-001/images/
+├─ visual-plan.json
+└─ prompts/
+   ├─ hero.json
+   ├─ inline-01.json
+   ├─ inline-02.json
+   └─ inline-03.json       # 可選；每篇 inline 總數為 2～3
 ```
 
 零成本預覽只驗證 request、文章 Day 與設定，不開瀏覽器：
 
 ```bash
-task leonardo:preview REQUEST=articles/day-001/images/prompts/agent-publishing-loop.json
+task leonardo:preview REQUEST=articles/day-001/images/prompts/hero.json
 ```
 
 明確要求真正生成時才執行：
 
 ```bash
-task leonardo:generate REQUEST=articles/day-001/images/prompts/agent-publishing-loop.json
+task leonardo:generate REQUEST=articles/day-001/images/prompts/hero.json
 ```
 
-這個命令只按一次正常網頁的 Generate，可能消耗 Leonardo Web tokens。完成後會透過頁面上的 Download 控制下載最多 `maxCandidates` 張，並將 request、前後截圖、候選圖、尺寸、generation ID、來源頁與 SHA-256 寫到：
+這個命令會先把 prompt、比例、style、model 與生成數量從 UI 讀回驗證，再只按一次正常網頁的 Generate，可能消耗 Leonardo Web tokens。完成後會透過頁面上的 Download 控制下載 `maxCandidates` 張，並將 request、prepared evidence、前後截圖、候選圖、尺寸、generation ID、來源頁與 SHA-256 寫到：
 
 ```text
 infra/generated/day-NNN/<run-id>/
 ```
 
 如果 UI 改版或 generation 逾時，失敗的 screenshot、HTML 與 trace 會放在 `infra/diagnostics/leonardo/`。可以先執行 `task leonardo:probe` 做不消耗 token 的 selector 診斷。
+
+要確認多次執行沒有互相覆寫，並重新計算所有下載檔案的 SHA-256：
+
+```bash
+task leonardo:runs:check DAY=1 MIN_RUNS=2
+```
+
+這裡的 repeatable 指工作流與證據可重複，不代表生成像素相同。Auto model 的 Web UI 沒有提供本流程可驗證的固定 seed，因此同一 prompt 每次可得到不同畫面。
 
 工作流刻意分成兩階段：
 
@@ -219,7 +233,7 @@ index.md → Agent 設計 prompt → Leonardo 候選圖
 未採用候選圖留在 `infra/generated/`，不進 Git。選定候選圖後，先把建議的 Markdown reference 加入 `index.md`，再執行 promotion；例如：
 
 ```bash
-task leonardo:promote RUN=C:/absolute/path/to/run.json CANDIDATE=1 NAME=agent-publishing-loop.jpg
+task leonardo:promote RUN=C:/absolute/path/to/run.json CANDIDATE=1 NAME=hero.jpg
 ```
 
 `NAME` 的副檔名必須和候選檔一致。promotion 會拒絕覆寫不同檔案，驗證 run record 的 SHA-256，複製候選圖到 `articles/day-NNN/images/generated/`，建立或更新 `manifest.json`，最後重新驗證 Markdown reference 與 provenance。manifest 記錄 model、完整 prompt、尺寸、時間、可選 generation ID、alt text 與 SHA-256。只有不含簽章 query／credential 的穩定 URL 才會保留；遠端結果 URL 不能作為文章 source of truth。

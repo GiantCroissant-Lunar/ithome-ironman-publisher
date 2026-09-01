@@ -56,6 +56,7 @@ async function main(): Promise<void> {
         {
           requestPath: cli.requestPath,
           dayNumber: request.dayNumber,
+          slot: request.slot,
           title: article.title,
           assetName: request.assetName,
           aspectRatio: request.aspectRatio,

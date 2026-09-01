@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 1,
+  "slot": "inline-02",
+  "assetName": "observe-act-verify-loop",
+  "prompt": "A polished conceptual illustration of an Observe, Act, Verify agent loop without any written words. Three visually distinct stations form a continuous circular path: a sensor-like eye examining article assets, a careful robotic hand operating a browser control behind a safety barrier, and a bright verification beacon confirming the public result. A human approval presence oversees the loop. Dark technical workspace, teal energy path, restrained amber highlights, crisp cinematic isometric art, balanced 16:9 composition. No diagrams with labels, no callouts, no text-bearing screens, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Agent 以觀察、行動與驗證三個階段形成可重複的安全工作迴圈"
+}

@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
-import { extname, join } from 'node:path';
+import { dirname, extname, isAbsolute, relative, resolve } from 'node:path';
 import { z } from 'zod';
 import { AppError, ExitCode } from '../infra/errors.js';
 import type { LeonardoGenerationRequest } from './generation-request.js';
@@ -29,6 +29,7 @@ const runSchema = z
       .object({
         version: z.literal(1),
         dayNumber: z.number().int().min(1).max(999),
+        slot: z.enum(['hero', 'inline-01', 'inline-02', 'inline-03']).optional(),
         assetName: z.string().trim().min(1),
         prompt: z.string().trim().min(1),
         negativePrompt: z.string().trim().min(1).optional(),
@@ -59,7 +60,7 @@ export async function recordCandidate(
   index: number,
   candidate: DownloadedCandidate,
 ): Promise<LeonardoGenerationCandidate> {
-  const filePath = join(directory, candidate.fileName);
+  const filePath = resolve(directory, candidate.fileName);
   const bytes = await readFile(filePath);
   return {
     index,
@@ -93,6 +94,40 @@ export async function loadGenerationRun(path: string): Promise<LeonardoGeneratio
     });
   }
   return parsed.data;
+}
+
+export async function validateGenerationRunArtifacts(path: string): Promise<LeonardoGenerationRun> {
+  const run = await loadGenerationRun(path);
+  const directory = dirname(path);
+  for (const candidate of run.candidates) {
+    const candidatePath = resolve(directory, candidate.fileName);
+    const relativePath = relative(directory, candidatePath);
+    if (!relativePath || relativePath.startsWith('..') || isAbsolute(relativePath)) {
+      throw new AppError('Leonardo run candidate path escapes its run directory', ExitCode.InvalidConfiguration, {
+        runPath: path,
+        candidateFileName: candidate.fileName,
+      });
+    }
+    let bytes: Buffer;
+    try {
+      bytes = await readFile(candidatePath);
+    } catch {
+      throw new AppError('Leonardo run candidate could not be read', ExitCode.VerificationFailed, {
+        runPath: path,
+        candidatePath,
+      });
+    }
+    const sha256 = createHash('sha256').update(bytes).digest('hex');
+    if (sha256 !== candidate.sha256) {
+      throw new AppError('Leonardo run candidate SHA-256 does not match its record', ExitCode.VerificationFailed, {
+        runPath: path,
+        candidatePath,
+        expectedSha256: candidate.sha256,
+        actualSha256: sha256,
+      });
+    }
+  }
+  return run;
 }
 
 export function normalizedDownloadedExtension(fileName: string): string {

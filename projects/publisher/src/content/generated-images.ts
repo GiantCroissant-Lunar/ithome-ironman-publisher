@@ -13,6 +13,7 @@ const generatedAssetSchema = z
   .object({
     path: z.string().regex(GENERATED_PATH, 'path must be a canonical lowercase image path under ./images/generated/'),
     sha256: z.string().regex(SHA256),
+    slot: z.enum(['hero', 'inline-01', 'inline-02', 'inline-03']).optional(),
     generationId: z.string().trim().min(1).optional(),
     model: z.string().trim().min(1),
     prompt: z.string().trim().min(1),

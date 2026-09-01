@@ -7,6 +7,12 @@ day-001/
   index.md
   ref-image-001.png
   images/
+    visual-plan.json
+    prompts/
+      hero.json
+      inline-01.json
+      inline-02.json
+      inline-03.json
     generated/
       hero.png
       manifest.json
@@ -27,6 +33,40 @@ tags:
 
 `timestamp` is the earliest intended publication time and must be RFC 3339 with an explicit offset. Quote it so YAML preserves the original offset.
 
+Every article requires `images/visual-plan.json`. It contains exactly one `hero` at `article-start` followed by two or three contiguous inline slots. Each inline slot names an existing level-two Markdown heading and references the matching canonical prompt filename:
+
+```json
+{
+  "version": 1,
+  "dayNumber": 1,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## First section"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Second section"
+      }
+    }
+  ]
+}
+```
+
+`task content:check` validates the Day, slot order, request filenames, unique asset names, and inline headings. Generation requests are executed one at a time so validating or editing the plan never consumes Leonardo tokens.
+
 Reference local images with a path relative to the same `day-NNN` directory:
 
 ```markdown
@@ -45,6 +85,7 @@ Leonardo-generated candidates remain in the Git-ignored `infra/generated/day-NNN
     {
       "path": "./images/generated/hero.png",
       "sha256": "<64 lowercase hexadecimal characters>",
+      "slot": "hero",
       "generationId": "<optional Leonardo generation ID>",
       "model": "Lucid Origin",
       "prompt": "<exact generation prompt>",

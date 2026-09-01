@@ -6,6 +6,7 @@ import { runGenerationWorkflow } from '../src/leonardo/generation-workflow.js';
 const request: LeonardoGenerationRequest = {
   version: 1,
   dayNumber: 1,
+  slot: 'hero',
   assetName: 'workflow-hero',
   prompt: 'A detailed editorial illustration of an agent workflow',
   aspectRatio: '16:9',

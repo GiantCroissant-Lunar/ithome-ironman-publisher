@@ -2,6 +2,7 @@ import { resolve } from 'node:path';
 import { loadProjectEnvironment } from '../config/environment.js';
 import { loadArticleForDay } from '../content/article.js';
 import { validateGeneratedImages } from '../content/generated-images.js';
+import { loadArticleVisualPlan, validateSelectedVisualPlacement } from '../content/visual-plan.js';
 import { AppError, errorDetails, ExitCode, exitCodeFor } from '../infra/errors.js';
 import { createLogger } from '../infra/logger.js';
 
@@ -25,12 +26,15 @@ async function main(): Promise<void> {
   const articlesDirectory = resolve(process.cwd(), process.env.ARTICLES_DIR ?? '../../articles');
   const article = await loadArticleForDay(articlesDirectory, dayNumber);
   const manifest = await validateGeneratedImages(article);
+  const visualPlan = await loadArticleVisualPlan(article);
+  const visualStatus = validateSelectedVisualPlacement(article, visualPlan, manifest);
   createLogger(process.env.LOG_LEVEL ?? 'info').info(
     {
       dayNumber,
       title: article.title,
       provider: manifest?.provider,
       generatedImages: manifest?.assets.length ?? 0,
+      visualPlan: visualStatus,
     },
     'Selected generated images are valid',
   );
