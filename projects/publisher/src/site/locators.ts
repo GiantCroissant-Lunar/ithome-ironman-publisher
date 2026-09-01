@@ -77,6 +77,8 @@ export function publishActionCandidates(page: Page): Locator[] {
     page.getByRole('menuitem', { name: /^(?:發表|發布)文章$/u }),
     page.getByRole('button', { name: /^publish article$/iu }),
     page.getByRole('menuitem', { name: /^publish article$/iu }),
+    page.locator('button#createSubmitBtn'),
+    page.locator('button.save-group__dropdown-btn--publish'),
   ];
 }
 

@@ -17,7 +17,7 @@ afterEach(async () => {
 
 describe('Playwright adapter end-to-end against a semantic fixture site', () => {
   it('uploads a colocated image, creates a draft, publishes, and verifies the public article', async () => {
-    const state: FixtureState = { saved: false, published: false, title: '', markdown: '' };
+    const state: FixtureState = { saved: false, published: false, title: '', markdown: '', tags: ['18th鐵人賽'] };
     const server = createServer((request, response) => {
       void handleRequest(request, response, state);
     });
@@ -94,6 +94,7 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       expect(state.published).toBe(true);
       expect(state.markdown).toContain(`${baseUrl}/uploaded/ref-image-001.png`);
       expect(state.markdown).not.toContain('./ref-image-001.png');
+      expect(state.tags).toEqual(expect.arrayContaining(['18th鐵人賽', 'Unity', 'AI Agent', 'Vibe Coding']));
       expect(site.getDiscoveredState().newArticleUrl).toBe(`${baseUrl}/2026ironman/create/9242`);
     } finally {
       await site.close(false);
@@ -109,6 +110,7 @@ interface FixtureState {
   published: boolean;
   title: string;
   markdown: string;
+  tags: string[];
 }
 
 async function handleRequest(
@@ -168,7 +170,7 @@ async function handleRequest(
   }
 
   if (request.method === 'GET' && requestUrl.pathname === '/2026ironman/create/9242') {
-    sendHtml(response, editorPage('', '', false, request.headers.host ?? 'fixture.test'));
+    sendHtml(response, editorPage('', '', ['18th鐵人賽'], false, request.headers.host ?? 'fixture.test'));
     return;
   }
 
@@ -176,13 +178,14 @@ async function handleRequest(
     const form = new URLSearchParams(await readBody(request));
     state.title = form.get('subject') ?? form.get('title') ?? '';
     state.markdown = form.get('description') ?? form.get('content') ?? '';
+    state.tags = form.getAll('tags[]');
     state.saved = true;
-    sendHtml(response, editorPage(state.title, state.markdown, true, request.headers.host ?? 'fixture.test'));
+    sendHtml(response, editorPage(state.title, state.markdown, state.tags, true, request.headers.host ?? 'fixture.test'));
     return;
   }
 
   if (request.method === 'GET' && requestUrl.pathname === '/draft/1') {
-    sendHtml(response, editorPage(state.title, state.markdown, true, request.headers.host ?? 'fixture.test'));
+    sendHtml(response, editorPage(state.title, state.markdown, state.tags, true, request.headers.host ?? 'fixture.test'));
     return;
   }
 
@@ -201,7 +204,7 @@ function pageShell(content: string): string {
   return `<!doctype html><html><body><header>test-user · Test Ironman Series · Vibe Coding</header>${content}</body></html>`;
 }
 
-function editorPage(title: string, markdown: string, saved: boolean, host: string): string {
+function editorPage(title: string, markdown: string, tags: string[], saved: boolean, host: string): string {
   const publishControls = saved
     ? `<button type="button" class="save-group__dropdown-toggle">▲</button>
        <form id="publish-form" method="post" action="/publish">
@@ -217,6 +220,9 @@ function editorPage(title: string, markdown: string, saved: boolean, host: strin
         <div class="editor-toolbar"><a title="上傳圖片">upload</a></div>
         <div class="CodeMirror" style="min-height:100px"><pre class="CodeMirror-code">${escapeHtml(markdown)}</pre></div>
         <div class="ir-post-tags">
+          <select name="tags[]" multiple style="display:none">
+            ${tags.map((tag) => `<option value="${escapeAttribute(tag)}" selected>${escapeHtml(tag)}</option>`).join('')}
+          </select>
           <input class="select2-search__field" role="textbox" type="search" onkeydown="if(event.key==='Enter'){event.preventDefault()}">
         </div>
         <button type="submit">儲存草稿</button>

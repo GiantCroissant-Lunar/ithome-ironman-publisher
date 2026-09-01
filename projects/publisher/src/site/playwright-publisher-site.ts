@@ -209,14 +209,7 @@ export class PlaywrightPublisherSite implements PublisherSite {
     const rendered = renderArticleWithAssets(article, assets);
     await this.fillEditableValue(editor, rendered.markdown);
 
-    const tagInput = await firstVisible(tagInputCandidates(this.page));
-    if (!tagInput) {
-      throw new AppError('The tag input could not be found', ExitCode.BrowserWorkflowFailed, { pageUrl: this.page.url() });
-    }
-    for (const tag of article.tags) {
-      await tagInput.fill(tag);
-      await tagInput.press('Enter');
-    }
+    await this.setArticleTags(article.tags);
     const saveDraft = await firstVisible(saveDraftCandidates(this.page));
     if (!saveDraft) {
       throw new AppError('A semantic save-draft control could not be found', ExitCode.BrowserWorkflowFailed, {
@@ -228,11 +221,18 @@ export class PlaywrightPublisherSite implements PublisherSite {
 
     const savedTitle = await this.readEditableValue(titleInput);
     const savedMarkdown = await this.readEditableValue(editor);
-    if (!titlesMatch(savedTitle, article.title) || normalizeMarkdown(savedMarkdown) !== normalizeMarkdown(rendered.markdown)) {
+    const savedTags = await this.readSelectedTags();
+    const missingTags = savedTags ? article.tags.filter((tag) => !savedTags.includes(tag)) : [];
+    if (
+      !titlesMatch(savedTitle, article.title) ||
+      normalizeMarkdown(savedMarkdown) !== normalizeMarkdown(rendered.markdown) ||
+      missingTags.length > 0
+    ) {
       throw new AppError('The saved draft could not be verified against the local article', ExitCode.VerificationFailed, {
         expectedTitle: article.title,
         sourceHash: article.sourceHash,
         renderedHash: rendered.renderedHash,
+        missingTags,
         pageUrl: this.page.url(),
       });
     }
@@ -431,6 +431,42 @@ export class PlaywrightPublisherSite implements PublisherSite {
       return true;
     }, value);
     if (!codeMirrorFilled) await locator.fill(value);
+  }
+
+  private async setArticleTags(tags: string[]): Promise<void> {
+    const select = this.page.locator('select[name="tags[]"]').first();
+    if ((await select.count()) > 0) {
+      await select.evaluate((element, requestedTags) => {
+        if (!(element instanceof HTMLSelectElement)) return;
+        for (const tag of requestedTags) {
+          let option = [...element.options].find((candidate) => candidate.value === tag);
+          if (!option) {
+            option = new Option(tag, tag, true, true);
+            element.add(option);
+          }
+          option.selected = true;
+        }
+        element.dispatchEvent(new Event('change', { bubbles: true }));
+      }, tags);
+      return;
+    }
+
+    const tagInput = await firstVisible(tagInputCandidates(this.page));
+    if (!tagInput) {
+      throw new AppError('The tag input could not be found', ExitCode.BrowserWorkflowFailed, { pageUrl: this.page.url() });
+    }
+    for (const tag of tags) {
+      await tagInput.fill(tag);
+      await tagInput.press('Enter');
+    }
+  }
+
+  private async readSelectedTags(): Promise<string[] | undefined> {
+    const select = this.page.locator('select[name="tags[]"]').first();
+    if ((await select.count()) === 0) return undefined;
+    return select.evaluate((element) =>
+      element instanceof HTMLSelectElement ? [...element.selectedOptions].map((option) => option.value) : [],
+    );
   }
 
   private async readEditableValue(locator: Locator): Promise<string> {
