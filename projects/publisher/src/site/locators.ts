@@ -1,7 +1,7 @@
 import type { Locator, Page } from 'playwright';
 
-// Keep every page-structure assumption here. These are conservative semantic/test-id
-// candidates, not a claim that the current iT 邦 DOM has been verified.
+// Keep every page-structure assumption here. Prefer semantic/test-id candidates;
+// iT-specific fallbacks are backed by captured 2026 editor evidence and fixture E2E tests.
 export const selectorCatalog = {
   publicArticleCards: [
     '[data-testid*="article-card" i]',
@@ -67,6 +67,7 @@ export function publishOptionsCandidates(page: Page): Locator[] {
   return [
     page.getByRole('button', { name: /^(?:發表|發布)(?:設定|選項|選單)$/u }),
     page.getByRole('button', { name: /^publish options$/iu }),
+    page.locator('button.save-group__dropdown-toggle'),
   ];
 }
 
@@ -101,6 +102,7 @@ export function markdownEditorCandidates(page: Page): Locator[] {
     page.getByLabel(/內容|正文|markdown|content/iu),
     page.locator('textarea[name*="content" i], textarea[name*="description" i]'),
     page.locator('[contenteditable="true"][role="textbox"]'),
+    page.locator('.CodeMirror'),
   ];
 }
 
@@ -109,6 +111,8 @@ export function tagInputCandidates(page: Page): Locator[] {
     page.getByRole('textbox', { name: /標籤|tag/iu }),
     page.getByLabel(/標籤|tag/iu),
     page.locator('input[name*="tag" i]'),
+    page.locator('.ir-post-tags input.select2-search__field[role="textbox"]'),
+    page.locator('input.select2-search__field[role="textbox"]'),
   ];
 }
 
@@ -123,6 +127,16 @@ export function imageUploadCandidates(page: Page): Locator[] {
   return [
     page.locator('input[type="file"][accept*="image" i]'),
     page.getByLabel(/上傳圖片|圖片上傳|upload image/iu).locator('input[type="file"]'),
+    page.locator('input#uploadButton[type="file"]'),
+    page.locator('input[type="file"][name="images[]"]'),
+  ];
+}
+
+export function imageUploadDialogCandidates(page: Page): Locator[] {
+  return [
+    page.getByTitle(/^(?:上傳圖片|圖片上傳|upload image)$/iu),
+    page.locator('.editor-toolbar [title="上傳圖片"]'),
+    page.locator('.editor-toolbar [title="Upload Image" i]'),
   ];
 }
 

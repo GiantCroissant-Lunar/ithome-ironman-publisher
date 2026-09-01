@@ -2,7 +2,7 @@
 
 「From (Unity) Game Dev to Orchestration of (Unity) Game Dev」系列的 content-to-publish 工具，參賽分類為 `Vibe Coding`。Day 001 以 AI Agent 自動發文作為第一個 orchestration 垂直應用；發文自動化是系列基礎設施與案例，不是全部 30 天的主題。工具以 TypeScript + Playwright 實作，不逆向、也不依賴未公開的 HTTP publish endpoint。
 
-目前語意 selector 已通過本機 Chromium E2E fixture，但**尚未在你的 2026 iT 邦 editor 完成校正**。正式使用前必須先執行 live draft sync，確認真實頁面 locator。
+語意 selector 已通過本機 Chromium E2E fixture；標題、SimpleMDE／CodeMirror、圖片上傳／插入、Select2 tag 與發表下拉選單也已依你的 2026 iT 邦 editor diagnostics 校正。正式 publish 與公開頁驗證仍須以一次有人監看的 live run 作最終確認。
 
 ## Repository layout
 

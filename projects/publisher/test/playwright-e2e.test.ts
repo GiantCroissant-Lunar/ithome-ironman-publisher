@@ -174,8 +174,8 @@ async function handleRequest(
 
   if (request.method === 'POST' && requestUrl.pathname === '/draft/1') {
     const form = new URLSearchParams(await readBody(request));
-    state.title = form.get('title') ?? '';
-    state.markdown = form.get('content') ?? '';
+    state.title = form.get('subject') ?? form.get('title') ?? '';
+    state.markdown = form.get('description') ?? form.get('content') ?? '';
     state.saved = true;
     sendHtml(response, editorPage(state.title, state.markdown, true, request.headers.host ?? 'fixture.test'));
     return;
@@ -202,28 +202,61 @@ function pageShell(content: string): string {
 }
 
 function editorPage(title: string, markdown: string, saved: boolean, host: string): string {
-  const publishForm = saved
-    ? '<form method="post" action="/publish"><button type="submit">發表文章</button></form>'
+  const publishControls = saved
+    ? `<button type="button" class="save-group__dropdown-toggle">▲</button>
+       <form id="publish-form" method="post" action="/publish">
+         <button id="publish-button" type="submit" hidden>發表文章</button>
+       </form>`
     : '';
   return pageShell(`
     <main>
       <p>Test Ironman Series</p>
       <form method="post" action="/draft/1">
-        <label>標題<input aria-label="標題" name="title" value="${escapeAttribute(title)}"></label>
-        <label>內容<textarea aria-label="內容" name="content">${escapeHtml(markdown)}</textarea></label>
-        <label>標籤<input aria-label="標籤" type="text" onkeydown="if(event.key==='Enter'){event.preventDefault()}"></label>
-        <input id="image-upload" type="file" accept="image/*" hidden>
+        <input name="subject" value="${escapeAttribute(title)}" placeholder="在這裡幫文章下個好標題...">
+        <textarea id="SimpleMDE_0" name="description" style="display:none">${escapeHtml(markdown)}</textarea>
+        <div class="editor-toolbar"><a title="上傳圖片">upload</a></div>
+        <div class="CodeMirror" style="min-height:100px"><pre class="CodeMirror-code">${escapeHtml(markdown)}</pre></div>
+        <div class="ir-post-tags">
+          <input class="select2-search__field" role="textbox" type="search" onkeydown="if(event.key==='Enter'){event.preventDefault()}">
+        </div>
         <button type="submit">儲存草稿</button>
       </form>
-      ${publishForm}
+      ${publishControls}
     </main>
     <script>
-      document.querySelector('#image-upload').addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        const editor = document.querySelector('[aria-label="內容"]');
-        editor.value += '\\n![uploaded](http://${escapeJavaScript(host)}/uploaded/' + encodeURIComponent(file.name) + ')';
-        editor.dispatchEvent(new Event('input', { bubbles: true }));
+      const source = document.querySelector('#SimpleMDE_0');
+      const wrapper = document.querySelector('.CodeMirror');
+      const code = document.querySelector('.CodeMirror-code');
+      wrapper.CodeMirror = {
+        getValue: () => source.value,
+        setValue: (value) => {
+          source.value = value;
+          code.textContent = value;
+          source.dispatchEvent(new Event('input', { bubbles: true }));
+        },
+        save: () => undefined,
+      };
+      document.querySelector('[title="上傳圖片"]').addEventListener('click', () => {
+        const dialog = document.createElement('div');
+        dialog.innerHTML = '<input id="uploadButton" type="file" name="images[]">' +
+          '<img id="uploadThumbnail" hidden><button id="InsertImg" type="button" hidden>插入圖片</button>';
+        document.body.append(dialog);
+        const upload = dialog.querySelector('#uploadButton');
+        const thumbnail = dialog.querySelector('#uploadThumbnail');
+        const insert = dialog.querySelector('#InsertImg');
+        upload.addEventListener('change', (event) => {
+          const file = event.target.files[0];
+          thumbnail.src = 'http://${escapeJavaScript(host)}/uploaded/' + encodeURIComponent(file.name);
+          thumbnail.hidden = false;
+          insert.hidden = false;
+        });
+        insert.addEventListener('click', () => {
+          wrapper.CodeMirror.setValue(wrapper.CodeMirror.getValue() + '\\n![uploaded](' + thumbnail.src + ')');
+          dialog.remove();
+        });
       });
+      const options = document.querySelector('.save-group__dropdown-toggle');
+      if (options) options.addEventListener('click', () => { document.querySelector('#publish-button').hidden = false; });
     </script>
   `);
 }

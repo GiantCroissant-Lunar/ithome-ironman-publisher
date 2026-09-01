@@ -21,6 +21,7 @@ import {
   emptyListingPattern,
   firstVisible,
   imageUploadCandidates,
+  imageUploadDialogCandidates,
   loginCandidates,
   markdownEditorCandidates,
   newArticleLinkCandidates,
@@ -185,7 +186,14 @@ export class PlaywrightPublisherSite implements PublisherSite {
         assets[image.markdownReference] = prior;
         continue;
       }
-      const uploadInput = await this.firstExisting(imageUploadCandidates(this.page));
+      let uploadInput = await this.firstExisting(imageUploadCandidates(this.page));
+      if (!uploadInput) {
+        const openUploadDialog = await firstVisible(imageUploadDialogCandidates(this.page));
+        if (openUploadDialog) {
+          await openUploadDialog.click();
+          uploadInput = await this.waitForExisting(imageUploadCandidates(this.page));
+        }
+      }
       if (!uploadInput) {
         throw new AppError('The image upload input could not be found', ExitCode.BrowserWorkflowFailed, {
           imagePath: image.absolutePath,
@@ -199,7 +207,7 @@ export class PlaywrightPublisherSite implements PublisherSite {
       uploadedImages += 1;
     }
     const rendered = renderArticleWithAssets(article, assets);
-    await editor.fill(rendered.markdown);
+    await this.fillEditableValue(editor, rendered.markdown);
 
     const tagInput = await firstVisible(tagInputCandidates(this.page));
     if (!tagInput) {
@@ -402,8 +410,38 @@ export class PlaywrightPublisherSite implements PublisherSite {
     return undefined;
   }
 
+  private async waitForExisting(candidates: Locator[]): Promise<Locator | undefined> {
+    const deadline = Date.now() + this.config.actionTimeoutMs;
+    while (Date.now() < deadline) {
+      const locator = await this.firstExisting(candidates);
+      if (locator) return locator;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    return undefined;
+  }
+
+  private async fillEditableValue(locator: Locator, value: string): Promise<void> {
+    const codeMirrorFilled = await locator.evaluate((element, nextValue) => {
+      const wrapper = element as HTMLElement & {
+        CodeMirror?: { setValue: (markdown: string) => void; save?: () => void };
+      };
+      if (!wrapper.CodeMirror) return false;
+      wrapper.CodeMirror.setValue(nextValue);
+      wrapper.CodeMirror.save?.();
+      return true;
+    }, value);
+    if (!codeMirrorFilled) await locator.fill(value);
+  }
+
   private async readEditableValue(locator: Locator): Promise<string> {
-    return locator.inputValue().catch(() => locator.innerText());
+    return locator.evaluate((element) => {
+      const editable = element as HTMLElement & {
+        CodeMirror?: { getValue: () => string };
+      };
+      if (editable.CodeMirror) return editable.CodeMirror.getValue();
+      if (editable instanceof HTMLInputElement || editable instanceof HTMLTextAreaElement) return editable.value;
+      return editable.innerText;
+    });
   }
 
   private async waitForUploadedUrl(editor: Locator, knownUrls: Set<string>): Promise<string> {
@@ -411,6 +449,16 @@ export class PlaywrightPublisherSite implements PublisherSite {
     while (Date.now() < deadline) {
       const uploadedUrl = extractHttpUrls(await this.readEditableValue(editor)).find((url) => !knownUrls.has(url));
       if (uploadedUrl) return uploadedUrl;
+      const insertImage = this.page.locator('#InsertImg');
+      if (await insertImage.isVisible().catch(() => false)) {
+        const remoteUrl = await this.page.locator('#uploadThumbnail').evaluate((element) =>
+          element instanceof HTMLImageElement ? element.src : element.getAttribute('src'),
+        );
+        if (remoteUrl && /^https?:\/\//iu.test(remoteUrl)) {
+          await insertImage.click();
+          return remoteUrl;
+        }
+      }
       await new Promise((resolve) => setTimeout(resolve, 250));
     }
     throw new AppError('Image upload completed without a discoverable hosted URL in the editor', ExitCode.BrowserWorkflowFailed, {
