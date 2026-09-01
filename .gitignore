@@ -1,0 +1,20 @@
+node_modules/
+dist/
+coverage/
+diagnostics/
+*.log
+.env
+.env.*
+!.env.example
+
+# Runtime state is centralized under infra/.
+infra/.env
+infra/.auth/
+infra/diagnostics/
+infra/logs/
+infra/state/
+
+# Contains login cookies/localStorage and must never be committed.
+.auth/
+storage-state.json
+playwright/.auth/

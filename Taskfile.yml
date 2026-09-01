@@ -1,0 +1,106 @@
+version: '3'
+
+vars:
+  APP_DIR: projects/publisher
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - task --list
+
+  setup:
+    desc: Install dependencies, Chromium, and repository hooks
+    cmds:
+      - task: install
+      - task: hooks:install
+
+  install:
+    desc: Install locked Node dependencies and Playwright Chromium
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm ci
+      - npx playwright install chromium
+
+  hooks:install:
+    desc: Install standard pre-commit hooks
+    cmds:
+      - pre-commit install --install-hooks
+
+  content:check:
+    desc: Validate every local article, timestamp, image, and content hash
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run content:check
+
+  auth:
+    desc: Bootstrap the Playwright login state with a visible browser
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run auth
+
+  draft:preview:
+    desc: Preview whether one article draft would be created or updated
+    requires:
+      vars: [DAY]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run draft:sync -- --day {{.DAY}}
+
+  draft:sync:
+    desc: Create or update one article draft without publishing it
+    requires:
+      vars: [DAY]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run draft:sync -- --day {{.DAY}} --write
+
+  publish:dry:
+    desc: Run the safe publish preview without clicking publish
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run publish
+
+  publish:
+    desc: Run the scheduler entrypoint; infra/.env safety lock still applies
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run publish -- --publish
+
+  lint:
+    desc: Run ESLint
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run lint
+
+  typecheck:
+    desc: Run strict TypeScript checks
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run typecheck
+
+  test:
+    desc: Run unit, workflow, and local Chromium E2E tests
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm test
+
+  build:
+    desc: Compile the TypeScript application
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run build
+
+  check:
+    desc: Run the complete repository quality gate
+    cmds:
+      - task: content:check
+      - task: lint
+      - task: typecheck
+      - task: test
+      - task: build
+
+  pre-commit:
+    desc: Run every pre-commit hook against tracked files
+    cmds:
+      - pre-commit run --all-files
