@@ -1,6 +1,7 @@
 import { resolve } from 'node:path';
 import { loadProjectEnvironment } from '../config/environment.js';
 import { loadAllArticles } from '../content/article.js';
+import { validateGeneratedImages } from '../content/generated-images.js';
 import { AppError, errorDetails, ExitCode, exitCodeFor } from '../infra/errors.js';
 import { createLogger } from '../infra/logger.js';
 import { publicationReceiptPath, readPublicationReceipt } from '../publication/publication-receipt.js';
@@ -13,6 +14,7 @@ async function main(): Promise<void> {
   const articles = await loadAllArticles(articlesDirectory);
   const articleSummaries = await Promise.all(
     articles.map(async (article) => {
+      const generatedImages = await validateGeneratedImages(article);
       const receiptPath = publicationReceiptPath(articlesDirectory, article.dayNumber);
       const receipt = await readPublicationReceipt(receiptPath);
       if (receipt && receipt.dayNumber !== article.dayNumber) {
@@ -27,6 +29,7 @@ async function main(): Promise<void> {
         title: article.title,
         timestamp: article.timestamp,
         images: article.images.length,
+        generatedImages: generatedImages?.assets.length ?? 0,
         sourceHash: article.sourceHash,
         ...(receipt
           ? {

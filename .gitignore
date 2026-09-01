@@ -11,6 +11,7 @@ diagnostics/
 infra/.env
 infra/.auth/
 infra/diagnostics/
+infra/generated/
 infra/logs/
 infra/state/
 

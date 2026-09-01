@@ -9,6 +9,7 @@
 ```text
 ithome-ironman-publisher/
 ├─ .agents/skills/             # Repo-local Agent routing and safety workflows
+├─ .codex/config.toml          # Project-scoped MCP config; never contains the API key
 ├─ .github/                    # Repository workflows
 ├─ .pre-commit-config.yaml     # Standard pre-commit configuration
 ├─ articles/                   # day-NNN Markdown modules, images and publication receipts
@@ -17,6 +18,7 @@ ithome-ironman-publisher/
 │  ├─ .env.example             # Safe template
 │  ├─ .auth/                   # Playwright storageState; ignored
 │  ├─ diagnostics/             # Trace/screenshot/HTML; ignored
+│  ├─ generated/               # Unselected Leonardo candidates; ignored
 │  ├─ logs/                    # launchd output; ignored
 │  ├─ state/                   # Discovered URLs, hashes and process lock; ignored
 │  └─ launchd/
@@ -46,6 +48,7 @@ Repo-local skills 位於 `.agents/skills/`。它們負責告訴 Agent **何時�
 目前提供：
 
 - `$ithome-article-author`：撰寫與驗證 `day-NNN` 文章。
+- `$ithome-article-illustrator`：透過 Leonardo 產生候選圖、人工選圖並保存 provenance。
 - `$ithome-auth-session`：建立或修復 Edge storageState。
 - `$ithome-site-discovery`：只讀探勘動態 URL 與 selector。
 - `$ithome-draft-sync`：精準建立或更新一篇草稿，不發布。
@@ -155,6 +158,43 @@ tags:
 相對圖片必須留在同一個 `day-NNN` 目錄，禁止使用 `../`。支援 PNG、JPEG、GIF、WebP 與 AVIF；HTTPS 圖片保留原 URL。本機圖片上傳後只替換送入 editor 的 Markdown，原始 `index.md` 不會被改寫。
 
 `publication.json` 是公開文章的不可變發布收據，不是手寫 frontmatter。程式只在公開頁確認文章後建立，內容包含 iT 文章 ID、canonical URL、系列、發布時間，以及當時的 `sourceHash`／`renderedHash`。它必須留在對應的 `day-NNN` 目錄並由 Git 追蹤；相同 Day 若出現不同文章 ID，流程會停止，不會覆寫舊收據。
+
+## Leonardo.Ai 生圖流程
+
+Leonardo 的網站訂閱與 API 是兩套額度。即使已訂閱 Solo，仍需先在 Leonardo 的 API Access 購買 API credits 並建立 API key，才可使用 MCP。專案已在 `.codex/config.toml` 設定官方 streamable HTTP endpoint，只開放 `generate-image`，並從啟動 Codex 時的 `LEONARDO_API_KEY` 環境變數取得 `API-Key` header；repository 不保存密鑰。相關要求可參考 [Leonardo MCP guide](https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp) 與 [Leonardo API Quick Start](https://docs.leonardo.ai/docs/getting-started)。
+
+Windows 首次設定：
+
+1. 在 Leonardo API Access 購買 API credits 並建立 key。不要把 key 貼到文章、chat、`infra/.env` 或任何 Git 檔案。
+2. 使用 Windows「編輯帳戶的環境變數」介面建立使用者環境變數 `LEONARDO_API_KEY`。若使用其他 secrets launcher，也要確保它在啟動 Codex 前把同名環境變數注入 process。
+3. 完全重新啟動 Codex，從這個受信任的 repository 開啟新 task。專案層 `.codex/config.toml` 與環境變數只會由新 process／session 載入；可用 `/mcp` 或 `codex mcp list` 確認 `leonardo-ai`。Codex 專案層 MCP 與 `env_http_headers` 的行為見 [Codex MCP documentation](https://developers.openai.com/codex/mcp)。
+4. 要為指定文章產圖時，明確呼叫 `$ithome-article-illustrator`。實際 generation 是付費外部動作，因此 Skill 不會因為「規劃流程」或「討論 prompt」就自動花費 credits。
+
+工作流刻意分成兩階段：
+
+```text
+index.md → Agent 設計 prompt → Leonardo 候選圖
+                                  │
+                         infra/generated/（忽略）
+                                  │ 人工選定
+                                  ▼
+              articles/day-NNN/images/generated/<name>.png
+                                  │
+                         manifest.json + SHA-256
+                                  │
+                      images:check → content:check
+                                  │
+                          draft sync / publish
+```
+
+未採用候選圖留在 `infra/generated/day-NNN/<run-id>/`，不進 Git。只有人工選定的圖才會下載到 `articles/day-NNN/images/generated/`、寫入 Markdown，並在同目錄 `manifest.json` 記錄 model、完整 prompt、尺寸、時間、可選 generation ID、alt text 與 SHA-256。只有不含簽章 query／credential 的穩定 URL 才可選擇性保留；一般遠端結果 URL 可能失效，不能作為文章 source of truth。
+
+```bash
+task images:check DAY=2
+task content:check
+```
+
+第一個命令只檢查指定 Day；第二個命令會檢查全部文章。manifest 中的每張圖都必須被 Markdown 引用，`images/generated/` 下被引用的圖也必須有 manifest，且實際檔案 SHA-256 必須一致。生圖不放進 launchd 或 `task publish`：它有成本且需要編輯判斷，排程只發布已審核、已落地、已驗證的本機資產。
 
 repo 已提供可審稿的 `day-001` 正式文章與 PNG。離線驗證：
 

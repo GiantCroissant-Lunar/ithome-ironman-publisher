@@ -12,6 +12,7 @@ Work from the repository root. Treat `articles/day-NNN/index.md` and its colocat
 - Put editorial judgment, Unity-orchestration series continuity, title/tag choices, and review decisions in this skill-driven workflow.
 - Leave parsing, path safety, timestamp validation, image hashing, and canonical `sourceHash` calculation to the TypeScript implementation. Do not reproduce those mechanics in ad-hoc shell commands or skill scripts.
 - Treat `articles/day-NNN/publication.json` as a generated, immutable Git receipt. Never create, rewrite, or delete it as part of article editing.
+- Route requests to create or revise AI-generated article visuals through `ithome-article-illustrator`; it owns candidate review and provenance. Continue to treat the selected local file and manifest as article source.
 - Do not open, create, update, or publish an iT draft. Route those requests to `ithome-draft-sync` or `ithome-publish`.
 
 ## Workflow

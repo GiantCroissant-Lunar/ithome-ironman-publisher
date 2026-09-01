@@ -10,6 +10,7 @@
   "scripts": {
     "auth": "tsx src/cli/auth-bootstrap.ts",
     "content:check": "tsx src/cli/content-check.ts",
+    "images:check": "tsx src/cli/generated-images-check.ts",
     "skills:check": "tsx src/cli/skills-check.ts",
     "draft:sync": "tsx src/cli/draft-sync.ts",
     "publish": "tsx src/cli/publish.ts",

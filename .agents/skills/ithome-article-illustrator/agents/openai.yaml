@@ -1,0 +1,11 @@
+interface:
+  display_name: "iT Article Illustrator"
+  short_description: "Generate and curate Leonardo article visuals"
+  default_prompt: "Use $ithome-article-illustrator to create reviewable visuals for a day-NNN article."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "leonardo-ai"
+      description: "Leonardo.Ai image generation"
+      transport: "streamable_http"
+      url: "https://mcp.leonardo.ai/v1/mcp"

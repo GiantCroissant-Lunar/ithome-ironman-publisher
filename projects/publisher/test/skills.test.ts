@@ -7,6 +7,7 @@ describe('repository agent skills', () => {
     const skills = await validateSkillsDirectory(resolve(process.cwd(), '../../.agents/skills'));
     expect(skills.map((skill) => skill.name)).toEqual([
       'ithome-article-author',
+      'ithome-article-illustrator',
       'ithome-auth-session',
       'ithome-draft-sync',
       'ithome-publish',

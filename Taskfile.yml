@@ -33,6 +33,14 @@ tasks:
     cmds:
       - npm run content:check
 
+  images:check:
+    desc: Validate selected generated images and their provenance manifest
+    requires:
+      vars: [DAY]
+    dir: '{{.APP_DIR}}'
+    cmds:
+      - npm run images:check -- --day {{.DAY}}
+
   skills:check:
     desc: Validate repository-local Agent Skills and UI metadata
     dir: '{{.APP_DIR}}'
