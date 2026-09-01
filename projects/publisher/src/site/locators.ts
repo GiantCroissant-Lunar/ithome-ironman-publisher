@@ -6,34 +6,45 @@ export const selectorCatalog = {
   publicArticleCards: [
     '[data-testid*="article-card" i]',
     '[data-test*="article-card" i]',
+    '.profile-list:not(:has(.title-badge--draft))',
     'main article',
   ],
   draftCards: [
     '[data-testid*="draft-card" i]',
     '[data-test*="draft-card" i]',
+    '.profile-list:has(.title-badge--draft)',
     'main article',
   ],
   titleLinks: [
     '[data-testid*="title" i] a[href]',
     'a[data-testid*="title" i][href]',
+    'a.qa-list__title-link[href]',
     'h1 a[href], h2 a[href], h3 a[href], h4 a[href]',
     'a[href*="/articles/"]',
   ],
-  dateElements: ['time[datetime]', 'time', '[data-testid*="date" i]', '[data-test*="date" i]'],
+  dateElements: [
+    'time[datetime]',
+    'time',
+    'a.qa-list__info-time[title]',
+    '[data-testid*="date" i]',
+    '[data-test*="date" i]',
+  ],
 } as const;
 
 export const emptyListingPattern = /尚無文章|沒有文章|目前沒有|no articles|no drafts|empty/iu;
 
 export function draftsLinkCandidates(page: Page): Locator[] {
   return [
-    page.getByRole('link', { name: /草稿|draft/iu }),
+    page.getByRole('link', { name: /草稿|我的發文|draft|my posts/iu }),
     page.locator('a[href*="draft" i]'),
+    page.locator('a[href^="/users/"][href$="/articles"]'),
   ];
 }
 
 export function newArticleLinkCandidates(page: Page): Locator[] {
   return [
-    page.getByRole('link', { name: /發表文章|寫文章|新增文章|new article|write/iu }),
+    page.getByRole('link', { name: /鐵人發文|發表文章|寫文章|新增文章|new article|write/iu }),
+    page.locator('a[href*="/ironman/create/" i]'),
     page.locator('a[href*="article" i][href*="new" i], a[href*="create" i]'),
   ];
 }

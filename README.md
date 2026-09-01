@@ -84,6 +84,7 @@ AUTH_STATE_PATH=../../infra/.auth/storage-state.json
 DIAGNOSTICS_DIR=../../infra/diagnostics
 STATE_PATH=../../infra/state/publisher-state.json
 LOCK_PATH=../../infra/state/publisher.lock
+BROWSER_CHANNEL=msedge
 ```
 
 這些路徑以 `projects/publisher/` 為 working directory。若要從其他位置啟動 CLI，可用 `ENV_FILE` 指定 `.env` 絕對路徑。
@@ -136,7 +137,7 @@ task content:check
 task auth
 ```
 
-程式會開啟可見的 Chromium。完成登入並確認帳號識別字可見後，在終端按 Enter；storageState 會存到 `infra/.auth/`。
+程式預設會以 Playwright 開啟可見的 Microsoft Edge（`BROWSER_CHANNEL=msedge`、`HEADLESS=false`）。這是獨立的自動化 context，不會讀取日常 Edge profile；完成一次人工登入並確認帳號識別字可見後，在終端按 Enter，storageState 會存到 `infra/.auth/`。真實 iT 邦頁面曾對 headless Edge 回傳 403，因此目前不應在正式流程啟用 headless；本機 fixture 測試仍使用 bundled Chromium headless mode。
 
 若有 CAPTCHA、二階段驗證或新版條款，請在人工登入步驟完成，不應撰寫繞過機制。
 

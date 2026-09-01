@@ -77,7 +77,10 @@ export class PlaywrightPublisherSite implements PublisherSite {
       );
     }
 
-    const browser = await chromium.launch({ headless: config.headless });
+    const browser = await chromium.launch({
+      headless: config.headless,
+      ...(config.browserChannel === 'msedge' ? { channel: 'msedge' as const } : {}),
+    });
     const context = await browser.newContext({ storageState: config.authStatePath });
     const page = await context.newPage();
     page.setDefaultTimeout(config.actionTimeoutMs);

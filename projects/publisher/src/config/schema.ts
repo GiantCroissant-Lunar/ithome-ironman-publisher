@@ -23,7 +23,8 @@ const rawConfigSchema = z.object({
   SCHEDULE_FALLBACK: hhmm.default('20:47'),
   PUBLISH_DRY_RUN: booleanString.default(true),
   PUBLISHED_UPDATE_POLICY: z.literal('report').default('report'),
-  HEADLESS: booleanString.default(true),
+  BROWSER_CHANNEL: z.enum(['msedge', 'chromium']).default('msedge'),
+  HEADLESS: booleanString.default(false),
   AUTH_STATE_PATH: z.string().trim().min(1).default('../../infra/.auth/storage-state.json'),
   DIAGNOSTICS_DIR: z.string().trim().min(1).default('../../infra/diagnostics'),
   STATE_PATH: z.string().trim().min(1).default('../../infra/state/publisher-state.json'),
@@ -53,6 +54,7 @@ export interface AppConfig {
   fallbackSchedule: string;
   publishDryRun: boolean;
   publishedUpdatePolicy: 'report';
+  browserChannel: 'msedge' | 'chromium';
   headless: boolean;
   authStatePath: string;
   diagnosticsDir: string;
@@ -95,6 +97,7 @@ export function loadConfig(
     fallbackSchedule: value.SCHEDULE_FALLBACK,
     publishDryRun: value.PUBLISH_DRY_RUN,
     publishedUpdatePolicy: value.PUBLISHED_UPDATE_POLICY,
+    browserChannel: value.BROWSER_CHANNEL,
     headless: value.HEADLESS,
     authStatePath: resolve(workingDirectory, value.AUTH_STATE_PATH),
     diagnosticsDir: resolve(workingDirectory, value.DIAGNOSTICS_DIR),

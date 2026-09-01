@@ -14,7 +14,10 @@ loadProjectEnvironment();
 async function main(): Promise<void> {
   const config = loadConfig();
   const logger = createLogger(config.logLevel);
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({
+    headless: false,
+    ...(config.browserChannel === 'msedge' ? { channel: 'msedge' as const } : {}),
+  });
   const context = await browser.newContext();
   const page = await context.newPage();
   const prompt = createInterface({ input, output });
@@ -32,7 +35,10 @@ async function main(): Promise<void> {
     await mkdir(dirname(config.authStatePath), { recursive: true });
     await context.storageState({ path: config.authStatePath });
     await PlaywrightPublisherSite.protectAuthFile(config.authStatePath);
-    logger.info({ authStatePath: config.authStatePath }, 'Authentication state saved; keep this file out of version control');
+    logger.info(
+      { authStatePath: config.authStatePath, browserChannel: config.browserChannel },
+      'Authentication state saved; keep this file out of version control',
+    );
   } finally {
     prompt.close();
     await browser.close();

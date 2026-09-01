@@ -45,6 +45,7 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       fallbackSchedule: '20:47',
       publishDryRun: false,
       publishedUpdatePolicy: 'report',
+      browserChannel: 'chromium',
       headless: true,
       authStatePath,
       diagnosticsDir: join(runDirectory, 'diagnostics'),
