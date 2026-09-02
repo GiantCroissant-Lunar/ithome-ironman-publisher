@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 2,
+  "slot": "inline-03",
+  "assetName": "d0-lifecycle-proof",
+  "prompt": "An elegant editorial illustration of a minimum viable AI-agent lifecycle proof, shown entirely through objects. A durable central station launches a small deterministic agent process with a visible child process, an initial terminal client disconnects, a second client reconnects to the same glowing session, and an event ledger preserves a continuous sequence. Nearby, a careful cancellation mechanism safely retires the entire process tree, while a separate real AI agent completes and emits usage evidence. Emphasize verified continuity rather than a finished product. Modern dark engineering aesthetic, navy and teal with amber verification lights, crisp cinematic isometric art, 16:9 landscape. No labels, no charts with text, no readable screens, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "D0 證明 Client 離線與重連、事件持久化、完整取消 process tree，以及真實 Agent session 的最小生命週期"
+}

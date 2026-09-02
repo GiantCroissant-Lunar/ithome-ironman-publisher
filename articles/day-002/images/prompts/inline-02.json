@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 2,
+  "slot": "inline-02",
+  "assetName": "clients-protocol-station",
+  "prompt": "A polished conceptual illustration of a distributed agent workstation architecture without written labels. Multiple interchangeable client devices—desktop application, browser, terminal console, and mobile device—connect through one unified luminous communication channel to a persistent central execution station. The station securely owns AI-agent processes, project workspaces, credentials, event storage, and sandbox boundaries. Show one device disconnecting while the central agent session continues uninterrupted and another device reconnects. Dark technical environment, teal connection paths, restrained amber human-approval accents, cinematic isometric art, balanced 16:9 composition. No infographic captions, no arrows containing text, no callouts, no readable screens, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "多種 Client 經共同通訊層連到持久化 Station，其中一個 Client 關閉時 Agent session 仍持續執行"
+}

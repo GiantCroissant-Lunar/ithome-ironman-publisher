@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "dayNumber": 2,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 從 IDE 到 ADE，改變的是工作單位"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## BearPunch 的基本模型：Client → Protocol → Station"
+      }
+    },
+    {
+      "slot": "inline-03",
+      "request": "./prompts/inline-03.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 今天做到哪裡：D0 不是產品完成，而是核心假設成立"
+      }
+    }
+  ]
+}

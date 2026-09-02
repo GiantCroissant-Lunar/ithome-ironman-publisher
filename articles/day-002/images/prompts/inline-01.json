@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 2,
+  "slot": "inline-01",
+  "assetName": "ide-to-ade-work-unit",
+  "prompt": "An editorial software-engineering illustration contrasting two development work units without text. On the left, a conventional developer desk focuses narrowly on an open source-code file and editor window. On the right, a richer AI-agent session surrounds a project workspace with a process tree, tool activity, event history, test evidence, a human approval control, and a persistent state beacon. The scene should show the conceptual evolution from editing files to governing durable agent work, using composition and recognizable objects only. Sophisticated dark navy, teal, and restrained amber palette, clean isometric 16:9 landscape, no split-screen labels, no UI text, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "開發工作的核心從 IDE 裡的檔案與編輯器，擴展為包含 workspace、程序、事件、證據與核准的 Agent session"
+}
