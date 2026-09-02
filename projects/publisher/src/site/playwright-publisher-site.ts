@@ -143,6 +143,8 @@ export class PlaywrightPublisherSite implements PublisherSite {
     await this.assertExpectedIdentity('draft listing', this.config.userIdentifier);
     const cards = await this.firstNonEmptySelector(selectorCatalog.draftCards);
     if (!cards) {
+      const publishedCards = await this.firstNonEmptySelector(selectorCatalog.publicArticleCards);
+      if (publishedCards) return [];
       const emptyStateVisible = await this.page.getByText(emptyListingPattern).first().isVisible().catch(() => false);
       if (emptyStateVisible) return [];
       throw new AppError(

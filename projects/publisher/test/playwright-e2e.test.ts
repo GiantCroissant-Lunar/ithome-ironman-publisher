@@ -116,6 +116,18 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       );
       expect(update.draft.url).toBe(`${baseUrl}/article/1/edit`);
       expect(update.action).toBe('updated');
+
+      const publicOnlyListingSite = await PlaywrightPublisherSite.create(config, logger, {
+        version: 1,
+        profileUrl: config.profileUrl,
+        draftsUrl: `${baseUrl}/users/20107519/articles`,
+        articles: {},
+      });
+      try {
+        expect(await publicOnlyListingSite.listDrafts()).toEqual([]);
+      } finally {
+        await publicOnlyListingSite.close(false);
+      }
     } finally {
       await site.close(false);
       await new Promise<void>((resolveClose, rejectClose) => {
@@ -156,7 +168,7 @@ async function handleRequest(
 
   if (request.method === 'GET' && requestUrl.pathname === '/users/20107519/articles') {
     const listing = state.published
-      ? `<main><article><h2><a href="/article/1">${escapeHtml(state.title)}</a></h2><time datetime="2026-09-01">2026-09-01</time></article></main>`
+      ? `<main><div class="profile-list"><h2><a href="/article/1">${escapeHtml(state.title)}</a></h2><time datetime="2026-09-01">2026-09-01</time></div></main>`
       : '<main><p>尚無文章</p></main>';
     sendHtml(response, pageShell(listing));
     return;
