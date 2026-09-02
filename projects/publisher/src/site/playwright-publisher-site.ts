@@ -216,11 +216,23 @@ export class PlaywrightPublisherSite implements PublisherSite {
         pageUrl: this.page.url(),
       });
     }
-    await saveDraft.click();
-    await this.page.waitForLoadState('domcontentloaded').catch(() => undefined);
+    await Promise.all([
+      this.page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
+      saveDraft.click(),
+    ]);
 
-    const savedTitle = await this.readEditableValue(titleInput);
-    const savedMarkdown = await this.readEditableValue(editor);
+    const savedTitleInput = await firstVisible(articleTitleInputCandidates(this.page));
+    const savedEditor = await firstVisible(markdownEditorCandidates(this.page));
+    if (!savedTitleInput || !savedEditor) {
+      throw new AppError('The saved draft editor could not be reloaded for verification', ExitCode.VerificationFailed, {
+        expectedTitle: article.title,
+        sourceHash: article.sourceHash,
+        renderedHash: rendered.renderedHash,
+        pageUrl: this.page.url(),
+      });
+    }
+    const savedTitle = await this.readEditableValue(savedTitleInput);
+    const savedMarkdown = await this.readEditableValue(savedEditor);
     const savedTags = await this.readSelectedTags();
     const missingTags = savedTags ? article.tags.filter((tag) => !savedTags.includes(tag)) : [];
     if (
