@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dayNumber": 2,
+  "reason": "The published-article update endpoint removed newly added images, so the user explicitly authorized same-day deletion and republication with the complete illustrated source.",
+  "original": {
+    "articleId": "10406802",
+    "articleUrl": "https://ithelp.ithome.com.tw/articles/10406802",
+    "publishedAt": "2026-09-02T11:50:30.303Z",
+    "finalStatus": 404,
+    "publicationReceipt": "./publication.json"
+  },
+  "replacement": {
+    "articleId": "10407080",
+    "articleUrl": "https://ithelp.ithome.com.tw/articles/10407080",
+    "publishedAt": "2026-09-02T13:39:09.755Z",
+    "sourceHash": "220b9066da23145f44454a88a2b2ae8a477456f2b069625c4ed76d0a8b231f80",
+    "renderedHash": "9a61d49bb7c1a4fb9e8e27bb26ad5841baa61de12c7626a9b111ae5046195a43",
+    "images": [
+      "https://ithelp.ithome.com.tw/upload/images/20260902/201075193IXi2vXYnV.jpg",
+      "https://ithelp.ithome.com.tw/upload/images/20260902/20107519PQKWzFX8zL.jpg"
+    ]
+  },
+  "verification": {
+    "verifiedAt": "2026-09-02T13:40:10.7865540Z",
+    "publicStatus": 200,
+    "exactTitle": true,
+    "registeredSeries": true,
+    "renderedImageCount": 2,
+    "allExpectedImagesRendered": true
+  }
+}
