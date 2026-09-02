@@ -12,6 +12,7 @@ describe('repository agent skills', () => {
       'ithome-draft-sync',
       'ithome-publish',
       'ithome-publish-diagnostics',
+      'ithome-republish-recovery',
       'ithome-site-discovery',
     ]);
   });
