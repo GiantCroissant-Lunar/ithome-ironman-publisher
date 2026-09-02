@@ -13,6 +13,7 @@ ithome-ironman-publisher/
 ├─ .github/                    # Repository workflows
 ├─ .pre-commit-config.yaml     # Standard pre-commit configuration
 ├─ articles/                   # day-NNN Markdown modules, images and publication receipts
+├─ docs/incidents/             # 可追溯的發文事故、根因與防再發措施
 ├─ infra/
 │  ├─ .env                     # Local runtime config; ignored by Git
 │  ├─ .env.example             # Safe template
@@ -54,6 +55,7 @@ Repo-local skills 位於 `.agents/skills/`。它們負責告訴 Agent **何時�
 - `$ithome-draft-sync`：精準建立或更新一篇草稿，不發布。
 - `$ithome-publish`：經明確授權後發布並從公開頁驗證。
 - `$ithome-publish-diagnostics`：分析失敗，避免不安全重試。
+- `$ithome-republish-recovery`：經明確授權後，處理同日刪除與帶圖重發。
 
 瀏覽器與資料處理邏輯集中在 `projects/publisher/src/`，由 Taskfile 提供穩定 entrypoint。skills 不建立自己的 `scripts/` 副本，避免 selector、雜湊與安全鎖出現多套真值。Skill 結構驗證已整合進完整 quality gate，也可單獨執行：
 

@@ -10,6 +10,7 @@ The maintained TypeScript workflow owns all site mutations. Do not reproduce edi
 ## Preconditions
 
 - The target article passes `task content:check`.
+- Any planned or requested publication image has already been selected, promoted, referenced from `index.md`, and accepted by `task images:check DAY=N`. Do not rely on a post-publication media update.
 - `task draft:preview DAY=N` succeeds.
 - The live registered series title and category exactly match `IRONMAN_SERIES_TITLE`, `IRONMAN_CATEGORY`, and the user's requested destination.
 - Authentication is valid. Use `ithome-auth-session` when it is not.
@@ -22,6 +23,7 @@ The maintained TypeScript workflow owns all site mutations. Do not reproduce edi
 3. Run `task draft:sync DAY=N` only after the preconditions hold.
 4. Require the adapter to upload only changed images, replace local paths with hosted URLs, save the draft, and read back title and Markdown.
 5. Confirm runtime state records `draftUrl`, `sourceHash`, `renderedHash`, asset SHA-256 values, hosted URLs, and `lastSyncedAt`.
-6. Report the draft result without clicking publish.
+6. For every expected image, require the saved Markdown readback to contain its hosted URL and independently confirm that URL resolves successfully. A successful save response alone is not evidence that the editor preserved media.
+7. Report the draft result without clicking publish.
 
 If verification fails after a save attempt, do not blindly retry. Route to `ithome-publish-diagnostics` because the site may already contain a partial change.

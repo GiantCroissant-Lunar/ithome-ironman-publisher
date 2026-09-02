@@ -14,6 +14,7 @@ This is a destructive recovery workflow. Deleting an Ironman article can affect 
 - Confirm the exact account, registered series, category, Day number, title, article ID, and public URL from both local state and the live page.
 - Require a clean, upstream-synchronized Git branch, successful `task content:check`, and reachable hosted image URLs.
 - Preserve `articles/day-NNN/publication.json` as immutable history. A replacement must get a separate lineage record; never overwrite the original receipt.
+- For the exact Day 002 precedent, consult `docs/incidents/2026-09-02-day-002-image-republication.md`; use its evidence as a precedent, not as authorization to delete a different article.
 
 ## Workflow
 
