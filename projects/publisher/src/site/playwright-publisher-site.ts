@@ -216,10 +216,27 @@ export class PlaywrightPublisherSite implements PublisherSite {
         pageUrl: this.page.url(),
       });
     }
-    await Promise.all([
-      this.page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-      saveDraft.click(),
-    ]);
+    const saveAction = await saveDraft.evaluate((element) => element.closest('form')?.action);
+    if (!saveAction) {
+      throw new AppError('The save-draft control is not attached to a form action', ExitCode.BrowserWorkflowFailed, {
+        pageUrl: this.page.url(),
+      });
+    }
+    const saveResponsePromise = this.page.waitForResponse(
+      (response) => response.request().method() === 'POST' && response.url() === saveAction,
+    );
+    await saveDraft.click();
+    const saveResponse = await saveResponsePromise;
+    if (saveResponse.status() >= 400) {
+      throw new AppError('The draft save request failed', ExitCode.BrowserWorkflowFailed, {
+        pageUrl: this.page.url(),
+        saveAction,
+        status: saveResponse.status(),
+      });
+    }
+    await saveResponse.finished();
+    const savedDraftUrl = new URL(saveResponse.headers().location ?? saveResponse.url(), saveResponse.url()).toString();
+    await this.navigate(savedDraftUrl);
 
     const savedTitleInput = await firstVisible(articleTitleInputCandidates(this.page));
     const savedEditor = await firstVisible(markdownEditorCandidates(this.page));
