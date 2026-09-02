@@ -82,6 +82,22 @@ export function publishActionCandidates(page: Page): Locator[] {
   ];
 }
 
+export function editArticleLinkCandidates(page: Page): Locator[] {
+  return [
+    page.getByRole('link', { name: /^(?:編輯|修改)文章$/u }),
+    page.getByRole('link', { name: /^edit article$/iu }),
+    page.locator('a[href*="/articles/"][href$="/edit"]'),
+  ];
+}
+
+export function updateArticleCandidates(page: Page): Locator[] {
+  return [
+    page.getByRole('button', { name: /^(?:更新|儲存修改)文章$/u }),
+    page.getByRole('button', { name: /^update article$/iu }),
+    page.locator('button#updateSubmitBtn'),
+  ];
+}
+
 export function confirmationCandidates(page: Page): Locator[] {
   return [
     page.getByRole('dialog').getByRole('button', { name: /^(?:確定|確認|確認發表|發表)$/u }),

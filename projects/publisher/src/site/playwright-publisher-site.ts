@@ -18,6 +18,7 @@ import {
   articleTitleInputCandidates,
   confirmationCandidates,
   draftsLinkCandidates,
+  editArticleLinkCandidates,
   emptyListingPattern,
   firstVisible,
   imageUploadCandidates,
@@ -31,6 +32,7 @@ import {
   selectorCatalog,
   seriesLinkCandidates,
   tagInputCandidates,
+  updateArticleCandidates,
 } from './locators.js';
 import type {
   DraftArticle,
@@ -162,7 +164,11 @@ export class PlaywrightPublisherSite implements PublisherSite {
     previousState?: ArticleRuntimeState,
   ): Promise<DraftSyncResult> {
     const action = existingDraft ? 'updated' : 'created';
-    await this.navigate(existingDraft?.url ?? (await this.requireAuthenticatedUrl('newArticle')));
+    const publishedEditorUrl = previousState?.articleUrl
+      ? await this.discoverPublishedEditorUrl(previousState.articleUrl)
+      : undefined;
+    const editorUrl = publishedEditorUrl ?? existingDraft?.url ?? (await this.requireAuthenticatedUrl('newArticle'));
+    await this.navigate(editorUrl);
     await this.assertExpectedIdentity('article editor', this.config.userIdentifier);
     if (this.config.seriesTitle) await this.assertExpectedIdentity('article editor', this.config.seriesTitle);
     if (this.config.seriesCategory) await this.assertExpectedIdentity('article editor', this.config.seriesCategory);
@@ -210,13 +216,16 @@ export class PlaywrightPublisherSite implements PublisherSite {
     await this.fillEditableValue(editor, rendered.markdown);
 
     await this.setArticleTags(article.tags);
-    const saveDraft = await firstVisible(saveDraftCandidates(this.page));
-    if (!saveDraft) {
-      throw new AppError('A semantic save-draft control could not be found', ExitCode.BrowserWorkflowFailed, {
+    const saveControl = await firstVisible(
+      publishedEditorUrl ? updateArticleCandidates(this.page) : saveDraftCandidates(this.page),
+    );
+    if (!saveControl) {
+      throw new AppError('A semantic article-save control could not be found', ExitCode.BrowserWorkflowFailed, {
         pageUrl: this.page.url(),
+        publishedUpdate: publishedEditorUrl !== undefined,
       });
     }
-    const saveAction = await saveDraft.evaluate((element) => element.closest('form')?.action);
+    const saveAction = await saveControl.evaluate((element) => element.closest('form')?.action);
     if (!saveAction) {
       throw new AppError('The save-draft control is not attached to a form action', ExitCode.BrowserWorkflowFailed, {
         pageUrl: this.page.url(),
@@ -225,7 +234,7 @@ export class PlaywrightPublisherSite implements PublisherSite {
     const saveResponsePromise = this.page.waitForResponse(
       (response) => response.request().method() === 'POST' && response.url() === saveAction,
     );
-    await saveDraft.click();
+    await saveControl.click();
     const saveResponse = await saveResponsePromise;
     if (saveResponse.status() >= 400) {
       throw new AppError('The draft save request failed', ExitCode.BrowserWorkflowFailed, {
@@ -235,7 +244,8 @@ export class PlaywrightPublisherSite implements PublisherSite {
       });
     }
     await saveResponse.finished();
-    const savedDraftUrl = new URL(saveResponse.headers().location ?? saveResponse.url(), saveResponse.url()).toString();
+    const savedDraftUrl = publishedEditorUrl
+      ?? new URL(saveResponse.headers().location ?? saveResponse.url(), saveResponse.url()).toString();
     await this.navigate(savedDraftUrl);
 
     const savedTitleInput = await firstVisible(articleTitleInputCandidates(this.page));
@@ -276,6 +286,21 @@ export class PlaywrightPublisherSite implements PublisherSite {
       assets,
       draft: { title: article.title, url: this.page.url() },
     };
+  }
+
+  private async discoverPublishedEditorUrl(articleUrl: string): Promise<string> {
+    await this.navigate(articleUrl);
+    await this.assertExpectedIdentity('published article', this.config.userIdentifier);
+    if (this.config.seriesTitle) await this.assertExpectedIdentity('published article', this.config.seriesTitle);
+    const editLink = await firstVisible(editArticleLinkCandidates(this.page));
+    const href = await editLink?.getAttribute('href');
+    if (!href) {
+      throw new AppError('The published article edit URL could not be discovered', ExitCode.BrowserWorkflowFailed, {
+        articleUrl,
+        pageUrl: this.page.url(),
+      });
+    }
+    return new URL(href, this.page.url()).toString();
   }
 
   public async publishDraft(draft: DraftArticle): Promise<void> {

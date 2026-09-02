@@ -1,11 +1,12 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { basename, join, resolve } from 'node:path';
 import type { AddressInfo } from 'node:net';
 import pino from 'pino';
 import { afterEach, describe, expect, it } from 'vitest';
 import type { AppConfig } from '../src/config/schema.js';
+import { loadArticleForDay } from '../src/content/article.js';
 import { PlaywrightPublisherSite } from '../src/site/playwright-publisher-site.js';
 import { runPublishWorkflow } from '../src/workflow/publish-workflow.js';
 
@@ -96,6 +97,25 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       expect(state.markdown).not.toContain('./ref-image-001.png');
       expect(state.tags).toEqual(expect.arrayContaining(['18th鐵人賽', 'unity', 'ai agent', 'vibe coding']));
       expect(site.getDiscoveredState().newArticleUrl).toBe(`${baseUrl}/2026ironman/create/9242`);
+
+      const localArticle = await loadArticleForDay(config.articlesDir, 1);
+      const image = localArticle.images[0];
+      expect(image).toBeDefined();
+      const update = await site.syncDraft(
+        localArticle,
+        { title: localArticle.title, url: `${baseUrl}/article/1/draft` },
+        {
+          articleUrl: `${baseUrl}/article/1`,
+          assets: {
+            [image!.markdownReference]: {
+              sha256: image!.sha256,
+              remoteUrl: `${baseUrl}/uploaded/${encodeURIComponent(basename(image!.absolutePath))}`,
+            },
+          },
+        },
+      );
+      expect(update.draft.url).toBe(`${baseUrl}/article/1/edit`);
+      expect(update.action).toBe('updated');
     } finally {
       await site.close(false);
       await new Promise<void>((resolveClose, rejectClose) => {
@@ -159,7 +179,22 @@ async function handleRequest(
   }
 
   if (request.method === 'GET' && requestUrl.pathname === '/article/1') {
-    sendHtml(response, pageShell(`<main><h1>${escapeHtml(state.title)}</h1><a href="/users/20107519/ironman/123">Test Ironman Series</a></main>`));
+    sendHtml(response, pageShell(`<main><h1>${escapeHtml(state.title)}</h1><a href="/users/20107519/ironman/123">Test Ironman Series</a><a href="/article/1/edit">編輯文章</a></main>`));
+    return;
+  }
+
+  if (request.method === 'GET' && requestUrl.pathname === '/article/1/edit') {
+    sendHtml(response, editorPage(state.title, state.markdown, state.tags, false, request.headers.host ?? 'fixture.test', true));
+    return;
+  }
+
+  if (request.method === 'POST' && requestUrl.pathname === '/article/1') {
+    const form = new URLSearchParams(await readBody(request));
+    state.title = form.get('subject') ?? form.get('title') ?? '';
+    state.markdown = form.get('description') ?? form.get('content') ?? '';
+    state.tags = form.getAll('tags[]').map((tag) => tag.toLocaleLowerCase());
+    response.writeHead(303, { Location: '/article/1' });
+    response.end();
     return;
   }
 
@@ -204,8 +239,8 @@ function pageShell(content: string): string {
   return `<!doctype html><html><body><header>test-user · Test Ironman Series · Vibe Coding</header>${content}</body></html>`;
 }
 
-function editorPage(title: string, markdown: string, tags: string[], saved: boolean, host: string): string {
-  const publishControls = saved
+function editorPage(title: string, markdown: string, tags: string[], saved: boolean, host: string, updating = false): string {
+  const publishControls = saved && !updating
     ? `<button type="button" class="save-group__dropdown-toggle">▲</button>
        <form id="publish-form" method="post" action="/publish">
          <button id="publish-button" type="submit" hidden>發表文章</button>
@@ -214,7 +249,7 @@ function editorPage(title: string, markdown: string, tags: string[], saved: bool
   return pageShell(`
     <main>
       <p>Test Ironman Series</p>
-      <form method="post" action="/draft/1">
+      <form method="post" action="${updating ? '/article/1' : '/draft/1'}">
         <input name="subject" value="${escapeAttribute(title)}" placeholder="在這裡幫文章下個好標題...">
         <textarea id="SimpleMDE_0" name="description" style="display:none">${escapeHtml(markdown)}</textarea>
         <div class="editor-toolbar"><a title="上傳圖片">upload</a></div>
@@ -225,7 +260,7 @@ function editorPage(title: string, markdown: string, tags: string[], saved: bool
           </select>
           <input class="select2-search__field" role="textbox" type="search" onkeydown="if(event.key==='Enter'){event.preventDefault()}">
         </div>
-        <button type="submit">儲存草稿</button>
+        <button type="submit"${updating ? ' id="updateSubmitBtn"' : ''}>${updating ? '更新文章' : '儲存草稿'}</button>
       </form>
       ${publishControls}
     </main>
