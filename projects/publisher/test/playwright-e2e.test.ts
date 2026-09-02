@@ -94,7 +94,7 @@ describe('Playwright adapter end-to-end against a semantic fixture site', () => 
       expect(state.published).toBe(true);
       expect(state.markdown).toContain(`${baseUrl}/uploaded/ref-image-001.png`);
       expect(state.markdown).not.toContain('./ref-image-001.png');
-      expect(state.tags).toEqual(expect.arrayContaining(['18th鐵人賽', 'Unity', 'AI Agent', 'Vibe Coding']));
+      expect(state.tags).toEqual(expect.arrayContaining(['18th鐵人賽', 'unity', 'ai agent', 'vibe coding']));
       expect(site.getDiscoveredState().newArticleUrl).toBe(`${baseUrl}/2026ironman/create/9242`);
     } finally {
       await site.close(false);
@@ -178,7 +178,7 @@ async function handleRequest(
     const form = new URLSearchParams(await readBody(request));
     state.title = form.get('subject') ?? form.get('title') ?? '';
     state.markdown = form.get('description') ?? form.get('content') ?? '';
-    state.tags = form.getAll('tags[]');
+    state.tags = form.getAll('tags[]').map((tag) => tag.toLocaleLowerCase());
     state.saved = true;
     sendHtml(response, editorPage(state.title, state.markdown, state.tags, true, request.headers.host ?? 'fixture.test'));
     return;

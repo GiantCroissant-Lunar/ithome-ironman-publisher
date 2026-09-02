@@ -251,7 +251,10 @@ export class PlaywrightPublisherSite implements PublisherSite {
     const savedTitle = await this.readEditableValue(savedTitleInput);
     const savedMarkdown = await this.readEditableValue(savedEditor);
     const savedTags = await this.readSelectedTags();
-    const missingTags = savedTags ? article.tags.filter((tag) => !savedTags.includes(tag)) : [];
+    const normalizedSavedTags = savedTags?.map((tag) => tag.trim().toLocaleLowerCase());
+    const missingTags = normalizedSavedTags
+      ? article.tags.filter((tag) => !normalizedSavedTags.includes(tag.trim().toLocaleLowerCase()))
+      : [];
     if (
       !titlesMatch(savedTitle, article.title) ||
       normalizeMarkdown(savedMarkdown) !== normalizeMarkdown(rendered.markdown) ||
