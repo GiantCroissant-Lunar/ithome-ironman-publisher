@@ -21,6 +21,7 @@ This is a destructive recovery workflow. Deleting an Ironman article can affect 
 2. Use the repository's saved headed Playwright Edge session. Never use or copy cookies from the user's everyday Edge profile.
 3. Locate the delete control from the authenticated page, verify its form or endpoint targets the exact article ID, invoke it once, and handle any site confirmation. Do not use a guessed DELETE endpoint.
 4. Verify both that the old URL is no longer public and that the exact title is absent from today's registered-series listing. If deletion is ambiguous, stop without retrying.
+   The user's article listing can retain a card marked `title-badge--delete`; treat it as a tombstone, not as a public article or draft.
 5. Clear only the ignored Day runtime pointers that refer to the deleted article or draft. Retain verified hosted asset URL/SHA pairs so the new draft can reuse them.
 6. Run `task publish:dry`. It must report the exact Day/title and `would-create`; any `already-published`, identity mismatch, stale URL, or unexpected draft is a hard stop.
 7. Run the authorized publication workflow once. Verify the new public page independently: exact title, account, registered series, today's Taipei date, article body, and every expected image URL rendered as an image.
