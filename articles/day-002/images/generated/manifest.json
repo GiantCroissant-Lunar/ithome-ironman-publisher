@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "provider": "leonardo-ai",
+  "assets": [
+    {
+      "path": "./images/generated/inline-01.jpg",
+      "sha256": "24816cce1486e7c36b109e1d8140589bc9e7257798d46895eb3824623a5ea561",
+      "slot": "inline-01",
+      "generationId": "c54ef1bb-9c56-49f9-81e7-a92e4c3e9171",
+      "model": "Auto",
+      "prompt": "An editorial software-engineering illustration contrasting two development work units without text. On the left, a conventional developer desk focuses narrowly on an open source-code file and editor window. On the right, a richer AI-agent session surrounds a project workspace with a process tree, tool activity, event history, test evidence, a human approval control, and a persistent state beacon. The scene should show the conceptual evolution from editing files to governing durable agent work, using composition and recognizable objects only. Sophisticated dark navy, teal, and restrained amber palette, clean isometric 16:9 landscape, no split-screen labels, no UI text, no letters, no numbers, no logos, no watermarks.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-02T12:29:22.762Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/editorial-software-engineering-illustration-c54ef1bb-9c56-49f9-81e7-a92e4c3e9171",
+      "alt": "開發工作的核心從 IDE 裡的檔案與編輯器，擴展為包含 workspace、程序、事件、證據與核准的 Agent session"
+    },
+    {
+      "path": "./images/generated/hero.jpg",
+      "sha256": "50ed42c682a6101866d126fb72ea59edb28df1adc9bff39932ecf38ead8030a9",
+      "slot": "hero",
+      "generationId": "d1656ea2-1cc4-412a-8efa-d2647fd900c5",
+      "model": "Auto",
+      "prompt": "A cinematic editorial technology illustration for a Taiwanese developer article about an Agent Development Environment. At the center, a resilient workstation-like execution station supervises several persistent AI software-agent sessions and protected project workspaces. Around it, interchangeable desktop, terminal, web, and mobile client devices connect through one coherent glowing communication layer. One client screen closes while the agent work visibly continues at the central station, communicating persistence, reconnectability, observability, evidence, and human governance through objects and lighting only. Subtle Unity game-development props and 3D scene assets appear in one workspace. Dark navy and warm teal palette with restrained amber approval highlights, polished isometric digital art, generous negative space, crisp details, 16:9 landscape. Pure scene illustration, not an infographic, no callouts, no labels, no signs, no readable screens, no letters, no numbers, no logos, no watermarks.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-02T12:28:37.179Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/cinematic-editorial-technology-illustration-d1656ea2-1cc4-412a-8efa-d2647fd900c5",
+      "alt": "持續運作的 Station 連接桌面、終端、Web 與行動 Client，並監督多個 Agent session 與專案 workspace"
+    }
+  ]
+}

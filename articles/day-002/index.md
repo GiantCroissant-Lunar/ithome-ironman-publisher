@@ -9,6 +9,8 @@ tags:
 
 # 什麼是 Agent Development Environment？
 
+![持續運作的 Station 連接桌面、終端、Web 與行動 Client，並監督多個 Agent session 與專案 workspace](./images/generated/hero.jpg)
+
 昨天用自動發文流程介紹了 orchestration：Agent 不只是生成內容，還要取得 context、操作工具、保存狀態，並在行動後重新驗證結果。
 
 今天，另一個 Agent 花了不少時間實作 BearPunch。到晚上，第一個 D0 lifecycle gate 已經通過。不過第二篇如果直接從 Rust crate、CLI 動詞和測試結果開始，很容易只看見一堆零件，卻不知道我們究竟想造什麼。
@@ -16,6 +18,8 @@ tags:
 所以 Day 002 先退一步，回答整個系列最重要的問題之一：**什麼是 Agent Development Environment（ADE）？它和我們熟悉的 IDE 有什麼不同？**
 
 ## 從 IDE 到 ADE，改變的是工作單位
+
+![開發工作的核心從 IDE 裡的檔案與編輯器，擴展為包含 workspace、程序、事件、證據與核准的 Agent session](./images/generated/inline-01.jpg)
 
 IDE 的核心工作單位通常是檔案、專案與目前開啟的 Editor。人負責記住「我正在做什麼」，IDE 提供編輯、搜尋、執行、除錯與版本控制工具。
 
