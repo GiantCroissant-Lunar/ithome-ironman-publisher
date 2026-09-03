@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 3,
+  "slot": "inline-03",
+  "assetName": "bearpunch-station-first-progress",
+  "prompt": "A cinematic editorial construction scene representing the current progress of a Station-first Agent Development Environment, with no text. In the foreground, a completed technical foundation contains a persistent execution station, four distinct AI-agent connectors, durable event storage, protected sandbox workspaces, a terminal control surface, and an operational TUI-like observation panel made only of abstract geometric blocks. In the background, an unfinished desktop application shell, remote station bridge, plugin module bay, and formal view-protocol conduit are visibly still under construction. Communicate honest progress: strong working infrastructure but an incomplete final product. Include subtle Unity project and 3D asset cues. Dark navy and teal palette with restrained amber work lights, polished isometric 16:9 illustration, no labels, no fake text, no readable screens, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "BearPunch 已完成 Station-first 核心、四個 Agent adapter、sandbox 與 TUI 觀察介面，但桌面 ADE、遠端連線與正式 view protocol 仍在施工"
+}

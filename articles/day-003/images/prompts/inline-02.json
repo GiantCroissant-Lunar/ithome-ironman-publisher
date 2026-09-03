@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 3,
+  "slot": "inline-02",
+  "assetName": "d0-lifecycle-verification-flow",
+  "prompt": "A full-bleed cinematic isometric physical diorama of rigorous AI-agent lifecycle verification, using objects only and filling the entire 16:9 canvas edge to edge. At the center, a sealed persistent station contains two nested luminous process orbs representing one root and one grandchild. On the left, a small client device with a completely blank black screen disconnects while the station keeps glowing. On the right, another client device with a completely blank black screen reconnects to the same station. Four identical sealed light capsules travel from the station into a solid archival vault, representing preserved canonical events. A mechanical containment ring safely extinguishes both nested process orbs together, with simple amber verification lamps confirming completion. Use only sculptural machinery, cables, capsules, blank devices, light, and shadows—no dashboards, data panels, screen content, floor markings, wall markings, signs, diagrams, timelines, charts, interface elements, typography-like decoration, or flat surfaces containing symbols. Dark navy engineering space, teal paths, restrained amber proof lights, polished cinematic detail. Absolutely no borders, frames, letterboxing, black bars, captions, labels, glyphs, pseudo-writing, letters, numbers, logos, or watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "D0 以 Client 離線與重連、相同事件紀錄，以及完整回收 root 與 grandchild process 驗證 Agent 生命週期"
+}

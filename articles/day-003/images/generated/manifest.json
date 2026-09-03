@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "provider": "leonardo-ai",
+  "assets": [
+    {
+      "path": "./images/generated/hero.jpg",
+      "sha256": "07a8f96c24fcc08f3e0ee22022a7ba39cbf0ee3db0b0cb15fff073ecdb3a1c1c",
+      "slot": "hero",
+      "generationId": "400429d2-2016-4bbe-9280-f20561c999a6",
+      "model": "Auto",
+      "prompt": "A cinematic editorial technology illustration for a Taiwanese developer article about an AI software agent outliving its client window. A resilient central execution station continues supervising a glowing agent session, a branching process tree, a protected project workspace, and a durable event ledger while one desktop client powers down. A second terminal client reconnects to the exact same still-running session through a secure teal communication path. Include subtle Unity game-development objects and 3D scene assets inside the workspace. Emphasize continuity, ownership, and verifiable state through physical objects and lighting rather than diagrams. Dark navy and warm teal palette with restrained amber verification lights, polished isometric digital art, generous negative space, crisp details, 16:9 landscape. Pure scene illustration, no callouts, no labels, no readable screens, no letters, no numbers, no logos, no watermarks.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-03T11:53:49.639Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/cinematic-editorial-technology-illustration-400429d2-2016-4bbe-9280-f20561c999a6",
+      "alt": "一個 Client 關閉後，Station 仍持續監督 Agent session、process tree、workspace 與事件，另一個 Client 隨後重新接回"
+    },
+    {
+      "path": "./images/generated/inline-02.jpg",
+      "sha256": "ea7185b7e1e357c9e6c1b7f7ba93995932c83804b2a4a9171e15c52b9069bd5d",
+      "slot": "inline-02",
+      "generationId": "d496b5ae-e40c-471e-8e5c-275681e9977a",
+      "model": "Auto",
+      "prompt": "A full-bleed cinematic isometric physical diorama of rigorous AI-agent lifecycle verification, using objects only and filling the entire 16:9 canvas edge to edge. At the center, a sealed persistent station contains two nested luminous process orbs representing one root and one grandchild. On the left, a small client device with a completely blank black screen disconnects while the station keeps glowing. On the right, another client device with a completely blank black screen reconnects to the same station. Four identical sealed light capsules travel from the station into a solid archival vault, representing preserved canonical events. A mechanical containment ring safely extinguishes both nested process orbs together, with simple amber verification lamps confirming completion. Use only sculptural machinery, cables, capsules, blank devices, light, and shadows—no dashboards, data panels, screen content, floor markings, wall markings, signs, diagrams, timelines, charts, interface elements, typography-like decoration, or flat surfaces containing symbols. Dark navy engineering space, teal paths, restrained amber proof lights, polished cinematic detail. Absolutely no borders, frames, letterboxing, black bars, captions, labels, glyphs, pseudo-writing, letters, numbers, logos, or watermarks.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-03T12:05:19.110Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/full-bleed-cinematic-isometric-physical-diorama-d496b5ae-e40c-471e-8e5c-275681e9977a",
+      "alt": "D0 以 Client 離線與重連、相同事件紀錄，以及完整回收 root 與 grandchild process 驗證 Agent 生命週期"
+    }
+  ]
+}

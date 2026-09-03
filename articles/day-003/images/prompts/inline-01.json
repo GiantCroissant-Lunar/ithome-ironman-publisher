@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 3,
+  "slot": "inline-01",
+  "assetName": "client-station-ownership-boundary",
+  "prompt": "An editorial software-engineering scene showing authority moving away from a temporary client window to a persistent execution station, without text. At one side, a lightweight desktop client sends a request and then fades or closes. At the center, a robust station securely owns an AI agent process, its child processes, a project workspace, and a glowing event archive. Another interchangeable client approaches and reconnects without disturbing the running work. Use clear physical hierarchy, secure boundaries, cables of light, and persistent status beacons to communicate ownership. Sophisticated dark navy, teal, and restrained amber palette, clean cinematic isometric art, 16:9 landscape. No infographic labels, no captions, no readable UI, no letters, no numbers, no logos, no watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "暫時性的 Client 只送出操作意圖，持續運作的 Station 才擁有 Agent、子程序、workspace 與事件狀態"
+}

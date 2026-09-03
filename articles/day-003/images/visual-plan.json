@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "dayNumber": 3,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 第一個核心假設：Client 不是 Agent 的主人"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## D0 怎麼把「持續運作」變成可驗證事實？"
+      }
+    },
+    {
+      "slot": "inline-03",
+      "request": "./prompts/inline-03.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## D0 通過後，今天的 BearPunch 到哪裡了？"
+      }
+    }
+  ]
+}
