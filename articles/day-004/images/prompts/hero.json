@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 4,
+  "slot": "hero",
+  "assetName": "family-ladder-executor-handoff",
+  "prompt": "A full-bleed cinematic macro photograph of an unlabeled miniature industrial diorama representing resilient AI-agent execution during a long Unity game-development workflow. Build the entire concept from physical machinery and simple sculptural objects only. A single sealed glowing project capsule travels unchanged along one continuous mechanical workbench through a compilation press, a testing obstacle chamber, a miniature 3D play-simulation cube, and a final plain shipping crate. Beside the track, one small robot operator has a visibly empty removable energy cylinder and is fully powered down; a second visually distinct robot safely receives the exact same sealed project capsule through a stepped mechanical handoff. A solid central vault preserves several identical glowing evidence capsules and controls the machinery. Use smooth unmarked metal, cables, gears, lamps, rails, glass, and figurines only. This is a photographed physical scene, not an infographic, not a diagram, not a blueprint, not a user interface, and not annotated concept art. Do not include computers, monitors, terminals, screens, signs, posters, control panels, floating overlays, HUD elements, line annotations, arrows, floor markings, wall markings, or any flat surface designed to carry information. Dark navy and warm teal materials with restrained amber lamps, realistic cinematic lighting, edge-to-edge 16:9 composition. Every visible surface must be blank and unmarked. Absolutely no borders, letterboxing, black bars, captions, labels, pseudo-writing, glyphs, letters, numbers, logos, or watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Unity 長流程中的原 Agent 因額度中斷，另一個 Agent 透過 Family Ladder 接手同一份受保護 workspace，而 Station 保留事件與 process ownership"
+}

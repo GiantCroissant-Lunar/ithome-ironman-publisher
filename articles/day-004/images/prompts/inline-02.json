@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 4,
+  "slot": "inline-02",
+  "assetName": "retryable-provider-failure-boundary",
+  "prompt": "A full-bleed cinematic macro photograph of an unlabeled miniature industrial diorama showing a strict failure boundary in AI-agent orchestration. Use only physical objects inside one continuous workshop. On the left, a small robot has an empty external energy cylinder and a visibly disconnected plain cable; a guarded mechanical bridge opens so a standby robot can receive one sealed glowing project capsule. On the right, a cracked project workpiece is stopped inside a compilation press and enclosed by an amber inspection ring beside a vault holding evidence capsules; no handoff bridge opens on that side. A simple central interlock physically separates provider availability failure from product verification failure. Communicate the contrast through placement, light, barriers, and machinery only. Use smooth unmarked metal, cables, gears, lamps, rails, blank crates, glass capsules, and figurines. This is a photographed physical scene, not an infographic, not a diagram, not a blueprint, not a user interface, and not annotated concept art. Do not include computers, monitors, terminals, screens, signs, posters, control panels, floating overlays, HUD elements, text boxes, line annotations, arrows, floor markings, wall markings, or any flat surface designed to carry information. Dark navy and teal materials with restrained amber warning lights, realistic cinematic lighting, edge-to-edge 16:9 composition. Every visible surface must be blank and unmarked. Absolutely no borders, letterboxing, black bars, captions, labels, pseudo-writing, glyphs, letters, numbers, logos, or watermarks.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Provider quota 或暫時網路失敗可進入受限 reroute，但 Unity 編譯與測試失敗必須停在 evidence gate，不可用換 Agent 掩蓋"
+}

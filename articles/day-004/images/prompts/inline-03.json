@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 4,
+  "slot": "inline-03",
+  "assetName": "same-work-new-run-hop",
+  "prompt": "A cinematic isometric editorial illustration of a safe AI-agent executor handoff with preserved work identity, shown only through physical objects. A first agent machine is being fully powered down inside a containment ring, including its small branching child-process lights. A sealed project capsule containing a miniature workspace, immutable base layer, brief artifact, and event ledger travels unchanged through a persistent station to a second distinct agent machine. Behind the handoff, two separate run chambers are connected by one luminous lineage thread, making clear that the new executor receives a new run segment while the same work and provenance continue. Dark navy and teal industrial environment with restrained amber verification lights, full-bleed polished 16:9 composition, blank devices only. No typography, fake writing, labels, readable screens, letters, numbers, logos, watermarks, borders, or black bars.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊 Agent 的完整 process tree 先被回收，同一份 brief、worktree、base 與事件 lineage 再交給新 run hop 與另一個 Agent"
+}

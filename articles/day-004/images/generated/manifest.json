@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "provider": "leonardo-ai",
+  "assets": [
+    {
+      "path": "./images/generated/hero.jpg",
+      "sha256": "4f0f0dd3f4fd3d91234a16b990f90bedb416b39413dd512d438a63e408df06cf",
+      "slot": "hero",
+      "generationId": "422ccfb3-1bfe-49c4-a9f0-22433101da7f",
+      "model": "Auto",
+      "prompt": "A full-bleed cinematic macro photograph of an unlabeled miniature industrial diorama representing resilient AI-agent execution during a long Unity game-development workflow. Build the entire concept from physical machinery and simple sculptural objects only. A single sealed glowing project capsule travels unchanged along one continuous mechanical workbench through a compilation press, a testing obstacle chamber, a miniature 3D play-simulation cube, and a final plain shipping crate. Beside the track, one small robot operator has a visibly empty removable energy cylinder and is fully powered down; a second visually distinct robot safely receives the exact same sealed project capsule through a stepped mechanical handoff. A solid central vault preserves several identical glowing evidence capsules and controls the machinery. Use smooth unmarked metal, cables, gears, lamps, rails, glass, and figurines only. This is a photographed physical scene, not an infographic, not a diagram, not a blueprint, not a user interface, and not annotated concept art. Do not include computers, monitors, terminals, screens, signs, posters, control panels, floating overlays, HUD elements, line annotations, arrows, floor markings, wall markings, or any flat surface designed to carry information. Dark navy and warm teal materials with restrained amber lamps, realistic cinematic lighting, edge-to-edge 16:9 composition. Every visible surface must be blank and unmarked. Absolutely no borders, letterboxing, black bars, captions, labels, pseudo-writing, glyphs, letters, numbers, logos, or watermarks.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-04T13:49:29.829Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/full-bleed-cinematic-macro-photograph-unlabeled-422ccfb3-1bfe-49c4-a9f0-22433101da7f",
+      "alt": "Unity 長流程中的原 Agent 因額度中斷，另一個 Agent 透過 Family Ladder 接手同一份受保護 workspace，而 Station 保留事件與 process ownership"
+    },
+    {
+      "path": "./images/generated/inline-02.jpg",
+      "sha256": "f34ba21a5f52c1fa16cb10a19c3035ec4245850a3b4bbcf44667babaed9c65a1",
+      "slot": "inline-02",
+      "generationId": "1c6a0c78-9f05-4c44-be7d-c1b6259ad025",
+      "model": "Auto",
+      "prompt": "A full-bleed cinematic macro photograph of an unlabeled miniature industrial diorama showing a strict failure boundary in AI-agent orchestration. Use only physical objects inside one continuous workshop. On the left, a small robot has an empty external energy cylinder and a visibly disconnected plain cable; a guarded mechanical bridge opens so a standby robot can receive one sealed glowing project capsule. On the right, a cracked project workpiece is stopped inside a compilation press and enclosed by an amber inspection ring beside a vault holding evidence capsules; no handoff bridge opens on that side. A simple central interlock physically separates provider availability failure from product verification failure. Communicate the contrast through placement, light, barriers, and machinery only. Use smooth unmarked metal, cables, gears, lamps, rails, blank crates, glass capsules, and figurines. This is a photographed physical scene, not an infographic, not a diagram, not a blueprint, not a user interface, and not annotated concept art. Do not include computers, monitors, terminals, screens, signs, posters, control panels, floating overlays, HUD elements, text boxes, line annotations, arrows, floor markings, wall markings, or any flat surface designed to carry information. Dark navy and teal materials with restrained amber warning lights, realistic cinematic lighting, edge-to-edge 16:9 composition. Every visible surface must be blank and unmarked. Absolutely no borders, letterboxing, black bars, captions, labels, pseudo-writing, glyphs, letters, numbers, logos, or watermarks.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-04T13:50:20.097Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/full-bleed-cinematic-macro-photograph-unlabeled-1c6a0c78-9f05-4c44-be7d-c1b6259ad025",
+      "alt": "Provider quota 或暫時網路失敗可進入受限 reroute，但 Unity 編譯與測試失敗必須停在 evidence gate，不可用換 Agent 掩蓋"
+    }
+  ]
+}

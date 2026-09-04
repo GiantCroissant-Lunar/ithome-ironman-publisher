@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 4,
+  "slot": "inline-01",
+  "assetName": "three-routing-layers",
+  "prompt": "A sophisticated isometric editorial scene showing three clearly separated physical layers of software orchestration without any text. The top layer is a Unity game-development assembly line with source-code objects, compilation gears, test apparatus, a 3D play chamber, and a build package. The middle layer is a persistent station routing one sealed workspace between several distinct AI-agent terminal machines arranged as an ordered ladder. The bottom layer is a separate network gateway choosing among abstract model-server connections inside one compatible agent. Use vertical depth, isolated platforms, and different light paths to communicate that workflow policy, agent-family dispatch, and model-provider routing are separate responsibilities. Dark navy, teal, and restrained amber palette, polished cinematic 16:9 composition. No labels, captions, arrows containing symbols, readable interfaces, letters, numbers, logos, watermarks, borders, or black bars.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "三層責任由上而下分開：Unity workflow stages、BearPunch Agent family dispatch，以及外部 gateway 的 model/provider routing"
+}
