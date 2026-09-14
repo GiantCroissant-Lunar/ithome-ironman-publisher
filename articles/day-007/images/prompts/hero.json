@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 7,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of two separate unlabeled plugin architecture experiments running side by side on one dark laboratory workbench, clearly independent rather than one integrated product. The left experiment contains two sealed host enclosures connected by a thin teal fabric bridge; multiple plugin capsules can communicate only through guarded central broker chambers, with no direct cable between capsules. The right experiment is a modular service rack containing detachable component cartridges, each sealed around its own small transparent memory vessel; one provider cartridge is being removed while consumer mechanisms remain in distinct active and paused physical states. A neutral observation fixture stands between the experiments without joining their machinery. Dark navy metal, warm teal service light, restrained amber authority locks, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment visibly extending beyond all four edges. This is a physical architecture experiment, not an infographic, comparison chart, software interface, poster, logo, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, comparison chart, diagram, poster, split screen, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "兩座獨立實驗台分別測試 Comet 的跨 host broker composition 與 Blink 的可卸載 service generation，代表不同 hypothesis 而非已整合產品"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 13,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled durable plugin system correctly refusing an incompatible control plane. Three nested product mechanisms form a continuous custody path toward one still-running native worker and a sealed private data vessel. Each mechanism is held by its own teal ownership lock and exact-shaped contract coupling. An older Station control enclosure has powered on nearby, but its interface coupling has the wrong physical geometry for a required platform socket; a firm restrained amber admission gate blocks all three product mechanisms without disturbing their locks, worker, or data. A separate generic recovery rail remains available beside the blocked product path. No replacement cartridge is allowed to slip into the retained route. Dark navy metal, warm teal retained-identity light, restrained amber refusal hardware, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all four edges. This is one coherent physical architecture scene, not an infographic, split screen, flowchart, software interface, comparison chart, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, split screen, flowchart, comparison chart, network diagram, poster, circuit board, fallback replacement cartridge, destroyed worker, deleted data, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊Station因platform socket不相容而被admission gate擋下，三層product owners、原worker與private data仍由各自的retention locks完整保留"
+}

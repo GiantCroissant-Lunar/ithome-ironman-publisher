@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 8,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical typed-message plugin path inside one domain-neutral host machine. Several independently sealed plugin capsules surround a guarded central broker chamber, but no capsule has a direct cable to any other capsule. Smooth data-only glass bundles enter the broker through schema-shaped mechanical gauges; one selected bundle is held by an amber generation pin and routed into a single activation's private inbox drawer. A session capsule, an adapter capsule, and a transcript capsule remain physically independent while teal light travels only through the host-owned broker and inbox channels. The host chamber visibly owns ranking gates, selector mechanisms, and fan-out valves without containing product-specific markings. Dark navy industrial metal, warm teal message light, restrained amber authority hardware, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery cropped by all image edges. Convey typed mediation only through distinct sockets, gauges, pins, inboxes, and light. This is not an infographic, flowchart, network diagram, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, flowchart, network diagram, direct plugin cable, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Saturn 的獨立 plugins 只透過 host broker 傳遞 data-only typed bundles，由 schema gate、selector、generation pin 與 per-activation inbox 管理路徑"
+}

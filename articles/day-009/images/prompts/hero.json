@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 9,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical plugin dependency system on a dark laboratory workbench. In the foreground, one durable owner anchor mechanically holds an entire three-stage chain of older sealed plugin cartridges, including a primary provider and its hidden upstream provider, with every coupling locked by continuous restrained amber retention clamps. Nearby, a newly installed three-stage replacement chain operates independently with brighter teal flow, while the retained old task continues only through its original complete chain. No cable crosses between the old and new chains, and no single cartridge is isolated from its transitive dependencies. The scene should convey simultaneous safe replacement and preserved execution meaning through physical couplings, revision-shaped sockets, and held routes. Dark navy metal, warm teal service light, restrained amber authority hardware, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all four edges. This is one coherent physical architecture scene, not a split screen, infographic, comparison chart, network diagram, software interface, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, comparison chart, network diagram, flowchart, split screen, poster, circuit board, crossed old-new dependency cable, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Durable owner 將舊版 provider 與其 transitive upstream 固定成完整鏈，新工作則使用另一條新版鏈，避免 replacement 後混用依賴"
+}

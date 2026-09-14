@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 12,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 從 Pipe Bytes 到 Committed Cursor"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Spool Full 必須 Failed，不能 Silent Drop"
+      }
+    }
+  ]
+}

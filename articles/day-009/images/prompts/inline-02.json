@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 9,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical message-delivery race inside a plugin host. A sealed command capsule waits at the lip of a private activation inbox conveyor. Before a mechanical gate can release it, an amber closure cassette containing several interlocked exact-revision couplers is visibly seated and locked into the command carriage; only then does the teal inbox gate begin to open. Behind the gate, a provider mechanism has nested service couplings that align precisely with the already attached closure cassette. Emphasize the strict physical happens-before ordering: retention context secured first, message visibility second, with no opportunity for the provider to route through an unbound current socket. Dark navy metal, warm teal delivery light, restrained amber closure hardware, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond every edge. This is a physical concurrency mechanism, not an infographic, timing diagram, flowchart, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, timing diagram, flowchart, network diagram, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Retained closure cassette 必須先鎖到 command，activation inbox 才能讓 provider 看見訊息，建立防止 nested send 漂移的 happens-before 關係"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 5,
+  "slot": "inline-02",
+  "assetName": "plugin-package-to-invocation-lifecycle",
+  "prompt": "A full-bleed cinematic macro photograph of an unlabeled miniature industrial admission line for a software plugin. One sealed artifact cartridge enters through sequential physical checkpoints: a scale and boundary gate for package validation, a crystal fingerprint scanner for exact bytes, a mechanical compatibility gauge, a guarded capability lock, and an isolated preparation chamber. Only after every checkpoint passes does the cartridge enter a registry carousel and connect to a private workspace tray through a scoped broker arm. A final evidence capsule is stored in a durable archive. Nearby, one visibly malformed cartridge is diverted while the currently operating cartridge remains untouched. Use only machinery, rails, locks, capsules, light, and blank surfaces. Dark navy and teal materials with restrained amber verification lamps, realistic edge-to-edge 16:9 composition. No infographic, screens, labels, annotations, pseudo-writing, letters, numbers, logos, watermarks, borders, or letterboxing.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Plugin artifact 依序通過 package、digest、contract、capability 與 runtime preparation，全部成立後才切換 registry route 並建立 scoped invocation"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 5,
+  "slot": "inline-03",
+  "assetName": "generation-pinning-hot-replacement",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled purely mechanical railway switching yard that represents safe software plugin hot replacement. The physical miniature must fill the native 16:9 image to all four edges, with rails and machinery visibly cropped by the frame edges and no empty bands. Use no electronic components anywhere. Show exactly three smooth sealed cylindrical cargo pods in clearly separated positions. On the left, an older teal pod is held firmly by a large visible steel clamp and remains connected by one luminous flexible tether to a glowing glass invocation sphere already travelling along an old rail toward a small private cargo tray. On the right, a new amber pod is mounted at an open rail switch while a second new glass invocation sphere enters its separate route. In the foreground, a cracked matte-black pod is isolated behind a closed barred admission gate, physically disconnected from every rail. The route switch is a solid three-arm mechanical turntable made only of featureless rounded metal, gears, locks, rails, clamps, glass spheres, and cables. Every surface is smooth, blank, and unmarked. Studio-lit realistic product photography, dark navy workshop, teal and amber lights, native edge-to-edge 16:9 crop. This is a physical miniature railway scene, not an infographic, computer, electronic device, user interface, movie frame, poster, or diagram. Absolutely no microchip, processor, circuit board, PCB, electronic socket, connector pins, keyboard, screen, flat information plate, matte, border, letterbox, black bar, empty horizontal band, chart, sign, badge, logo, arrow symbol, pseudo-writing, glyph, letter, number, caption, or watermark anywhere.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊 generation 被既有 invocation pin 住繼續完成，新 invocation 改走新 generation，錯誤 candidate 不會破壞目前 route"
+}

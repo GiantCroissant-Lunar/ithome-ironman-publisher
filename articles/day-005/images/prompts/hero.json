@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 5,
+  "slot": "hero",
+  "assetName": "plugin-first-station-boundary",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled miniature technology diorama representing a software system rebuilt around strict plugin boundaries. The photographed physical set must fill the native 16:9 image all the way to all four edges, with machinery visibly cropped by the frame edges and no empty bands. At the center, a plain faceted star-shaped station vault owns a glowing state archive, smooth policy rings, and unmarked resource locks. The vault must have a completely blank top with no emblem, icon, crest, tool symbol, writing, or decoration. Around it, several separately built plugin cartridges dock through narrow standardized mechanical ports: one sealed transparent module suggests an isolated component, another enclosed machine cell suggests a supervised native process, and a third service capsule stays outside the trusted core. Each cartridge reaches only one small private workspace tray through a guarded broker arm. Use only smooth unmarked metal, glass, cables, rails, locks, and light. Studio-lit realistic product photography, dark navy metal, warm teal paths, restrained amber authority locks, shallow depth of field, native edge-to-edge 16:9 crop. This is a physical miniature scene, not an infographic, user interface, movie frame, poster, or diagram. Absolutely no matte, border, letterbox, black bar, empty horizontal band, screen, sign, panel, badge, emblem, logo, pseudo-writing, glyph, letter, number, caption, or watermark anywhere.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Star-shaped Station 保有 state、policy 與 resource authority，多個獨立 plugin artifact 只能經標準化入口與 scoped broker 存取各自 workspace"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 8,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical plugin runtime on a dark laboratory bench at the exact moment its hidden lifetime dependency is revealed. A large central Station enclosure is losing teal power, and a smaller agent worker mechanism tethered beneath it by bundled glass process conduits is also going dark even though its task chamber is still mid-operation. Beside them, a durable sealed archive remains softly illuminated. In the background sits an unfinished independent supervisor cradle with loose, visibly unconnected couplers and an empty worker socket, clearly a proposed missing mechanism rather than an operational completed product. Show the contrast through physical power, attachment, and unfinished construction only. Dark navy metal, warm teal runtime light, restrained amber authority locks, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond every edge. This is one continuous physical scene, not an infographic, architecture diagram, split screen, software interface, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, architecture diagram, flowchart, split screen, poster, circuit board, completed external supervisor, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Saturn Station 失去電力時，受其 tether 的 Agent worker 也隨之熄滅；一旁未接線的 supervisor cradle 代表仍未完成的 durable lifetime 設計"
+}

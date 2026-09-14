@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 9,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical semantic-drift experiment. An older primary plugin cartridge is firmly held by an amber retention clamp, but behind it a concealed secondary coupling has slipped away from its matching older upstream cartridge and is beginning to engage a newly installed teal upstream cartridge. The resulting mixed mechanical chain looks physically possible yet visibly mismatched: socket geometry, material age, and light rhythm differ at the hidden transitive joint. A durable owner anchor remains connected to the old primary cartridge, revealing that pinning only the first provider did not preserve the whole execution path. Dark navy industrial laboratory, teal replacement energy, restrained amber warning and authority locks, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment cropped by all edges. Convey the architecture failure only through couplings, clamps, material generations, and light. This is not an infographic, flowchart, network diagram, split screen, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, flowchart, network diagram, split screen, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "第一層舊 provider 雖被固定，隱藏的 transitive coupling 卻接上新版 upstream，形成未經驗證的混合執行語意"
+}

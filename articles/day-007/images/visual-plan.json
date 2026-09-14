@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 7,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Comet：讓 ADE 成為 Plugin Composition"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Blink：把 Plugin 變成可卸載的 Service Generation"
+      }
+    }
+  ]
+}

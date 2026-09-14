@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 13,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 一個 Operation，三個 Durable Owners"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 舊 Station 啟動成功，Product Plugins 全部拒絕"
+      }
+    }
+  ]
+}

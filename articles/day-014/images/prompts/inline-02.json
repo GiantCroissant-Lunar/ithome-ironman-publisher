@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 14,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled historical evidence snapshot and a separate current-status index in a dark laboratory archive. An older glass snapshot plate permanently preserves a small group of unfinished components exactly as they appeared at capture time, sealed and untouched. Alongside it, a newer mechanical index carriage points to a later permanent archive block where those same component identities have been accepted into repository custody. The newer index does not overwrite or alter the old plate; both remain connected by a precise lineage rail. Nearby, a fixture review token is visibly synthetic and distinct from an empty real-review station, reinforcing that recorded evidence cannot claim more than it contains. Dark navy archival metal, warm teal lineage light, restrained amber provenance locks, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with archive machinery extending beyond all edges. This is a physical provenance scene, not an infographic, timeline, diagram, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, timeline, diagram, split screen, poster, circuit board, overwritten historical plate, fake human figure, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊review snapshot永久保留capture當下的未提交狀態，current index另指向後來的commit；兩者由lineage連接但不互相改寫"
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 8,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Typed Messaging 已經證明什麼？"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Transcript 活著，不代表 Conversation 活著"
+      }
+    }
+  ]
+}

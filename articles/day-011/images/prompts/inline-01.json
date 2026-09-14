@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 11,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled plugin-owned run announcement mechanism inside a dark laboratory. A native execution engine with a continuous output spool feeds observable state into one sealed plugin capsule. The plugin waits until the spool reaches a stable mechanical mark, then releases one identical glass event capsule into two separate generic host channels: one channel enters a bounded client event reel, while the other enters a private inbox belonging to an independent usage plugin. No client mechanism repeatedly probes the execution engine, and the two plugin capsules have no direct cable. Show product interpretation in the plugin capsule and generic transport in neutral host machinery through distinct materials and couplings. Dark navy industrial metal, warm teal announcement light, restrained amber readiness latch, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with apparatus cropped by every edge. This is not an infographic, flowchart, polling dashboard, software interface, network diagram, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, flowchart, polling dashboard, network diagram, direct plugin cable, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "workspace-runs plugin等output穩定後產生同一份typed announcement，分別送入client event log與獨立usage plugin，而client不直接poll runtime"
+}

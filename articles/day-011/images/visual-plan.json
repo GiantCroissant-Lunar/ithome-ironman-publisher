@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 11,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Run 由 Plugin 宣告，不由 Client Poll"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Restart 不是 Lag"
+      }
+    }
+  ]
+}

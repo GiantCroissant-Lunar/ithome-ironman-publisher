@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 10,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled durable plugin worker being safely revoked on a dark laboratory workbench. A complete older code-and-contract assembly remains firmly preserved inside a transparent teal retention cradle, still physically attached to its durable owner anchor for later interpretation and cleanup. Beside it, a separate amber authority key has been withdrawn from a guarded control gate, causing the connected native worker mechanism to power down and its process branches to fold safely closed. The retained code, workspace vessel, output spool, and evidence tray remain intact and illuminated even though the worker no longer has power to perform new effects. Show two distinct physical systems: preserved interpretation identity and removable current authority. Dark navy metal, warm teal continuity light, restrained amber and muted red revocation hardware, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all four edges. This is one coherent physical architecture scene, not an infographic, split screen, software interface, poster, flowchart, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, split screen, flowchart, network diagram, poster, circuit board, destroyed evidence, deleted workspace, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Durable owner仍保留舊code、workspace與evidence供正確收尾，但獨立authority key已被撤除，使native worker停止接受新effect"
+}

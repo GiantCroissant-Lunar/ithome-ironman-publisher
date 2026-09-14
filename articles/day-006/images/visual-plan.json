@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "dayNumber": 6,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Surface 不是畫面，而是一份 Contribution"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 追一顆按鈕：Action 沒有第二條捷徑"
+      }
+    },
+    {
+      "slot": "inline-03",
+      "request": "./prompts/inline-03.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Replace、Revoke、Unpublish 時，畫面要怎麼失效？"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 14,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of three consecutive unlabeled evidence stations on one dark industrial workbench, each representing a fundamentally different kind of engineering progress. The first station contains a stressed recovery test rig and sealed proof capsules but no new production machinery. The second contains only a carefully locked contract blueprint vessel and priority selector, with an intentionally empty implementation bay. The third contains two newly assembled modular plugin mechanisms accompanied by independent test seals and an archive block, while a separate deployment coupling remains visibly disconnected. The three stations share one timeline rail but use incompatible sockets so their evidence types cannot be confused. Dark navy metal, warm teal verified light, restrained amber decision and validation locks, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with apparatus cropped by every edge. This is not an infographic, three-column chart, timeline diagram, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, three-column chart, timeline diagram, split screen, poster, circuit board, connected deployment socket, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "三座相連但不可混用的證據站分別代表acceptance tests、docs-only contract與runtime plus tests，最後的deployment coupling仍未接上"
+}

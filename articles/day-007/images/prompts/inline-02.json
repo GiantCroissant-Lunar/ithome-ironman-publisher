@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 7,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled modular service-generation test rack built from smooth physical components. A detachable provider cartridge, sealed around its own transparent memory vessel, has just been removed from the center socket. One optional consumer mechanism remains active with a dim teal bypass path, while a required consumer is safely paused behind an amber holding latch with its own replaceable memory vessel released. A fresh replacement provider cartridge approaches a ranked mechanical socket, and a circular level-triggered governor is physically aligning all service routes toward the currently available cartridge. Each generation is visibly isolated in its own glass chamber; no shared memory crosses the chambers. Dark navy metal laboratory, teal active paths, restrained amber suspension locks, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all edges. Convey lifecycle only through positions, locks, routes, and light, with no arrows or labels. This is not an infographic, flowchart, software interface, poster, or movie frame. Absolutely no text, letters, numbers, symbols, labels, arrows, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, flowchart, diagram, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Blink 的 provider generation 被抽出時 optional consumer 保持降級運作、required consumer suspend，replacement 出現後由 reconcile 重新綁定"
+}

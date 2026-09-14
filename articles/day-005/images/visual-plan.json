@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "dayNumber": 5,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Plugin-First 不是把一切都做成外掛"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 一個 Plugin 從 Package 到 Invocation"
+      }
+    },
+    {
+      "slot": "inline-03",
+      "request": "./prompts/inline-03.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Hot Replacement 不是覆蓋檔案"
+      }
+    }
+  ]
+}

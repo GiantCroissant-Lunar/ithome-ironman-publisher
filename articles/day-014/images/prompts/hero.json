@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 14,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical architecture evidence ledger on a dark laboratory workbench. A long precision ledger mechanism separates several distinct evidence objects into guarded compartments: a sealed contract blueprint capsule, a working code mechanism, a stamped test specimen, a permanent archive block, a translucent local receipt stored outside the archive rail, and a dark inactive deployment socket. Farther ahead, several empty open-gate trays remain visibly unfilled. Each object has a different physical coupling and cannot be inserted into the wrong compartment. No new machinery is being built; the scene focuses on classification, custody, and claim boundaries. Dark navy metal, warm teal verified-evidence light, restrained amber boundary locks, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment extending beyond all four edges. This is one coherent physical editorial scene, not an infographic, checklist, dashboard, flowchart, software interface, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, checklist, dashboard, flowchart, poster, circuit board, all evidence merged together, active deployment, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Architecture evidence ledger將contract、code、test、commit、local receipt、deployment與open gates放進不同實體隔間，避免不同證據被當成同一種完成狀態"
+}

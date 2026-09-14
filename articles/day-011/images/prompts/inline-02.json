@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 11,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled observer recovery mechanism distinguishing a restart from ordinary lag. An old bounded event reel ends at a broken Station coupling while an observer carriage still holds a uniquely shaped cursor key from that reel. A replacement Station presents a fresh reel with a visibly different hub geometry and only a short length of new teal material. A guarded amber reset mechanism rejects the old key, empties a small cache tray, and seats a new matching cursor key at the beginning of the replacement reel. Nearby, a separate same-reel retention gate demonstrates ordinary backlog within one intact reel without resetting its hub. Use physical hub shapes, keys, cache trays, gates, and reel continuity to distinguish new incarnation from same-stream lag. Dark navy metal, warm teal stream light, restrained amber reset hardware, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment extending beyond every edge. This is a physical protocol mechanism, not an infographic, timeline, diagram, software interface, split screen, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, timeline, diagram, split screen, poster, circuit board, identical old and new hubs, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊stream cursor key無法套用到新Station的不同instance hub，observer清空舊cache並從新reel起點重建；同stream lag則仍留在原reel內"
+}

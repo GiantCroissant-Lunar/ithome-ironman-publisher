@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 14,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 三筆 Commit，三種不同的進度"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Review 是 Snapshot，不是 Current Status"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 6,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical miniature representing governed plugin-contributed views. A neutral central rendering loom accepts several different sealed plugin cartridges through identical standardized rails. Each cartridge feeds arrangements of blank translucent glass tiles, cards, rows, lists, and one smooth tactile button into the same generic mechanical display frame. From the button, one luminous amber signal bead travels backward through a visible generation ring, a dispatch turntable, and a locked capability gate before reaching the originating plugin capsule. The Station machinery owns the locks and routing while the cartridges own the replaceable arrangements. Dark navy metal workshop, warm teal data light, restrained amber authority light, realistic studio photography, shallow depth of field, edge-to-edge native 16:9 crop with machinery visibly cropped at all four edges. This is a physical miniature scene, not a software screenshot, infographic, diagram, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, symbols, arrows, labels, logos, badges, watermarks, pseudo-writing, screen pixels, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, words, labels, logos, symbols, arrows, pseudo-writing, watermark, user interface screenshot, computer monitor, infographic, diagram, poster, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "多個 plugin surface 經相同 semantic IR 進入通用 renderer，而 action 仍返回 generation、dispatch 與 grant 管理的 Station 路徑"
+}

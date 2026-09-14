@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 11,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled restart-safe observation system on a dark laboratory workbench. One continuous durable worker mechanism and run carriage travels across the entire scene without stopping. Above it, an older Station event recorder has powered down with its finite teal event reel ending at a disconnected observer cursor coupler. A newly powered Station recorder beside it begins a completely fresh event reel from its own distinct physical hub. The observer mechanism visibly releases the old reel coupler and locks onto the new hub near its beginning instead of waiting for the new reel to grow to the old position. The worker continuity remains physically separate from the two event-stream incarnations. Dark navy metal, warm teal event light, restrained amber reset hardware, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all four edges. This is one coherent physical architecture scene, not an infographic, timeline, split screen, flowchart, software interface, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, timeline, split screen, flowchart, network diagram, poster, circuit board, merged event reels, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "同一個worker與run持續運作，但舊Station event reel已結束；observer放開舊cursor並從新Station的獨立stream起點重新觀察"
+}

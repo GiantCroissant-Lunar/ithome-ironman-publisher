@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 6,
+  "slot": "inline-03",
+  "assetName": "inline-03.jpg",
+  "prompt": "A full-frame editorial macro product photograph of one unlabeled physical renderer workshop showing three safe plugin-view failure outcomes in a single continuous scene, not a triptych. On the left, an older teal glass surface module is frozen behind a closed transparent shutter after its generation ring has rotated to a new cartridge. In the center, an amber button signal is stopped cleanly by a large locked capability gate after permission is revoked. On the right, an empty standardized dock and retracted rail remain after a plugin cartridge is removed, while the same neutral rendering loom continues operating elsewhere. Use spatial separation, rails, shutters, locks, empty sockets, and light to convey the three outcomes without arrows, signs, or text. Dark navy metal, teal generation light, restrained amber denial lock, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all edges. Every surface is smooth and unmarked. This is not an infographic, diagram, user interface screenshot, poster, split screen, or movie frame. Absolutely no text, letters, numbers, symbols, arrows, labels, logos, badges, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, symbols, arrows, logo, pseudo-writing, watermark, UI screenshot, monitor, infographic, diagram, triptych, split screen, poster, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Replacement 使舊 generation 畫面失效、revoke 拒絕 effect、unpublish 從 surface catalog 移除 contribution"
+}

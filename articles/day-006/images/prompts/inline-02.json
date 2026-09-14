@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 6,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph tracing one governed action through a purely physical miniature machine. In the foreground, a smooth blank amber button on a translucent card releases one glowing signal sphere into a single continuous mechanical route. The sphere passes through a numbered-looking but completely unmarked faceted generation lock, then a neutral dispatch turntable, enters one sealed resident plugin capsule, and finally reaches a heavy capability gate controlled by the Station before touching a small glowing effect crystal. Show the route by rails, rings, clamps, cables, and light only, with no arrows or labels. The plugin capsule cannot bypass the locked gate. Dark navy industrial workbench, teal route illumination, restrained amber authority accents, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery visibly cut by the image edges. Every object is smooth and unmarked. This is a physical miniature, not an infographic, flowchart, software interface, poster, or movie frame. Absolutely no text, letters, numbers, symbols, arrows, labels, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logo, pseudo-writing, watermark, UI screenshot, monitor, infographic, flowchart, diagram, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "View action 從 generation-bound instance 回到 dispatch、plugin command 與 capability grant recheck，沒有 UI 旁路"
+}

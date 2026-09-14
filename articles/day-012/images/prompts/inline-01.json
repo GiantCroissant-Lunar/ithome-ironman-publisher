@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 12,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical output commit pipeline inside a dark industrial laboratory. A translucent pipe delivers irregular raw material into a framing chamber. One incomplete portion remains suspended behind a closed boundary gate, while a complete portion passes through a precision sealing press, becomes a single glass record capsule, is pressed into a durable metal spool, and only then moves a mechanical cursor ratchet forward. The sealing press and spool show a strict physical order: complete frame, durable pressure lock, then visible cursor movement. Nearby long material is divided into several consecutive sealed capsules without breaking its internal colored fiber strands. Dark navy metal, warm teal data glow, restrained amber commit latches, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with apparatus cropped by every edge. This is a physical commit mechanism, not an infographic, flowchart, diagram, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, flowchart, diagram, poster, circuit board, broken fiber strands, cursor moving before seal, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Raw pipe bytes先在framing chamber形成完整record，經durable sealing後才進入spool並推進cursor；partial frame仍被commit gate擋住"
+}

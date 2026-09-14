@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 6,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled mechanical admission bench for a plugin-contributed surface. One sealed dark-metal plugin cartridge carries a small modular arrangement of blank translucent physical cards, rows, columns, list slats, and a single button cap. Every interactive piece is connected by a short teal mechanical tether only to command sockets on that same cartridge. The entire assembly passes through a precise steel inspection gate with shape gauges, one-way locks, and an amber approval iris before joining a neutral renderer rail. No host controls or other plugin sockets are reachable. Dark navy workshop, teal glass and restrained amber lock light, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 composition with objects extending beyond the frame. Use only smooth unmarked metal, glass, cables, locks, rails, and geometric components. This is not a user interface screenshot, infographic, diagram, poster, or movie frame. Absolutely no text, letters, numbers, symbols, arrows, labels, logos, emblems, pseudo-writing, watermark, screen, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, symbols, arrows, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, diagram, flowchart, poster, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Plugin surface 在 admission 時只能把 intent 綁定到自身宣告的 command，再以受驗證的通用 component 進入 renderer"
+}

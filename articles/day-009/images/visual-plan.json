@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 9,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 一個 A:A 變成 A:B 的語意漂移"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Closure 必須在 Inbox 可見之前生效"
+      }
+    }
+  ]
+}

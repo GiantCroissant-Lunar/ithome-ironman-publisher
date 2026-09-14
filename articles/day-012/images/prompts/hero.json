@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 12,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled durable output-continuity mechanism on a dark laboratory workbench. One native worker engine continues running along the lower edge while its transparent output pipe feeds a heavy independent spool machine. The spool contains a precise sequence of fully sealed glass record capsules glowing teal, each locked into place by a mechanical cursor ratchet. At the current edge, an unfinished open capsule holds a partial stream of material behind a framing gate and has not advanced the ratchet. An older Station control enclosure is disconnected on one side and a replacement Station enclosure is attaching on the other, but both remain physically separate from the worker-owned spool. The replacement reader can touch only the sealed prefix, never the unfinished capsule. Dark navy metal, warm teal committed-output light, restrained amber commit gates and authority hardware, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery extending beyond all four edges. This is one coherent physical architecture scene, not an infographic, timeline, split screen, flowchart, software interface, poster, or movie frame. Every surface is smooth and completely unmarked. Absolutely no text, letters, numbers, labels, arrows, symbols, badges, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, badges, pseudo-writing, watermark, UI screenshot, monitor, infographic, timeline, split screen, flowchart, network diagram, poster, circuit board, exposed code, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Worker持續運作並由獨立spool保存已封存的output records；Station replacement只能讀取committed prefix，尚未完成的frame仍停在cursor之外"
+}

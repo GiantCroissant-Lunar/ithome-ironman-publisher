@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 13,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled three-layer durable operation assembled from physical custody chambers. An outer workflow chamber, a middle coordinator chamber, and an inner execution-service chamber each contain a distinct sealed owner vault with its own uniquely shaped namespace key and exact revision lock. The same subtle material fingerprint passes through all three chambers, representing one immutable request, but no chamber shares or opens another chamber's vault. The inner chamber connects to one native worker resource held in a separate cradle. Exact topic couplers link each layer while preserving three independent lifetime locks. Dark navy industrial metal, warm teal continuity glow, restrained amber intent and retention latches, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with apparatus cropped by every edge. This is a physical ownership composition, not an infographic, layered diagram, flowchart, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, layered diagram, flowchart, poster, circuit board, shared unlocked state, single giant plugin, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Workspace facade、coordinator與execution service以相同request fingerprint建立三個不同namespace與lifetime locks，最內層再持有native worker"
+}

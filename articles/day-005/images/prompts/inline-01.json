@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "dayNumber": 5,
+  "slot": "inline-01",
+  "assetName": "host-kernel-runtime-plugin-layers",
+  "prompt": "A polished full-bleed isometric physical diorama showing the layered boundary of a plugin-first agent station using objects only. A small outer control lever connects to a trusted host machinery frame. Inside it sits a compact kernel vault with a registry carousel, policy lock, generation pins, and invocation clocks. Below the kernel, two distinct narrow adapters lead to separately built modules: a transparent isolated component capsule and a confined native machine inside a containment cage. Both reach allocation-specific workspace trays only through guarded broker arms, while the central archive remains inaccessible. Communicate composition, lifecycle authority, runtime independence, and scoped resources through physical separation and light paths. Dark navy, teal, and restrained amber palette, cinematic 16:9 composition. No screens, diagrams, text-bearing panels, labels, glyphs, letters, numbers, logos, watermarks, borders, or black bars.",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Host 只負責接線，kernel 掌握 registry、policy 與 lifecycle，Wasm 和 confined process adapters 再執行獨立 plugin artifact"
+}

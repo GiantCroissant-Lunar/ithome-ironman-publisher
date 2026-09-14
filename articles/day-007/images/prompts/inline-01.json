@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 7,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical plugin service composition spanning two separate host enclosures. Inside the nearer enclosure, a client capsule reaches a domain capsule only through a guarded central broker chamber; the domain capsule then makes a second broker-mediated connection to a sealed persistence capsule with isolated transparent storage cells. No plugin capsules have direct cables to each other. A narrow teal fabric bridge continues from the first broker to a second distant host enclosure while preserving the same mechanical service socket shape. Credential identity is represented by unique physical key slots held by the broker, never by markings on the capsules. Dark navy industrial laboratory, teal service paths, restrained amber authorization locks, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with machinery cropped by every image edge. Use only smooth unmarked metal, glass, cables, gates, sockets, and light. This is not an infographic, network diagram, user interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, network diagram, infographic, flowchart, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Comet 的 session domain capsule 經 host broker 再呼叫 state capsule，caller identity 由受證明的 slot 建立，跨 host 時維持相同 service call 形狀"
+}

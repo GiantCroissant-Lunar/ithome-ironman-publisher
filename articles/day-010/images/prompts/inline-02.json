@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 10,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled managed worker after revocation but before retirement. The worker mechanism is dark and safely folded inside a cancelled process-tree cage, with its input gate firmly sealed. Next to it, an exact old code cartridge, a private workspace vessel, a coiled output spool, and several evidence capsules remain secured by teal retention clamps on a cleanup bench. A separate terminal retirement hatch farther along the bench is still closed, waiting for the evidence capsules to be captured and inspected before the clamps can release. Show that cancellation has occurred while resources remain intentionally held for cleanup, and that retirement is a later explicit physical stage. Dark navy metal, warm teal retained-evidence light, restrained amber terminal hardware, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment extending beyond all edges. This is one continuous physical lifecycle scene, not an infographic, timeline, flowchart, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, timeline, flowchart, split screen, poster, circuit board, destroyed workspace, missing evidence, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Worker已因revoke停止且input gate關閉，但舊code、workspace、output與receipts仍被保留，等待capture後才進入explicit retirement"
+}

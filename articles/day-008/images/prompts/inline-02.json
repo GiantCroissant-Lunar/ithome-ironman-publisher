@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 8,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled physical failure-recovery scene on a dark laboratory bench. A durable sealed archive made of stacked blank metal memory tiles remains illuminated inside thick glass, preserving a completed trace. Immediately beside it, a once-branching agent worker tree has gone dark: its small process chambers are empty, transparent input and output tubes are severed at a powerless Station coupling, and a delicate mechanical cursor carriage has stopped before reaching the next blank spool. The archive is intact, but there is visibly no living mechanism attached that could continue the interrupted operation. Use one coherent physical scene with contrasting durable material and vanished transient machinery, not two panels. Dark navy metal, warm teal archive glow, restrained amber break points, realistic studio-lit miniature photography, shallow depth of field, native edge-to-edge 16:9 crop with objects extending beyond all edges. No human figures and no readable pages. This is not an infographic, timeline, flowchart, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, readable pages, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, timeline, flowchart, split screen, poster, circuit board, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Durable transcript archive 仍亮著，但 Agent worker tree、pipes 與 protocol cursor 已隨 Station 熄滅，表示 reconstruction 不等於 conversation continuity"
+}

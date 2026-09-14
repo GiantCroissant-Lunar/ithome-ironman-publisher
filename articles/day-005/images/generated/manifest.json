@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "provider": "leonardo-ai",
+  "assets": [
+    {
+      "path": "./images/generated/hero.jpg",
+      "sha256": "32a33ec7cc716aa41a91adf0fa5b541332a7018427744ad99610b34af4ce8786",
+      "slot": "hero",
+      "generationId": "ddb45829-591b-43ba-9216-1cfb245e3f5d",
+      "model": "Auto",
+      "prompt": "A full-frame editorial macro product photograph of an unlabeled miniature technology diorama representing a software system rebuilt around strict plugin boundaries. The photographed physical set must fill the native 16:9 image all the way to all four edges, with machinery visibly cropped by the frame edges and no empty bands. At the center, a plain faceted star-shaped station vault owns a glowing state archive, smooth policy rings, and unmarked resource locks. The vault must have a completely blank top with no emblem, icon, crest, tool symbol, writing, or decoration. Around it, several separately built plugin cartridges dock through narrow standardized mechanical ports: one sealed transparent module suggests an isolated component, another enclosed machine cell suggests a supervised native process, and a third service capsule stays outside the trusted core. Each cartridge reaches only one small private workspace tray through a guarded broker arm. Use only smooth unmarked metal, glass, cables, rails, locks, and light. Studio-lit realistic product photography, dark navy metal, warm teal paths, restrained amber authority locks, shallow depth of field, native edge-to-edge 16:9 crop. This is a physical miniature scene, not an infographic, user interface, movie frame, poster, or diagram. Absolutely no matte, border, letterbox, black bar, empty horizontal band, screen, sign, panel, badge, emblem, logo, pseudo-writing, glyph, letter, number, caption, or watermark anywhere.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-05T13:35:06.019Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/full-frame-editorial-macro-product-photograph-ddb45829-591b-43ba-9216-1cfb245e3f5d",
+      "alt": "Star-shaped Station 保有 state、policy 與 resource authority，多個獨立 plugin artifact 只能經標準化入口與 scoped broker 存取各自 workspace"
+    },
+    {
+      "path": "./images/generated/inline-03.jpg",
+      "sha256": "4f4dbb8c1f899a6f2506aff65e6306496037b9e640e866d51e21d528ce3674a8",
+      "slot": "inline-03",
+      "generationId": "4e2f80c0-fd1e-4939-b690-6dd7782e4d82",
+      "model": "Auto",
+      "prompt": "A full-frame editorial macro product photograph of an unlabeled purely mechanical railway switching yard that represents safe software plugin hot replacement. The physical miniature must fill the native 16:9 image to all four edges, with rails and machinery visibly cropped by the frame edges and no empty bands. Use no electronic components anywhere. Show exactly three smooth sealed cylindrical cargo pods in clearly separated positions. On the left, an older teal pod is held firmly by a large visible steel clamp and remains connected by one luminous flexible tether to a glowing glass invocation sphere already travelling along an old rail toward a small private cargo tray. On the right, a new amber pod is mounted at an open rail switch while a second new glass invocation sphere enters its separate route. In the foreground, a cracked matte-black pod is isolated behind a closed barred admission gate, physically disconnected from every rail. The route switch is a solid three-arm mechanical turntable made only of featureless rounded metal, gears, locks, rails, clamps, glass spheres, and cables. Every surface is smooth, blank, and unmarked. Studio-lit realistic product photography, dark navy workshop, teal and amber lights, native edge-to-edge 16:9 crop. This is a physical miniature railway scene, not an infographic, computer, electronic device, user interface, movie frame, poster, or diagram. Absolutely no microchip, processor, circuit board, PCB, electronic socket, connector pins, keyboard, screen, flat information plate, matte, border, letterbox, black bar, empty horizontal band, chart, sign, badge, logo, arrow symbol, pseudo-writing, glyph, letter, number, caption, or watermark anywhere.",
+      "width": 1344,
+      "height": 768,
+      "generatedAt": "2026-09-05T13:49:10.905Z",
+      "sourceUrl": "https://app.leonardo.ai/generation/image/full-frame-editorial-macro-product-photograph-4e2f80c0-fd1e-4939-b690-6dd7782e4d82",
+      "alt": "舊 generation 被既有 invocation pin 住繼續完成，新 invocation 改走新 generation，錯誤 candidate 不會破壞目前 route"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 10,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "A full-frame editorial macro product photograph of two orthogonal unlabeled control mechanisms governing one durable plugin worker. A teal mechanical retention spine locks an older exact code cartridge, contract couplers, workspace vessel, and durable owner anchor into one stable interpretation assembly. Crossing nearby without merging, an amber authority rail passes through a removable permission gate before reaching the worker's effect actuators. The retention spine remains continuously locked while the authority gate is visibly closed and its key removed, making the worker's effect mechanism inactive without disturbing the preserved code graph. Use physical separation, materials, gates, and light to show that generation identity and current permission are independent dimensions. Dark navy industrial laboratory, warm teal continuity glow, restrained amber revocation light, realistic miniature product photography, shallow depth of field, native edge-to-edge 16:9 crop with apparatus cropped by every edge. This is not an infographic, axis chart, diagram, software interface, split screen, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, axis chart, diagram, split screen, poster, circuit board, merged permission and retention control, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Teal retention spine固定exact code、contract與workspace，另一條amber authority rail可獨立關閉，表示保存語意不等於保存權限"
+}

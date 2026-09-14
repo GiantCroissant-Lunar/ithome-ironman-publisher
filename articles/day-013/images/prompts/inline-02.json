@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 13,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled older control enclosure encountering a newer retained plugin ABI. The older Station enclosure is fully powered and its generic maintenance rail remains active, but its main connector cannot fit a newer platform coupling guarded by an amber compatibility gate. Behind that gate, three retained product chambers stay dark but intact, each exact cartridge and ownership lock still seated; farther behind them, the original worker mechanism and private data vessel continue safely under independent custody. A bright newer replacement handler cartridge sits nearby but is physically prevented from entering any retained socket. In the distance, a compatible control enclosure with the correct coupling approaches for later recovery. Dark navy metal, warm teal retained-resource light, restrained amber refusal and repair hardware, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment extending beyond all edges. This is one continuous physical failure-and-recovery scene, not an infographic, comparison chart, timeline, flowchart, split screen, software interface, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, comparison chart, timeline, flowchart, split screen, poster, circuit board, fallback handler inserted, duplicate worker, released ownership, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊Station仍能使用generic recovery rail，但缺少required ABI而無法admit三個product plugins；新版handler不能fallback，原worker、data與exact owners保持不變"
+}

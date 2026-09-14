@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 12,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "A full-frame editorial macro product photograph of an unlabeled bounded output spool at the exact moment capacity is exhausted. A large dark metal spool is packed almost completely with intact sealed teal glass record capsules. The next complete capsule is stopped by a firm amber capacity gate before it can enter, triggering the connected worker process-tree mechanism to fold into a safe powered-down state rather than spilling or crushing any records. All previously sealed capsules remain perfectly ordered and untouched. On the far side, a replacement reader mechanism retrieves the preserved capsules page by page into an identical empty tray, emphasizing an exact retained prefix after explicit failure. Dark navy industrial metal, warm teal retained-output light, restrained amber and muted red terminal hardware, realistic studio macro photography, shallow depth of field, native edge-to-edge 16:9 crop with equipment extending beyond all edges. This is one continuous physical failure-and-recovery scene, not an infographic, capacity chart, timeline, flowchart, software interface, split screen, poster, or movie frame. Absolutely no text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, monitor, circuit board, matte, border, letterbox, black bar, or empty horizontal band.",
+  "negativePrompt": "text, letters, numbers, labels, arrows, symbols, logos, pseudo-writing, watermark, UI screenshot, monitor, infographic, capacity chart, timeline, flowchart, split screen, poster, circuit board, silent overflow, crushed records, missing prefix, border, frame, letterbox, black bars, empty bands",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Spool容量滿時下一筆record被明確拒絕並終止worker，既有sealed prefix保持完整，replacement再逐頁重播相同records"
+}
