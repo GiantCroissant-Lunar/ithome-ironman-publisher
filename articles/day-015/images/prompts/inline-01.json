@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 15,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial scene of a complex spacecraft maintenance depot viewed from above at an oblique angle, one immaculate central rail ending at a finished platform while multiple real side rails lead to a sealed prototype bay, a detached inspection platform, and an active workbench covered with partially assembled components, archival test canisters stored on separate shelves, every branch visibly connected yet in a distinct state, realistic materials and spatial logic, graphite steel, muted amber work lights and cool cyan inspection light, no symbolic arrows or diagram styling, cinematic 16:9 crop",
+  "negativePrompt": "text, letters, labels, numbers, arrows, diagram, flowchart, infographic, UI, code, logos, watermark, split panels, border, fantasy magic, cartoon, cluttered composition, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "中央主線、候選支線、檢查平台與施工中的工作台共存於同一座維修站，呈現 repository 是多層狀態圖而非單一 HEAD。"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 15,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of a vast orbital engineering archive being reopened after a long pause, a pristine central workbench representing the clean main baseline while several connected side workshops hold a sealed candidate module, an unfinished repair assembly, and aged validation instruments, a distant gas giant visible through the observatory window, careful technicians first mapping every workspace before touching the machinery, physically believable industrial architecture, dark graphite metal with restrained amber and cyan light, strong depth and atmospheric volumetric lighting, sophisticated software architecture metaphor without diagrams, edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, user interface, code, logos, watermark, split screen, comic panels, decorative border, low detail, cartoon style, oversaturated colors",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "重新開啟的軌道工程檔案庫，乾淨的中央基線旁仍連接候選模組、未完成修補與舊驗證設備，象徵重返專案時必須先盤點完整狀態。"
+}

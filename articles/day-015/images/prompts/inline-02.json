@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 15,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration of a precision restoration laboratory preparing an old orbital machine for safe reactivation, technicians preserve an untouched baseline core under glass, compare a separate candidate assembly against a newer identity module, inspect an unfinished timing mechanism, then place calibrated validation instruments beside a fresh empty evidence capsule, the physical sequence is clear through staging and composition rather than arrows, orderly engineering process, realistic dark metal and glass, restrained amber and cyan illumination, high detail, edge-to-edge 16:9 framing",
+  "negativePrompt": "text, letters, captions, labels, numbers, arrows, checklist, flowchart, infographic, dashboard, user interface, code, logos, watermark, split screen, decorative frame, cartoon, low detail, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "工程團隊先保存基線、比對候選模組、檢查未完成的時序修補，再準備新的驗證容器，象徵 Re-entry Baseline 的安全整理順序。"
+}

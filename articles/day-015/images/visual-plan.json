@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 15,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Repository 不是一條線，而是一張狀態圖"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 整理順序：先恢復 Re-entry Baseline，再決定怎麼合"
+      }
+    }
+  ]
+}
