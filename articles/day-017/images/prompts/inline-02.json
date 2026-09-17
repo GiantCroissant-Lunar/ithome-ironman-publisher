@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 17,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration inside a secure orbital application runtime, an activated module sits in its own transparent scope chamber and uses a unique physical digest key to open only the resource drawer sealed inside its matching staged package, neighboring packages remain inaccessible behind separate locks even when their outer shapes look similar, a bridge mechanism verifies the complete package before delivering one declared asset, realistic industrial materials, graphite and glass, restrained cyan identity light and amber accents, clear spatial storytelling without text or arrows, edge-to-edge 16:9 crop",
+  "negativePrompt": "text, letters, captions, labels, numbers, arrows, checklist, flowchart, infographic, dashboard, user interface, code, logos, watermark, split screen, decorative border, cartoon, low detail, oversaturated colors",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "啟用中的 module 以自己的 digest key 只能開啟匹配 staged package 內已宣告的 resource drawer，其他 packages 仍由獨立鎖隔離。"
+}

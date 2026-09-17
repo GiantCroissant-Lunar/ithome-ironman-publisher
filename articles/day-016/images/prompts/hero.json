@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 16,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of one precision orbital service core shared by two visibly different spacecraft, the central mechanism handles sealed modules, state vaults and lifecycle machinery while the left vessel remains a heavy industrial execution station with engines and tool arms and the right vessel remains a light observation craft connected to distant stations, common core physically identical but outer capabilities unmistakably distinct, realistic engineering, dark graphite metal, restrained amber and cyan lighting, deep space and Jupiter in the background, sophisticated software architecture metaphor without diagrams, edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, user interface, code, logos, watermark, split screen, comic panels, decorative border, duplicated spacecraft, cartoon style, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "同一座精密生命週期核心分別被重型執行站與輕型連線船組合，兩者共用模組與狀態機械，外層能力仍清楚不同。"
+}

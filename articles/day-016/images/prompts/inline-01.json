@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 16,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial scene inside an orbital restoration facility, one shared inspection conveyor verifies damaged sealed modules and reaches a precise decision junction: one outer host keeps a failed module in a transparent diagnostic quarantine bay, while the other outer host consults a physically tethered retention archive before either preserving the module or stopping the restoration chamber, the central verification machinery is shared but the two product responses remain separate and tangible, realistic industrial materials, graphite steel, amber warning light and cool cyan inspection light, cinematic depth, no diagram styling, 16:9 crop",
+  "negativePrompt": "text, letters, labels, numbers, arrows, branching diagram, flowchart, infographic, UI, code, logos, watermark, split panels, decorative border, cartoon, fantasy magic, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "共用檢驗輸送線面對損壞模組時，一側保留為診斷件，另一側先查詢 retention 檔案庫，呈現相同 restore 流程與不同失敗語意。"
+}

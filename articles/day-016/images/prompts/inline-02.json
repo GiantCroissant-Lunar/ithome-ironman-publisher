@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 16,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration of an orbital factory guarded by a precise architectural inspection system, one authorized lifecycle machine operates in a protected central chamber while inspectors detect and remove a newly duplicated lock-and-record mechanism growing inside each of two outer vehicle bays, a calibrated reference sample in the core proves the machinery must exist exactly once, physically believable tools and containment fields, dark industrial metal with restrained cyan scans and amber work lights, high detail, architecture governance metaphor without text or diagrams, edge-to-edge 16:9 framing",
+  "negativePrompt": "text, letters, captions, labels, numbers, arrows, checklist, flowchart, infographic, dashboard, user interface, code, logos, watermark, split screen, decorative frame, cartoon, low detail, oversaturated colors",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "架構檢查系統保護中央唯一的生命週期機械，並攔下外層載具中重新長出的 lock 與 records 副本，同時以核心實體作為 positive control。"
+}

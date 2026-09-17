@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 17,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 一個 Resource Byte 改變，就必須是另一個 Identity"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## App 的 resource(path) 綁定 Activation Digest"
+      }
+    }
+  ]
+}

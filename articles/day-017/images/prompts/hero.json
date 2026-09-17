@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 17,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of a sealed orbital software cargo bundle entering a precision validation dock, one central executable core surrounded by distinct sidecar canisters containing structured data crystals, an icon plate, a compact wasm mechanism and a shader prism, every piece physically pinned into one tamper-evident frame before the complete unit enters an immutable vault, realistic industrial engineering, graphite metal, restrained amber and cyan inspection lighting, Jupiter visible beyond the station, sophisticated package identity metaphor without diagrams or text, edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, user interface, code, logos, watermark, split screen, comic panels, decorative border, loose unlabeled clutter, cartoon style, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "一個軌道軟體 bundle 將執行核心、資料、圖示、Wasm 與 shader sidecars 一起固定在防拆框架中，整體通過驗證後才進入 immutable vault。"
+}

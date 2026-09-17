@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 17,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial scene of two nearly identical sealed orbital cargo bundles at a content-addressed vault, the first contains an intact small resource crystal while the second differs by one microscopic illuminated defect in that sidecar and is therefore routed into a completely separate immutable chamber, both bundles include the same central engine and outer frame, precision scanners inspect paths and bytes rather than superficial labels, realistic graphite steel and glass, cool cyan scans with restrained amber warning light, high detail, cinematic 16:9 framing, no diagram styling",
+  "negativePrompt": "text, letters, labels, numbers, arrows, flowchart, infographic, binary digits, UI, code, logos, watermark, split panels, decorative frame, cartoon, fantasy magic, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "兩個幾乎相同的 bundle 因其中一個 resource crystal 只有微小差異而被存入不同 immutable chambers，象徵一個 byte 改變就形成新的 identity。"
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 16,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Restore Hook：相同流程，不同失敗語意"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Conformance 不只檢查依賴，也防止重複長回來"
+      }
+    }
+  ]
+}
