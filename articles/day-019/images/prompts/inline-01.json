@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 19,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial scene inside an orbital network control station where four physically separate mechanisms govern one outgoing service capsule: an access gate checks permission, a route resolver selects one approved beacon, a sealed credential injector adds a key without exposing it, and a calibrated timer plus bounded cargo chamber limits the exchange, all four converge only at the final gateway while the requesting plugin remains outside, realistic graphite steel and glass, restrained cyan and amber lighting, clear spatial storytelling without labels or arrows, cinematic 16:9 crop",
+  "negativePrompt": "text, letters, labels, numbers, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative frame, exposed credential, cartoon, fantasy magic, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "同一個outbound request由permission gate、origin resolver、sealed credential injector與deadline／capacity chamber四個獨立機制共同決定。"
+}

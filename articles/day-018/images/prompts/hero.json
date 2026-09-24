@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 18,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of an orbital plugin module being safely decommissioned while one final luminous service cable remains active, the old module is withdrawn from the main routing rail but not yet dismantled, a new replacement module already serves traffic in a neighboring bay, and a small patient sentinel waits to release the old module's machinery only after the final cable goes dark, realistic industrial engineering, graphite metal, restrained amber and cyan lighting, Jupiter visible through the station structure, sophisticated lifecycle metaphor without diagrams or text, edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, user interface, code, logos, watermark, split screen, comic panels, decorative border, violent destruction, severed live cable, cartoon style, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊 plugin module 已退出主路由但仍由最後一條發光 service cable 使用，新 module 已在旁服務，sentinel 等待舊 call 結束後才安全釋放機械。"
+}

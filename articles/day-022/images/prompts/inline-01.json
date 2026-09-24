@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 22,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Close architectural editorial view of an orbital engineering service rack with two distinct component bays, one bay has a new polished cartridge already connected and active, the neighboring bay has an older weathered cartridge still connected through a glowing cyan line and a new inactive candidate visibly isolated beside it in an amber inspection cradle, the active and candidate positions are physically distinct and easy to read, no damage and no frantic repairs, careful engineering preserves service while exposing the incomplete upgrade, realistic graphite steel and clear glass, precise side lighting, plain unmarked objects with no screens or labels, wide 16:9 composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, checkmarks, flowchart, infographic, dashboard, code, logos, watermark, split screen, decorative border, sparks, explosions, cartoon, fantasy magic, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "相鄰元件各自顯示提供服務的版本與候選位置，右側新候選失敗時舊版連線仍然有效，對應 serving、candidate 與 mixed 狀態。"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 23,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of a working orbital engineering station near Jupiter using its own maintenance arm to inspect and repair a small removable component in its own service bay, a continuous physical connection makes the arm clearly part of the same station it is improving, an engineer observes the exposed coupling with a handheld inspection lamp, a few amber diagnostic lights reveal imperfect connections while steady cyan conduits keep the surrounding machinery operating, believable industrial construction, graphite steel and clear glass, realistic materials and restrained lighting, Jupiter small in the distant window, plain unmarked surfaces without screens, a single continuous scene focused on learning from operating real machinery, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "木星旁的工程站使用自己的維修機械臂檢查自身元件，工程師從實際運作中找出缺口，對應 Jupiter 透過自己的 Sessions 承接開發與修正。"
+}

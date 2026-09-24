@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 18,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial scene inside a precision orbital control chamber after a single maintenance sweep has completed, an old service module is visibly disconnected from the public routing rail yet remains suspended in a deactivation cradle because one internal call conduit is still glowing, the automated control arm has returned to rest and no second sweep is scheduled, realistic machinery and clear spatial storytelling, dark graphite steel, cool cyan routing lights and restrained amber drain status, cinematic depth, no diagram styling, 16:9 crop",
+  "negativePrompt": "text, letters, captions, labels, numbers, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative frame, cartoon, fantasy magic, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "一次維護 sweep 已結束，舊 module 雖退出路由卻因內部仍有發光 call conduit 而停在 deactivation cradle，且沒有下一次 sweep 被排程。"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 24,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Close editorial illustration of a station-owned robotic arm carefully placing a verified plain metal instruction cartridge from a shared supply container into an empty fitted bay of a technician's existing tool case, a neighboring bay holds an older personally modified cartridge with a distinctive handmade grip and remains untouched, an amber inspection lamp illuminates the protected older item, cyan light follows the new placement, realistic orbital workshop, graphite metal and glass, precise tactile materials, simple visual contrast between successful placement and preserving an existing personal item, all surfaces unmarked with no text or screens, wide 16:9 composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, diagrams, flowcharts, dashboard, code, logos, watermark, split screen, decorative border, overwriting, destruction, sparks, cartoon, fantasy magic, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Host 將已核對來源的工作方法放入空位，同時保留使用者自行修改的既有載體，呈現 Skill 放置紀錄與不覆寫人工修改的規則。"
+}

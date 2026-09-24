@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 23,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Realistic editorial illustration of an engineer bringing a newly tested precision module from a clean bench to an older operating orbital station rack, the pristine module is held just outside an existing socket and its visibly different connector geometry prevents insertion, worn data cartridges and established cabling remain safely in the old rack, the engineer pauses to compare the two connector shapes under a focused amber inspection lamp, steady cyan lights in the running equipment, graphite metal and glass, a calm believable maintenance scene showing the compatibility discovered only on existing equipment, all surfaces blank and unmarked with no screens, wide 16:9 composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, checkmarks, infographic, dashboard, code, logos, watermark, split panels, decorative border, forced insertion, damaged connectors, sparks, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "工程師將已在測試台驗證的新版元件帶回舊設備，才發現接頭與既有介面不相容，對應實際更新時浮現的契約與舊資料問題。"
+}

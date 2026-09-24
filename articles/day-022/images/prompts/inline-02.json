@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 22,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial scene inside an orbital maintenance chamber being powered up after a shutdown, a durable precision fixture preserves the exact positions of two service cartridges of different ages, cyan service conduits reconnect to those same cartridges while a failed replacement remains locked in an unpowered amber cradle, a separate protected older module continues to connect to one small legacy work capsule through its own dedicated conduit, visual emphasis on restoring exact identities and retaining pending work without automatically retrying the failed candidate, realistic graphite steel and glass, gentle morning side light, plain unmarked surfaces with no display screens or writing, wide 16:9 composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative frame, duplicated floating objects, fantasy magic, cartoon, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "重開的維護艙依保存的位置重新接回兩個不同版本的服務元件，失敗候選保持未啟動，另有精確保留的舊模組服務既有工作，呈現 restore 與 retention 的責任。"
+}

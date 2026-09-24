@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 20,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial still life in an orbital engineering workshop, three distinct physical elements assembled into one coherent instrument: a fixed precision-cut graphite framework defining available slots, removable translucent cyan cartridges filling those slots with current contents, and a keyed amber mechanical actuator connected to one approved output coupling, the framework remains stable while cartridges can be exchanged and the actuator has a clearly constrained motion, readable spatial separation without diagram panels, realistic materials and subtle side lighting, plain unmarked objects with no screens or writing surfaces, sophisticated industrial photography style, wide 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, user interface, code, logos, watermark, split screen, decorative frame, cartoon, fantasy magic, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "固定框架、可替換資料匣與受限制的操作接頭分別呈現 Surface、Data、Intent 的責任，三者共同構成可顯示也可操作的介面。"
+}

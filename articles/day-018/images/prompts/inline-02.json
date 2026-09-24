@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 18,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration of a lightweight autonomous sentinel monitoring several orbital deactivation cradles without being physically tethered to them, it observes a final luminous call conduit through a delicate optical link, sleeps while the conduit remains active, then summons exactly one cleanup arm when the light extinguishes, the sentinel never holds the old module in place and no machinery spins wastefully during the wait, realistic industrial space architecture, graphite metal and glass, restrained cyan sensor light with amber accents, high detail, edge-to-edge 16:9 framing, no text or arrows",
+  "negativePrompt": "text, letters, labels, numbers, arrows, checklist, flowchart, infographic, user interface, code, logos, watermark, split screen, decorative border, heavy chain tether, busy spinning machinery, cartoon, low detail, oversaturated colors",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "輕量 sentinel 以不持有 module 的光學連線觀察 drain，call conduit 仍亮時休眠，熄滅後只喚起一次 cleanup arm。"
+}

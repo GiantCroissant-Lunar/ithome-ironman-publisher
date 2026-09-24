@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 20,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Surface、Data 與 Intent 各自負責什麼"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 把錯誤操作擋在 Guest 呼叫之前"
+      }
+    }
+  ]
+}

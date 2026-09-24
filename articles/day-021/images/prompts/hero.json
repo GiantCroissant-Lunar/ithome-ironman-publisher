@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 21,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration inside an orbital engineering workshop near Jupiter, two precision robotic work arms rest motionless in their charging cradles with dim amber battery indicators, an unfinished service module remains securely clamped on a central workbench, all fitted parts and loose components carefully preserved in separate fitted trays, a small independent cyan inspection light continues illuminating the work for the next shift, calm deliberate suspension with an intact workspace and no damage, realistic graphite metal, glass and restrained amber and cyan lighting, Jupiter softly visible outside, every surface plain and unmarked without screens or writing, edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, flowchart, infographic, user interface, dashboard, code, logos, watermark, split panels, decorative border, explosions, sparks, abandoned ruins, frantic people, fantasy magic, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "兩個工作機械臂因能源耗盡而停止，未完成模組與零件仍被妥善固定保存，獨立檢查燈照亮現場，呈現執行者中斷後仍可接手的工作狀態。"
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 24,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Skills 跟著 Bundle 交付，由 Host 放進工作目錄"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 改契約時，讓新舊 Topic 各有身分"
+      }
+    }
+  ]
+}

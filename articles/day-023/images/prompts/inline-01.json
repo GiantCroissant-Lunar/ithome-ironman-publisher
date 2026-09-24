@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 23,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Close editorial illustration inside a graphite industrial orbital station, one distinctive cylindrical workpiece stays secured in a single indexed fixture while three slim sensor leads converge on that same workpiece, a technician adjusts its one mechanical status indicator as the process advances, several empty duplicate holders pushed aside on the bench emphasize that this remains one physical job, calm precise engineering, cyan monitoring light and one amber indicator, crisp tactile steel and glass, shallow depth of field, every surface plain and unmarked with no writing or screens, visually simple composition centered on one persistent object observed through changing states, wide 16:9 frame",
+  "negativePrompt": "text, letters, numbers, labels, arrows, diagrams, flowcharts, dashboard, code, logos, watermark, split screen, decorative border, multiple identical central workpieces, cartoon, fantasy magic, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "同一個工件固定在唯一的治具中，由多個感測來源持續更新狀態，呈現同一次工具呼叫依 call ID 合併成一筆 entry。"
+}

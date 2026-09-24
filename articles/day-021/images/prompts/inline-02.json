@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 21,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial still life of a preserved engineering handoff in an orbital station, an unfinished mechanical module rests beside an exact-fitting physical test jig and a small deliberately mismatched calibration piece, completed inspected parts are held in one fitted tray while an empty final integration socket remains visibly waiting at the far end of the bench, an incoming engineer's gloved hand reaches first toward the test jig, visual emphasis on reproducing checks before continuing assembly, realistic graphite metal and glass, precise cyan inspection light and subtle amber accents, plain unmarked objects with no papers screens labels or writing, wide 16:9 composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, checkmarks, flowchart, infographic, user interface, dashboard, code, logos, watermark, split panels, decorative border, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "接手者先拿起與候選組件配套的測試治具，已檢查零件與尚待整合的位置清楚分開，呈現把下一步寫成可重現驗證的交接方式。"
+}

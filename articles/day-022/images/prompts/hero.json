@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 22,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of a modular orbital service station near Jupiter, two independently powered machinery modules mounted inside one shared transport frame, the left bay now holds a pristine replacement module serving through a steady cyan conduit while its former module rests disconnected in a tray, the right bay continues using an older active module while a failed replacement waits safely in a separate amber-lit preparation cradle, each bay has its own couplings and service line, realistic industrial engineering, graphite metal and glass, restrained cyan and amber lighting, Jupiter subtly visible in the distance, clear continuous scene showing partial replacement with both service lines still alive, every surface plain and unmarked with no screens, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative frame, sparks, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "同一個交付框架內的兩個元件各自替換：左側新版已接手，右側保留舊版服務並將失敗候選留在準備槽，呈現部分升級時仍可觀察的混合版本。"
+}

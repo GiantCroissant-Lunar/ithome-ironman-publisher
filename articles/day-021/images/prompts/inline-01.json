@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 21,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Architectural editorial scene in a realistic orbital workshop, a completed reference mechanism is protected inside a glass enclosure at the rear, in front three separate workbenches each hold a different unfinished module on its own matching keyed baseplate with its loose replacement parts kept alongside it, the reference mechanism and candidate work never overlap, clear spatial organization lets the next engineer recover each exact assembly state, coherent single scene with deep perspective rather than split panels, graphite steel and translucent glass, restrained cyan baseline lighting and warm amber workbench lighting, plain unmarked materials without labels or screens, cinematic 16:9 composition",
+  "negativePrompt": "text, words, letters, numbers, labels, arrows, flowchart, infographic, dashboard, code, logos, watermark, split screen, decorative frame, cartoon style, chaotic piles, floating objects, excessive glow",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "已驗收的基準模組與三份工作中組件各自保存在明確位置，未安裝零件留在對應工作台，象徵 main、已接受子集與未提交修改的身分分層。"
+}

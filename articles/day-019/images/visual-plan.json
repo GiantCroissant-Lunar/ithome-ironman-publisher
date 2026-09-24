@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 19,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 四個決策拆開：Permission、Origin、Secret、Bounds"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Stream Handle 也必須有 Owner"
+      }
+    }
+  ]
+}

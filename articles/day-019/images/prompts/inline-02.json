@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 19,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration of multiple long-lived data streams flowing through transparent conduits in an orbital station, each conduit locked to one distinct plugin activation chamber with its own ownership seal, a foreign chamber cannot operate another stream's cutoff, and when one activation chamber powers down a host-controlled release mechanism closes all of its conduits together, realistic industrial space architecture, graphite metal and glass, cool cyan stream light with restrained amber shutdown accents, high detail, no text or diagram arrows, edge-to-edge 16:9 framing",
+  "negativePrompt": "text, letters, captions, labels, numbers, arrows, checklist, flowchart, infographic, user interface, code, logos, watermark, split screen, decorative border, tangled anonymous pipes, cartoon, low detail, oversaturated colors",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "每條資料stream都鎖定自己的plugin activation，其他activation無法取消；owner關閉時host release mechanism會一起收掉它的所有stream。"
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 20,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration inside a realistic orbital engineering station near Jupiter, a gloved operator presses a single unmarked amber mechanical control in the foreground, beneath a clear protective housing a precisely machined contract template aligns a cyan data cartridge and a keyed actuator before a distant service module engages, one continuous physical mechanism connects the human control to the governed machine response, clear foreground middle ground and background, graphite metal and glass with restrained cyan and amber light, quiet professional atmosphere, all panels plain and unmarked with no screens or writing surfaces, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, dashboard, code, logos, watermark, split panels, decorative border, fantasy magic, exaggerated neon, cartoon style, cluttered machinery",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "操作員按下控制鈕後，資料匣與操作接頭必須先對齊契約模板，才會驅動遠端模組，呈現從畫面到受驗證呼叫的完整路徑。"
+}

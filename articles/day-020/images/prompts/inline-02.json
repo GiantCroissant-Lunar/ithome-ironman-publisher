@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 20,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic close-up of a precision admission gate in a realistic orbital station, an amber action cartridge with correctly shaped pins is aligned with a machined contract socket and allowed toward a quiet service chamber, beside it one cartridge with the wrong pin geometry and another with a missing pin are held securely in shallow inspection trays before reaching the machinery, the rejection is calm and visible with no damage or alarms, focus on physical shape checking before actuation, graphite steel, glass, restrained cyan inspection light and warm amber accents, all surfaces plain and unmarked, no monitors, wide 16:9 editorial composition",
+  "negativePrompt": "text, letters, numbers, labels, arrows, flowchart, infographic, dashboard, code, logos, watermark, split panels, decorative border, sparks, explosions, weapons, cartoon, fantasy magic, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "符合契約形狀的操作匣才能進入執行通道，錯誤型別與缺少參數的操作在機械啟動前留在檢查區，呈現先驗證再呼叫的邊界。"
+}

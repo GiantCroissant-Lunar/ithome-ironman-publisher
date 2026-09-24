@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 22,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 升級一半時，把 Serving 與 Candidate 一起留下"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Host 重開後，還原同一個混合狀態"
+      }
+    }
+  ]
+}

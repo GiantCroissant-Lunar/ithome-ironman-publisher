@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "dayNumber": 18,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": {
+        "kind": "article-start"
+      }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 一次 Reconcile 為什麼不夠"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 第二層：Weak Watcher 讓最後一個 Call 成為觸發點"
+      }
+    }
+  ]
+}

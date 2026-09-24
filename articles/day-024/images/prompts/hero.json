@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 24,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration inside an orbital engineering station near Jupiter, a compact autonomous maintenance rover preparing to leave a service bay, a station-owned robotic arm equips it with two visibly different resources: a precision tool coupling attached to its side and a small sealed instruction cartridge placed in its recessed storage slot, a restrained cyan conduit traces the tool connection while an amber inspection lamp illuminates the cartridge, believable industrial engineering, graphite steel and clear glass, Jupiter subtly visible through a distant window, calm careful preparation before work begins, all objects have plain unmarked surfaces with no screens, single coherent scene, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "木星旁的工程站在工作開始前，為維修車接上工具介面並放入工作方法載體，對應 Session 同時取得 MCP 入口與 Skills。"
+}

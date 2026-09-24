@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 19,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration of a small orbital plugin capsule requesting passage through a secure network gateway using only a simple route key, while the station gateway independently resolves the destination, retrieves a credential from a sealed vault, applies timing and cargo-size controls, and sends the request toward one operator-approved service beacon, the plugin never touches the destination coordinates or secret vault, realistic industrial engineering, dark graphite metal, restrained cyan routing light and amber authority indicators, Jupiter in the distance, sophisticated capability-security metaphor without diagrams or text, edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, flowchart, infographic, user interface, code, logos, watermark, split screen, comic panels, decorative border, visible password, exposed key, cartoon style, oversaturated neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "Plugin capsule只持有簡單route key，Station gateway另行解析目的地、從密封vault取得credential並套用時間與容量控制，再送往operator允許的service beacon。"
+}

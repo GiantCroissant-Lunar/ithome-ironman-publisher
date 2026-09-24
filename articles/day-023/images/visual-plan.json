@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 23,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 同一次工具呼叫，只留下一個持續更新的 Entry"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 真正裝回去，才碰到舊資料與畫面"
+      }
+    }
+  ]
+}

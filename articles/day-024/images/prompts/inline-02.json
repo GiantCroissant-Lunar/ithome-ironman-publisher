@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 24,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Realistic editorial illustration of an orbital service rack with two distinct connector standards mounted side by side, an older round socket stays connected to existing machinery while a newly added hexagonal socket receives a matching new module, both connections carry calm steady cyan light, the surrounding rack and stored equipment remain intact, an engineer guides only the new matching plug under an amber task lamp, precise industrial graphite steel and glass, visually clear coexistence of old and new interfaces without changing the old socket, plain unmarked surfaces with no screens or lettering, single continuous scene, wide 16:9 frame",
+  "negativePrompt": "text, letters, numbers, labels, arrows, checkmarks, infographic, dashboard, code, logos, watermark, split panels, decorative border, forced mismatched connection, sparks, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "舊介面繼續連接原有設備，新介面在旁接入新版元件，對應 open 與 open.v2 保持各自契約並存的升級方式。"
+}

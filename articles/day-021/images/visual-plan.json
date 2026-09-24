@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 21,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 保存 Worktree 時，也要保存它的身分"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 把下一步寫成可以重新驗證的工作"
+      }
+    }
+  ]
+}
