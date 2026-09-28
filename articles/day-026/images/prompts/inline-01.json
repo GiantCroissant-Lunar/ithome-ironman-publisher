@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 26,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Cinematic editorial illustration of one continuous orbital engineering workshop with two separate recessed maintenance bays divided by a solid frosted-glass partition, in the foreground bay a compact rover receives fitted mechanical tools from its own wall cabinet under soft cyan light, through the partition a second rover rests in a separate bay with a different set of tools under warm amber light, distinct equipment stays physically within each bay, perspective makes the two workspaces and their boundaries easy to understand without diagrams, graphite metal and tactile glass, practical believable architecture, quiet focused atmosphere, every object has a plain unmarked surface with no displays or signs, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "兩個由隔板分開的維修工作區各自配有工具與維修車，象徵 workspace 清單決定每件工作能取得的來源。"
+}

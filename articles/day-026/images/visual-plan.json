@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 26,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 先確認這份上下文屬於哪個專案"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 一條看似合理的篩選規則，刪掉了需要的經驗"
+      }
+    }
+  ]
+}

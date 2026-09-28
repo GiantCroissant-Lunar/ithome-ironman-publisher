@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 26,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration inside a quiet orbital engineering workshop near Jupiter, a compact autonomous maintenance rover waits beside an open portable equipment case on a workbench, a precise robotic arm fits a carefully selected set of distinct mechanical components into the case's shaped recesses before the rover departs for a repair, a deep archive of additional components remains in soft focus behind the bench, the finite case and its useful varied contents are the focal point, Jupiter softly visible through one distant window, graphite steel and frosted glass, restrained cyan inspection light and warm amber work lights, tactile believable engineering materials, calm thoughtful composition about assembling relevant knowledge for one task, all surfaces plain and unmarked, no screens or paperwork, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "木星旁的工程工作站中，機械臂將工作需要的零件裝進容量有限的工具箱，維修車在旁等待，象徵 Agent 開工前的上下文組裝。"
+}

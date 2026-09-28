@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 27,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration in a quiet orbital engineering workshop, a human engineer and a compact autonomous maintenance robot stand on opposite sides of one shared mechanical dispatch bench, both use the same physical routing mechanism in the middle of the bench, two separate cable conduits lead from this shared mechanism to two clearly distinct work bays in the background, one bay is softly lit in cyan and the other in warm amber, the composition clearly centers the single shared operating point while preserving the distinct destinations, graphite steel, brushed aluminum and frosted glass, subtle view of Jupiter through a distant small window as a connection to the previous chapter, believable tactile engineering materials, calm collaborative atmosphere, all surfaces plain and unmarked, no monitors or paperwork, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "工程師與自主維修機器人共同操作中央工作台，工作台分別連向兩個工作區，象徵人與 Agent 透過共同入口操作明確的執行端。"
+}

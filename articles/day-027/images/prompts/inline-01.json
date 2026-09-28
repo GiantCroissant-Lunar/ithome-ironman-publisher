@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 27,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Cinematic close-up editorial illustration of a precise mechanical routing junction on an orbital workshop bench, a single incoming conduit enters a central brushed-metal junction and two distinct conduits leave it toward separate equipment docks, a small robotic inspection arm checks the distinctive interlocking shape of a connector at the selected dock before allowing the coupling to close, the other dock remains physically separate and untouched, matching connector geometry is clearly visible as an analogy for checking destination identity, graphite and silver materials, restrained cyan light at the inspected connection, warm amber ambient workshop light, shallow depth of field with enough clarity to follow both routes, all surfaces plain and unmarked, no screens or documents, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon, tangled cables",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "中央接點連向兩個分開的設備座，檢查臂在接合前核對目標接頭的形狀，象徵 App 路由命令時仍須驗證 Station 身分。"
+}

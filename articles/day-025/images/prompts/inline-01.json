@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 25,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Close cinematic editorial illustration in an orbital engineering workshop, a small robotic courier places a newly machined plain metal knowledge cartridge onto an amber-lit inspection tray, a transparent closed divider separates this intake tray from a carefully fitted archive of previously inspected cartridges, a precision inspection arm is positioned above the new arrival before any transfer, one coherent scene with a clear physical boundary between new observations and accepted records, realistic graphite metal and clear glass, warm amber intake light and subtle cool cyan archive light, all surfaces unmarked with no screens or paperwork, tactile materials and calm deliberate staging, wide 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, arrows, diagram, flowchart, dashboard, code, logos, watermark, split screen, decorative border, rubber stamps, signs, weapons, sparks, cartoon, fantasy magic, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "新送來的知識載體先留在檢查盤，與已驗收的檔案分開，呈現 Agent 的新觀察先記為 candidate，再經 review 納入正式來源的流程。"
+}

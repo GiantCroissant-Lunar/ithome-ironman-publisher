@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 27,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## MCP 透過 App，找到明確的 Station"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 測試全綠，還是可能漏掉最重要的界線"
+      }
+    }
+  ]
+}

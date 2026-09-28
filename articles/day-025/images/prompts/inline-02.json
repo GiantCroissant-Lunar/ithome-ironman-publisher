@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 25,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic macro editorial illustration of a precision optical sorting bench inside an orbital engineering station, a narrow calibrated aperture admits one sharply aligned cyan beam that illuminates a matching plain metal cartridge in a receiving cradle, several diffuse weak amber reflections stop on the matte baffle before the cradle, surrounding unused receiving spaces remain visibly empty, a physical metaphor for rejecting weak matches before ranking useful results, believable optical hardware with graphite steel and frosted glass, restrained lighting, crisp focal plane, all housings are completely unmarked with no scales or displays, one continuous scene, wide 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, tick marks, arrows, graphs, diagram, flowchart, infographic, dashboard, code, logos, watermark, split panels, decorative border, laser weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "校準後的光學裝置阻隔微弱雜散光，只讓對準的訊號到達接收槽，空槽保持空白，比喻 no-match floor 先排除不相關紀錄，再進行排序。"
+}

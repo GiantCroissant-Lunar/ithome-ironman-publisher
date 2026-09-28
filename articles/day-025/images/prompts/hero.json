@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 25,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration inside a quiet orbital engineering archive near Jupiter, a compact autonomous maintenance rover pauses beside a precision retrieval arm that is carefully extracting one uniquely shaped metal component from a large wall of fitted archive compartments, an open matching socket on the rover makes the relevance of the selected component visually clear, adjacent superficially similar components stay in their compartments, one narrow cyan inspection beam connects the chosen component and its matching socket, Jupiter softly visible through a distant window, graphite steel, frosted glass, restrained amber work lights, tactile believable engineering, calm focused composition about finding the right stored knowledge for a task, every object has a plain unmarked surface and there are no monitors or signs, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "木星旁的工程檔案室中，維修車依工作需要取回與介面相符的零件，其餘相似零件留在架上，象徵長期記憶需要驗證召回是否切合問題。"
+}

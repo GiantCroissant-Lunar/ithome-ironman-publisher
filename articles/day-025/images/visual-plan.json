@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dayNumber": 25,
+  "assets": [
+    {
+      "slot": "hero",
+      "request": "./prompts/hero.json",
+      "placement": { "kind": "article-start" }
+    },
+    {
+      "slot": "inline-01",
+      "request": "./prompts/inline-01.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## Agent 的新觀察，先保存成候選"
+      }
+    },
+    {
+      "slot": "inline-02",
+      "request": "./prompts/inline-02.json",
+      "placement": {
+        "kind": "after-heading",
+        "heading": "## 先讓相似度有意義，再乘上紀錄權重"
+      }
+    }
+  ]
+}

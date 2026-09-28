@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 26,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration focused on an open mechanical equipment case in an orbital workshop, the case contains two large polished components but many shaped compartments remain empty, a precise robotic hand is lifting a simple physical sorting gate away from several smaller visibly worn yet functional tools waiting immediately beside the case, the small tools clearly fit the empty compartments, composition emphasizes useful experience unnecessarily left outside despite ample capacity and a deliberate correction of the selection process, restrained amber highlights on worn tools, cool cyan light inside the case, graphite steel and tactile machined surfaces, realistic engineering still life, all objects plain and unmarked with no screens, charts or paperwork, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "工具箱只放了兩個大型零件，旁邊仍有能放入空槽的小工具；機械手移開篩選擋板，象徵修正會排除有用經驗的相對門檻。"
+}

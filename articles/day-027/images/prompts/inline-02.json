@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 27,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration of a controlled engineering test on a clean orbital workshop bench, a gloved engineer deliberately lifts a small removable locking pin from a miniature rail carriage test fixture, the carriage is securely held inside a transparent protective test enclosure, an independent inspection probe points directly at the now-empty pin socket, the removed pin, empty socket and inspection probe are the three sharp focal details, a spare intact locking assembly rests farther back out of focus, the scene communicates deliberately removing a required safeguard to see whether a test detects its absence, graphite steel and frosted glass, restrained cyan inspection light and warm amber work lights, realistic physical materials and calm methodical mood, all surfaces plain and unmarked, no displays or papers, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, broken glass, dangerous accident, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "工程師在受控測試台刻意取出鎖定銷，旁邊的探針檢查缺件位置，象徵移除重要規則後，測試必須能偵測到差異。"
+}
