@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 28,
+  "slot": "inline-02",
+  "assetName": "inline-02.jpg",
+  "prompt": "Cinematic editorial illustration of a small optical observation instrument on an engineering laboratory bench, the instrument has one round sensor lens and a small amber indicator lamp mounted beside it, two angled polished mirrors unintentionally reflect the instrument's own amber lamp back toward its sensor, an engineer carefully slides a matte black light baffle into the returning beam while preserving the sensor's clear view of a small cyan-lit mechanical rover in the background, single coherent physical scene showing an observer accidentally seeing its own signal and a precise correction, restrained visible light through a faint laboratory haze, believable graphite housing, brushed aluminum mounts and optical glass, calm focused lighting, plain unmarked surfaces, no screens, no papers, no diagrams, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "觀測器自己的指示燈經鏡面反射回感測器，工程師以遮光片截斷回傳光線，象徵 Activity 需要排除自身更新造成的回饋循環。"
+}

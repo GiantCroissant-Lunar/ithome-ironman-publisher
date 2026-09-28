@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 28,
+  "slot": "inline-01",
+  "assetName": "inline-01.jpg",
+  "prompt": "Cinematic editorial illustration of a precise tabletop robotics test in an orbital engineering workshop, close three-quarter view of two separate mechanical assembly trays side by side, one cyan cable visibly runs from the left tactile control lever all the way to the left robotic arm, a separate amber cable visibly runs from the right lever to the right robotic arm, an engineer's gloved hand gently disengages only the amber lever and its arm rests in its cradle, the cyan arm continues holding a tiny rover wheel above its own tray, the two uninterrupted cable paths are fully visible without crossing, composition emphasizes that an action follows its own work context from control to destination, graphite and brushed metal with muted cyan and amber light, shallow depth of field while keeping both cable routes readable, plain unmarked surfaces and no electronic displays, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, crossed cables, extra hands, split panels, decorative border, weapons, explosions, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "兩個控制桿各以獨立線路連向自己的機械臂，工程師只停下其中一側，另一側繼續工作，象徵操作必須攜帶正確的 scope。"
+}

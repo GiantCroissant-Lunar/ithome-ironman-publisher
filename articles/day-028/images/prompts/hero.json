@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dayNumber": 28,
+  "slot": "hero",
+  "assetName": "hero.jpg",
+  "prompt": "Cinematic editorial illustration inside a calm orbital engineering workshop, wide elevated three-quarter view of two adjacent open work bays and a human engineer observing from a central walkway, the left bay contains a cyan-lit robotic arm steadily assembling a small mechanical rover, the right bay contains a warm amber-lit robotic arm at rest with its tool securely docked, each bay has its own clearly visible continuous cable conduit leading to a separate tactile lever on a shared physical workbench, a small independent mechanical observation instrument beside the walkway catches light from both bays, spatially clear composition emphasizing visible work ownership and distinct operating states, believable brushed aluminum, graphite steel and frosted glass materials, soft white overhead lighting with restrained cyan and amber accents, all surfaces plain and unmarked, no monitors or paperwork, wide edge-to-edge 16:9 composition",
+  "negativePrompt": "text, letters, words, numbers, labels, captions, arrows, flowchart, infographic, dashboard, user interface, code, logos, watermark, split panels, decorative border, weapons, explosions, fantasy magic, cartoon, excessive neon",
+  "aspectRatio": "16:9",
+  "style": "Dynamic",
+  "model": "Auto",
+  "maxCandidates": 1,
+  "alt": "工程師從中央走道觀察兩個工作區，一側機械臂持續作業，另一側已停靠工具，象徵畫面需要呈現各自的工作範圍與狀態。"
+}
